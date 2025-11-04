@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { FaGlobe, FaRocket, FaMicrochip, FaTag, FaCheckCircle, FaCloudscale } from 'react-icons/fa';
+import StatsDisplay from './StatsDisplay';
 
 export default function About() {
   const { t } = useLanguage();
@@ -13,13 +14,6 @@ export default function About() {
     { key: 'fixedPrice', icon: FaTag, gradient: 'from-green-500 to-emerald-500' },
     { key: 'compliance', icon: FaCheckCircle, gradient: 'from-indigo-500 to-blue-500' },
     { key: 'multiCloud', icon: FaCloudscale, gradient: 'from-pink-500 to-rose-500' },
-  ];
-
-  const stats = [
-    { value: '5+', label: t.stats.experience },
-    { value: '50+', label: t.stats.projects },
-    { value: '30+', label: t.stats.clients },
-    { value: '99%', label: t.stats.success },
   ];
 
   return (
@@ -34,20 +28,8 @@ export default function About() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-6 rounded-xl bg-gradient-to-br from-primary-50 to-secondary-50 hover:shadow-lg transition-all"
-            >
-              <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm md:text-base text-secondary-600 font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
+        <div className="mb-20">
+          <StatsDisplay />
         </div>
 
         {/* Advantages Grid */}

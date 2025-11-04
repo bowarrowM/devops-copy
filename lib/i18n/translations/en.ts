@@ -13,7 +13,7 @@ export const en: Translations = {
     subtitle: 'Optimize your cloud infrastructure, automate CI/CD processes, and accelerate your digital transformation. From startups to enterprises, we\'re here with modern DevOps solutions.',
     cta: 'Free Consultation',
     ctaSecondary: 'Explore Services',
-    badge: 'DevOps Patented Turkish Company',
+    badge: 'Professional DevOps Company',
   },
   services: {
     title: 'Our Services',
@@ -40,52 +40,42 @@ export const en: Translations = {
       assessment: {
         title: 'DevOps Assessment & Strategy',
         description: 'Analyze current state, evaluate technology stack, and develop roadmap.',
-        price: '$5K - $15K',
       },
       cicd: {
         title: 'CI/CD Pipeline Implementation',
         description: 'Automated testing and deployment with GitLab, GitHub Actions, or Jenkins.',
-        price: '$10K - $30K',
       },
       cloudMigration: {
         title: 'Cloud Migration',
         description: 'Secure and optimized migration to AWS, Azure, or GCP.',
-        price: '$15K - $50K',
       },
       kubernetes: {
         title: 'Kubernetes & Container Orchestration',
         description: 'Container management with EKS, AKS, or GKE, service mesh, and GitOps.',
-        price: '$25K - $75K',
       },
       iac: {
         title: 'Infrastructure as Code (IaC)',
         description: 'Infrastructure automation with Terraform, Pulumi, or CloudFormation.',
-        price: '$20K - $60K',
       },
       devsecops: {
         title: 'DevSecOps Integration',
         description: 'Security scanning automation, compliance management, and vulnerability assessment.',
-        price: '$30K - $80K',
       },
       platform: {
         title: 'Platform Engineering',
         description: 'Internal developer platforms and self-service infrastructure solutions.',
-        price: '$50K - $150K',
       },
       aiops: {
         title: 'AIOps & Observability',
         description: 'AI-powered monitoring with Prometheus, Grafana, ELK, or Datadog.',
-        price: '$40K - $100K',
       },
       finops: {
         title: 'FinOps & Cost Optimization',
         description: 'Analyze and optimize your cloud spending.',
-        price: '$25K - $75K',
       },
       managed: {
         title: 'Managed DevOps Services',
         description: '24/7 monitoring, incident response, and full DevOps team support.',
-        price: 'From $3K/month',
       },
     },
   },

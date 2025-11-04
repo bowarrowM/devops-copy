@@ -13,7 +13,7 @@ export const de: Translations = {
     subtitle: 'Optimieren Sie Ihre Cloud-Infrastruktur, automatisieren Sie CI/CD-Prozesse und beschleunigen Sie Ihre digitale Transformation. Von Startups bis Unternehmen bieten wir moderne DevOps-Lösungen.',
     cta: 'Kostenlose Beratung',
     ctaSecondary: 'Services erkunden',
-    badge: 'DevOps Patentiertes türkisches Unternehmen',
+    badge: 'Professionelles DevOps-Unternehmen',
   },
   services: {
     title: 'Unsere Dienstleistungen',
@@ -40,52 +40,42 @@ export const de: Translations = {
       assessment: {
         title: 'DevOps-Bewertung & Strategie',
         description: 'Analyse des aktuellen Zustands, Bewertung des Technologie-Stacks und Roadmap-Entwicklung.',
-        price: '5K - 15K €',
       },
       cicd: {
         title: 'CI/CD Pipeline-Implementierung',
         description: 'Automatisierte Tests und Bereitstellung mit GitLab, GitHub Actions oder Jenkins.',
-        price: '10K - 30K €',
       },
       cloudMigration: {
         title: 'Cloud-Migration',
         description: 'Sichere und optimierte Migration zu AWS, Azure oder GCP.',
-        price: '15K - 50K €',
       },
       kubernetes: {
         title: 'Kubernetes & Container-Orchestrierung',
         description: 'Container-Management mit EKS, AKS oder GKE, Service Mesh und GitOps.',
-        price: '25K - 75K €',
       },
       iac: {
         title: 'Infrastructure as Code (IaC)',
         description: 'Infrastruktur-Automatisierung mit Terraform, Pulumi oder CloudFormation.',
-        price: '20K - 60K €',
       },
       devsecops: {
         title: 'DevSecOps-Integration',
         description: 'Automatisierung von Sicherheitsscans, Compliance-Management und Schwachstellenbewertung.',
-        price: '30K - 80K €',
       },
       platform: {
         title: 'Platform Engineering',
         description: 'Interne Entwicklerplattformen und Self-Service-Infrastrukturlösungen.',
-        price: '50K - 150K €',
       },
       aiops: {
         title: 'AIOps & Observability',
         description: 'KI-gestütztes Monitoring mit Prometheus, Grafana, ELK oder Datadog.',
-        price: '40K - 100K €',
       },
       finops: {
         title: 'FinOps & Kostenoptimierung',
         description: 'Analysieren und optimieren Sie Ihre Cloud-Ausgaben.',
-        price: '25K - 75K €',
       },
       managed: {
         title: 'Managed DevOps Services',
         description: '24/7 Überwachung, Incident Response und vollständiger DevOps-Team-Support.',
-        price: 'Ab 3K €/Monat',
       },
     },
   },

@@ -105,16 +105,6 @@ export default function Services() {
                   {serviceData.description}
                 </p>
 
-                {/* Price */}
-                <div className="mt-auto pt-4 border-t border-secondary-100">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-semibold text-secondary-500">Fiyat:</span>
-                    <span className="text-lg font-bold text-primary-600">
-                      {serviceData.price}
-                    </span>
-                  </div>
-                </div>
-
                 {/* Hover Effect */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-primary-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </div>

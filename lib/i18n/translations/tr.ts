@@ -13,7 +13,7 @@ export const tr: Translations = {
     subtitle: 'Bulut altyapınızı optimize edin, CI/CD süreçlerinizi otomatikleştirin ve dijital dönüşümünüzü hızlandırın. Startup\'lardan kurumsal şirketlere, modern DevOps çözümleriyle yanınızdayız.',
     cta: 'Ücretsiz Danışın',
     ctaSecondary: 'Hizmetleri Keşfedin',
-    badge: 'DevOps Patentli Türk Firması',
+    badge: 'Profesyonel DevOps Şirketi',
   },
   services: {
     title: 'Hizmetlerimiz',
@@ -40,52 +40,42 @@ export const tr: Translations = {
       assessment: {
         title: 'DevOps Değerlendirme & Strateji',
         description: 'Mevcut durumunuzu analiz eder, teknoloji stack değerlendirmesi yapar ve yol haritası oluştururuz.',
-        price: '₺150.000 - ₺450.000',
       },
       cicd: {
         title: 'CI/CD Pipeline Kurulumu',
         description: 'GitLab, GitHub Actions veya Jenkins ile otomatik test ve deployment süreçleri.',
-        price: '₺300.000 - ₺900.000',
       },
       cloudMigration: {
         title: 'Bulut Migrasyonu',
         description: 'AWS, Azure veya GCP\'ye güvenli ve optimize edilmiş bulut geçişi.',
-        price: '₺450.000 - ₺1.500.000',
       },
       kubernetes: {
         title: 'Kubernetes & Container Orchestration',
         description: 'EKS, AKS veya GKE ile container yönetimi, service mesh ve GitOps implementasyonu.',
-        price: '₺750.000 - ₺2.250.000',
       },
       iac: {
         title: 'Infrastructure as Code (IaC)',
         description: 'Terraform, Pulumi veya CloudFormation ile altyapı otomasyonu.',
-        price: '₺600.000 - ₺1.800.000',
       },
       devsecops: {
         title: 'DevSecOps Entegrasyonu',
         description: 'Güvenlik taraması otomasyonu, compliance yönetimi ve vulnerability management.',
-        price: '₺900.000 - ₺2.400.000',
       },
       platform: {
         title: 'Platform Engineering',
         description: 'Internal developer platform ve self-service altyapı çözümleri.',
-        price: '₺1.500.000 - ₺4.500.000',
       },
       aiops: {
         title: 'AIOps & Observability',
         description: 'Prometheus, Grafana, ELK veya Datadog ile yapay zeka destekli izleme.',
-        price: '₺1.200.000 - ₺3.000.000',
       },
       finops: {
         title: 'FinOps & Maliyet Optimizasyonu',
         description: 'Bulut harcamalarınızı analiz eder ve optimize ederiz.',
-        price: '₺750.000 - ₺2.250.000',
       },
       managed: {
         title: 'Yönetilen DevOps Hizmetleri',
         description: '7/24 izleme, olay müdahalesi ve tam DevOps ekip desteği.',
-        price: '₺90.000/ay\'dan başlayan',
       },
     },
   },

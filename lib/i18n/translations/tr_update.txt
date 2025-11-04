@@ -1,0 +1,4 @@
+Remove from all translations:
+1. All "price" fields from services
+2. "DevOps Patentli Türk Firması" -> "Profesyonel DevOps Şirketi"
+3. Remove price from Services component display

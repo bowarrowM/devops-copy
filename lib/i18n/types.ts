@@ -40,52 +40,42 @@ export interface Translations {
       assessment: {
         title: string;
         description: string;
-        price: string;
       };
       cicd: {
         title: string;
         description: string;
-        price: string;
       };
       cloudMigration: {
         title: string;
         description: string;
-        price: string;
       };
       kubernetes: {
         title: string;
         description: string;
-        price: string;
       };
       iac: {
         title: string;
         description: string;
-        price: string;
       };
       devsecops: {
         title: string;
         description: string;
-        price: string;
       };
       platform: {
         title: string;
         description: string;
-        price: string;
       };
       aiops: {
         title: string;
         description: string;
-        price: string;
       };
       finops: {
         title: string;
         description: string;
-        price: string;
       };
       managed: {
         title: string;
         description: string;
-        price: string;
       };
     };
   };

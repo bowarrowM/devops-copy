@@ -1,0 +1,112 @@
+'use client';
+
+import { useLanguage } from '@/lib/context/LanguageContext';
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+
+export default function Footer() {
+  const { t } = useLanguage();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer className="bg-secondary-900 text-white">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Company Info */}
+          <div>
+            <h3 className="text-2xl font-bold mb-4">
+              DevOps<span className="text-primary-400">.com.tr</span>
+            </h3>
+            <p className="text-secondary-400 mb-4">
+              {t.footer.tagline}
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
+              >
+                <FaLinkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
+              >
+                <FaGithub className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
+              >
+                <FaTwitter className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:info@devops.com.tr"
+                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
+              >
+                <FaEnvelope className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-bold text-lg mb-4">{t.footer.services}</h4>
+            <ul className="space-y-2 text-secondary-400">
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">CI/CD Pipeline</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">Cloud Migration</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">Kubernetes</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">DevSecOps</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">Platform Engineering</button></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-bold text-lg mb-4">{t.footer.company}</h4>
+            <ul className="space-y-2 text-secondary-400">
+              <li><button onClick={() => scrollToSection('about')} className="hover:text-primary-400 transition-colors">{t.nav.about}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.nav.services}</button></li>
+              <li><button onClick={() => scrollToSection('contact')} className="hover:text-primary-400 transition-colors">{t.nav.contact}</button></li>
+              <li><a href="/blog" className="hover:text-primary-400 transition-colors">Blog</a></li>
+              <li><a href="/career" className="hover:text-primary-400 transition-colors">Kariyer</a></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-bold text-lg mb-4">{t.footer.legal}</h4>
+            <ul className="space-y-2 text-secondary-400">
+              <li><a href="/privacy" className="hover:text-primary-400 transition-colors">Gizlilik Politikası</a></li>
+              <li><a href="/terms" className="hover:text-primary-400 transition-colors">Kullanım Şartları</a></li>
+              <li><a href="/kvkk" className="hover:text-primary-400 transition-colors">KVKK</a></li>
+              <li><a href="/cookies" className="hover:text-primary-400 transition-colors">Çerez Politikası</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-secondary-800 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-secondary-400 text-sm">
+              © {new Date().getFullYear()} DevOps.com.tr. {t.footer.rights}
+            </p>
+            <div className="flex items-center gap-4 text-sm text-secondary-400">
+              <span>🇹🇷 Made with ❤️ in Turkey</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

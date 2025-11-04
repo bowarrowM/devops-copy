@@ -1,9 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { SiDocker, SiKubernetes, SiTerraform, SiJenkins, SiGithubactions, SiAmazonaws, SiMicrosoftazure, SiGooglecloud, SiPrometheus, SiGrafana, SiElasticsearch, SiRedis, SiPostgresql, SiMongodb, SiRabbitmq, SiApachekafka } from 'react-icons/si';
 
 export default function TechStack() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [rotations, setRotations] = useState<{ [key: number]: number }>({});
+
   const technologies = [
     { name: 'Docker', icon: SiDocker, color: '#2496ED', category: 'Container' },
     { name: 'Kubernetes', icon: SiKubernetes, color: '#326CE5', category: 'Orchestration' },
@@ -71,6 +75,24 @@ export default function TechStack() {
         >
           {technologies.map((tech, index) => {
             const Icon = tech.icon;
+            const currentRotation = rotations[index] || 0;
+
+            const handleHoverStart = () => {
+              setHoveredIndex(index);
+              setRotations(prev => ({
+                ...prev,
+                [index]: (prev[index] || 0) + 360
+              }));
+            };
+
+            const handleHoverEnd = () => {
+              setHoveredIndex(null);
+              setRotations(prev => ({
+                ...prev,
+                [index]: (prev[index] || 0) - 360
+              }));
+            };
+
             return (
               <motion.div
                 key={index}
@@ -79,6 +101,8 @@ export default function TechStack() {
                   y: -15,
                   scale: 1.05,
                 }}
+                onHoverStart={handleHoverStart}
+                onHoverEnd={handleHoverEnd}
                 className="relative group"
               >
                 <div className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 transform-gpu"
@@ -99,7 +123,9 @@ export default function TechStack() {
                         transformStyle: 'preserve-3d',
                         backfaceVisibility: 'hidden',
                       }}
-                      whileHover={{ rotateY: 360 }}
+                      animate={{
+                        rotateY: currentRotation,
+                      }}
                       transition={{ duration: 0.8, ease: "easeInOut" }}
                     >
                       <Icon

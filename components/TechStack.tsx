@@ -95,17 +95,21 @@ export default function TechStack() {
 
                   {/* Icon */}
                   <div className="relative flex flex-col items-center gap-3">
-                    <div
+                    <motion.div
                       className="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 group-hover:shadow-lg transition-shadow"
                       style={{
                         boxShadow: `0 0 0 1px ${tech.color}20`,
+                        transformStyle: 'preserve-3d',
+                        backfaceVisibility: 'hidden',
                       }}
+                      whileHover={{ rotateY: 360 }}
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
                     >
                       <Icon
                         className="w-10 h-10"
                         style={{ color: tech.color }}
                       />
-                    </div>
+                    </motion.div>
 
                     {/* Name */}
                     <div className="text-center">

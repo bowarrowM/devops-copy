@@ -94,11 +94,7 @@ export default function TechStack() {
                   />
 
                   {/* Icon */}
-                  <motion.div
-                    className="relative flex flex-col items-center gap-3"
-                    whileHover={{ rotateY: 360 }}
-                    transition={{ duration: 0.8 }}
-                  >
+                  <div className="relative flex flex-col items-center gap-3">
                     <div
                       className="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 group-hover:shadow-lg transition-shadow"
                       style={{
@@ -116,7 +112,7 @@ export default function TechStack() {
                       <div className="text-sm font-bold text-slate-900">{tech.name}</div>
                       <div className="text-xs text-slate-500 mt-1">{tech.category}</div>
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* Decorative corner elements */}
                   <div className="absolute top-2 right-2 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"

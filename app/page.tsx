@@ -3,6 +3,8 @@
 import { LanguageProvider } from '@/lib/context/LanguageContext';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import InteractiveDevOpsFlow from '@/components/InteractiveDevOpsFlow';
+import TechStack from '@/components/TechStack';
 import Services from '@/components/Services';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import About from '@/components/About';
@@ -18,7 +20,9 @@ export default function Home() {
       <main className="min-h-screen">
         <Navbar />
         <Hero />
+        <InteractiveDevOpsFlow />
         <Services />
+        <TechStack />
         <WhyChooseUs />
         <About />
         <Testimonials />

@@ -77,12 +77,9 @@ export default function TechStack() {
                 variants={item}
                 whileHover={{
                   y: -15,
-                  rotateY: 15,
-                  rotateX: 15,
-                  scale: 1.1,
+                  scale: 1.05,
                 }}
-                className="relative group perspective-1000"
-                style={{ transformStyle: 'preserve-3d' }}
+                className="relative group"
               >
                 <div className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 transform-gpu"
                   style={{ transformStyle: 'preserve-3d' }}

@@ -139,5 +139,6 @@ export const de: Translations = {
     company: 'Unternehmen',
     legal: 'Rechtliches',
     rights: 'Alle Rechte vorbehalten.',
+    trademark: 'DevOps® Plattform ist ein eingetragenes Produkt/Marke von DevOps Ltd. Şti.',
   },
 };

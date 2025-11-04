@@ -37,9 +37,10 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
+              className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors flex items-center gap-1"
             >
-              DevOps<span className="text-secondary-900">.com.tr</span>
+              <span>DevOps</span>
+              <span className="text-xs align-super">®</span>
             </button>
           </div>
 

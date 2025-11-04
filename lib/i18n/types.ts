@@ -139,5 +139,6 @@ export interface Translations {
     company: string;
     legal: string;
     rights: string;
+    trademark: string;
   };
 }

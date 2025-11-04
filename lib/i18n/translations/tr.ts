@@ -139,5 +139,6 @@ export const tr: Translations = {
     company: 'Şirket',
     legal: 'Yasal',
     rights: 'Tüm hakları saklıdır.',
+    trademark: 'DevOps® platformu DevOps Ltd. Şti.\'nın tescilli ürün/markasıdır.',
   },
 };

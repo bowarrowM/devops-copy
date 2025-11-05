@@ -126,6 +126,12 @@ export const tr: Translations = {
       service: 'İlgilendiğiniz Hizmet',
       message: 'Mesajınız',
       submit: 'Gönder',
+      submitting: 'Gönderiliyor...',
+      selectPlaceholder: 'Seçiniz...',
+      consent: 'KVKK Aydınlatma Metni\'ni okudum, verilerimin işlenmesini kabul ediyorum.',
+      consentRequired: 'Devam etmek için onay vermelisiniz',
+      success: 'Mesajınız başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.',
+      error: 'Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan e-posta ile iletişime geçin.',
     },
     info: {
       address: 'İstanbul, Türkiye',

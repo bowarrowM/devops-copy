@@ -126,6 +126,12 @@ export const en: Translations = {
       service: 'Service Interest',
       message: 'Your Message',
       submit: 'Submit',
+      submitting: 'Submitting...',
+      selectPlaceholder: 'Select...',
+      consent: 'I have read the Privacy Policy and consent to the processing of my data.',
+      consentRequired: 'You must provide consent to continue',
+      success: 'Your message has been sent successfully! We will contact you shortly.',
+      error: 'An error occurred. Please try again or contact us directly via email.',
     },
     info: {
       address: 'Istanbul, Turkey',

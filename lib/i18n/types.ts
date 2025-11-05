@@ -126,6 +126,12 @@ export interface Translations {
       service: string;
       message: string;
       submit: string;
+      submitting: string;
+      selectPlaceholder: string;
+      consent: string;
+      consentRequired: string;
+      success: string;
+      error: string;
     };
     info: {
       address: string;

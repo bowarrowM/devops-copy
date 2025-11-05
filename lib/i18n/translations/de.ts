@@ -126,6 +126,12 @@ export const de: Translations = {
       service: 'Service-Interesse',
       message: 'Ihre Nachricht',
       submit: 'Absenden',
+      submitting: 'Wird gesendet...',
+      selectPlaceholder: 'Auswählen...',
+      consent: 'Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zu.',
+      consentRequired: 'Sie müssen Ihre Zustimmung geben, um fortzufahren',
+      success: 'Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.',
+      error: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.',
     },
     info: {
       address: 'Istanbul, Türkei',

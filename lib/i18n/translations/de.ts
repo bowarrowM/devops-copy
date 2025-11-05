@@ -9,11 +9,11 @@ export const de: Translations = {
     getStarted: 'Jetzt starten',
   },
   hero: {
-    title: 'Platform Engineering & GitOps Beratung',
+    title: 'DevOps Beratung & Platform Engineering',
     subtitle: 'Entwickler sollen Code schreiben, nicht Infrastruktur verwalten. Self-Service-Plattformen, automatisierte Deployments und sofortiger Rollback mit GitOps und Platform Engineering. Internal Developer Platforms (IDP) auf AWS, Azure, GCP aufbauen und Teamproduktivität mit AI-Workflows, LLMOps und Cloud-Native-Architekturen steigern.',
     cta: 'Kostenlose Beratung',
     ctaSecondary: 'Services erkunden',
-    badge: 'Platform Engineering & GitOps Experten',
+    badge: 'DevOps & Platform Engineering Experten',
   },
   services: {
     title: 'Unsere Dienstleistungen',

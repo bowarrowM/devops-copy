@@ -202,4 +202,26 @@ export interface Translations {
     rights: string;
     trademark: string;
   };
+  legal: {
+    privacy: {
+      title: string;
+      lastUpdated: string;
+      introduction: string;
+    };
+    terms: {
+      title: string;
+      lastUpdated: string;
+      introduction: string;
+    };
+    kvkk: {
+      title: string;
+      lastUpdated: string;
+      introduction: string;
+    };
+    cookies: {
+      title: string;
+      lastUpdated: string;
+      introduction: string;
+    };
+  };
 }

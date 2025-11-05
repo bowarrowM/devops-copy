@@ -202,4 +202,26 @@ export const tr: Translations = {
     rights: 'Tüm hakları saklıdır.',
     trademark: 'DevOps® platformu DevOps Ltd. Şti.\'nın tescilli ürün/markasıdır.',
   },
+  legal: {
+    privacy: {
+      title: 'Gizlilik Politikası',
+      lastUpdated: 'Son Güncelleme',
+      introduction: 'DevOps Ltd. Şti. olarak, kişisel verilerinizin güvenliği bizim için önceliklidir. Bu gizlilik politikası, topladığımız bilgileri, nasıl kullandığımızı ve haklarınızı açıklar.',
+    },
+    terms: {
+      title: 'Kullanım Koşulları',
+      lastUpdated: 'Son Güncelleme',
+      introduction: 'DevOps.com.tr web sitesini kullanarak aşağıdaki şartları ve koşulları kabul etmiş olursunuz.',
+    },
+    kvkk: {
+      title: 'KVKK Aydınlatma Metni',
+      lastUpdated: 'Son Güncelleme',
+      introduction: '6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla DevOps Ltd. Şti. olarak kişisel verilerinizin işlenmesine ilişkin sizi bilgilendirmek isteriz.',
+    },
+    cookies: {
+      title: 'Çerez Politikası',
+      lastUpdated: 'Son Güncelleme',
+      introduction: 'Web sitemizde çerezler kullanarak deneyiminizi geliştirmek ve hizmetlerimizi optimize etmek için veri topluyoruz.',
+    },
+  },
 };

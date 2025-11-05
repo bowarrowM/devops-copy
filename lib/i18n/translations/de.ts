@@ -202,4 +202,26 @@ export const de: Translations = {
     rights: 'Alle Rechte vorbehalten.',
     trademark: 'DevOps® Plattform ist ein eingetragenes Produkt/Marke von DevOps Ltd. Şti.',
   },
+  legal: {
+    privacy: {
+      title: 'Datenschutzerklärung',
+      lastUpdated: 'Zuletzt aktualisiert',
+      introduction: 'Als DevOps Ltd. Şti. hat Ihre Datensicherheit für uns Priorität. Diese Datenschutzerklärung erläutert die Informationen, die wir sammeln, wie wir sie verwenden und Ihre Rechte.',
+    },
+    terms: {
+      title: 'Nutzungsbedingungen',
+      lastUpdated: 'Zuletzt aktualisiert',
+      introduction: 'Durch die Nutzung der Website DevOps.com.tr stimmen Sie den folgenden Geschäftsbedingungen zu.',
+    },
+    kvkk: {
+      title: 'Datenschutzhinweis',
+      lastUpdated: 'Zuletzt aktualisiert',
+      introduction: 'Gemäß dem Gesetz Nr. 6698 zum Schutz personenbezogener Daten („KVKK") möchten wir Sie als Datenverantwortlicher DevOps Ltd. Şti. über die Verarbeitung Ihrer personenbezogenen Daten informieren.',
+    },
+    cookies: {
+      title: 'Cookie-Richtlinie',
+      lastUpdated: 'Zuletzt aktualisiert',
+      introduction: 'Wir verwenden Cookies auf unserer Website, um Ihre Erfahrung zu verbessern und unsere Dienste durch Datenerfassung zu optimieren.',
+    },
+  },
 };

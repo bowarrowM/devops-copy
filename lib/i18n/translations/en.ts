@@ -202,4 +202,26 @@ export const en: Translations = {
     rights: 'All rights reserved.',
     trademark: 'DevOps® platform is a registered product/trademark of DevOps Ltd. Şti.',
   },
+  legal: {
+    privacy: {
+      title: 'Privacy Policy',
+      lastUpdated: 'Last Updated',
+      introduction: 'As DevOps Ltd. Şti., your data security is our priority. This privacy policy explains the information we collect, how we use it, and your rights.',
+    },
+    terms: {
+      title: 'Terms of Service',
+      lastUpdated: 'Last Updated',
+      introduction: 'By using the DevOps.com.tr website, you agree to the following terms and conditions.',
+    },
+    kvkk: {
+      title: 'Data Protection Notice',
+      lastUpdated: 'Last Updated',
+      introduction: 'In accordance with Law No. 6698 on Protection of Personal Data ("KVKK"), we would like to inform you about the processing of your personal data as the data controller, DevOps Ltd. Şti.',
+    },
+    cookies: {
+      title: 'Cookie Policy',
+      lastUpdated: 'Last Updated',
+      introduction: 'We use cookies on our website to enhance your experience and optimize our services by collecting data.',
+    },
+  },
 };

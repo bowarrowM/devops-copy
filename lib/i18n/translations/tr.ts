@@ -81,7 +81,7 @@ export const tr: Translations = {
     learnMore: 'Detayları Gör',
   },
   about: {
-    title: 'Neden DevOps.com.tr?',
+    title: 'Neden DevOps?',
     subtitle: 'İşletmenizin bulut ve DevOps dönüşümünde güvenilir danışmanınız',
     advantages: {
       bilingual: {
@@ -255,7 +255,7 @@ export const tr: Translations = {
     terms: {
       title: 'Kullanım Koşulları',
       lastUpdated: 'Son Güncelleme',
-      introduction: 'DevOps.com.tr web sitesini kullanarak aşağıdaki şartları ve koşulları kabul etmiş olursunuz.',
+      introduction: 'DevOps web sitesini kullanarak aşağıdaki şartları ve koşulları kabul etmiş olursunuz.',
     },
     kvkk: {
       title: 'KVKK Aydınlatma Metni',

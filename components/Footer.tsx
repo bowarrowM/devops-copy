@@ -100,7 +100,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <div className="flex flex-col gap-2">
               <p className="text-secondary-400 text-sm">
-                © {new Date().getFullYear()} DevOps.com.tr. {t.footer.rights}
+                © {new Date().getFullYear()} DevOps. {t.footer.rights}
               </p>
               <p className="text-secondary-500 text-xs">
                 {t.footer.trademark}

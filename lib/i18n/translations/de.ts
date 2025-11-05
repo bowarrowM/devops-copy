@@ -81,7 +81,7 @@ export const de: Translations = {
     learnMore: 'Mehr erfahren',
   },
   about: {
-    title: 'Warum DevOps.com.tr?',
+    title: 'Warum DevOps?',
     subtitle: 'Ihr vertrauenswürdiger Berater für Cloud- und DevOps-Transformation',
     advantages: {
       bilingual: {
@@ -255,7 +255,7 @@ export const de: Translations = {
     terms: {
       title: 'Nutzungsbedingungen',
       lastUpdated: 'Zuletzt aktualisiert',
-      introduction: 'Durch die Nutzung der Website DevOps.com.tr stimmen Sie den folgenden Geschäftsbedingungen zu.',
+      introduction: 'Durch die Nutzung der Website DevOps stimmen Sie den folgenden Geschäftsbedingungen zu.',
     },
     kvkk: {
       title: 'Datenschutzhinweis',

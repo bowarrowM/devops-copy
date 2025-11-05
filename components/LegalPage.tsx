@@ -176,7 +176,7 @@ function TermsContent({ locale }: { locale: string }) {
     return (
       <>
         <h2>1. Hizmet Kullanımı</h2>
-        <p>DevOps.com.tr web sitesini yasal amaçlar için kullanmayı kabul edersiniz.</p>
+        <p>DevOps web sitesini yasal amaçlar için kullanmayı kabul edersiniz.</p>
 
         <h2>2. Fikri Mülkiyet</h2>
         <p>Web sitesindeki tüm içerik DevOps Ltd. Şti.'nin mülkiyetindedir ve telif hakkı yasaları ile korunmaktadır.</p>
@@ -192,7 +192,7 @@ function TermsContent({ locale }: { locale: string }) {
     return (
       <>
         <h2>1. Nutzung des Dienstes</h2>
-        <p>Sie stimmen zu, die Website DevOps.com.tr für rechtmäßige Zwecke zu nutzen.</p>
+        <p>Sie stimmen zu, die Website DevOps für rechtmäßige Zwecke zu nutzen.</p>
 
         <h2>2. Geistiges Eigentum</h2>
         <p>Alle Inhalte auf der Website sind Eigentum von DevOps Ltd. Şti. und durch Urheberrechtsgesetze geschützt.</p>
@@ -208,7 +208,7 @@ function TermsContent({ locale }: { locale: string }) {
     return (
       <>
         <h2>1. Service Usage</h2>
-        <p>You agree to use the DevOps.com.tr website for lawful purposes.</p>
+        <p>You agree to use the DevOps website for lawful purposes.</p>
 
         <h2>2. Intellectual Property</h2>
         <p>All content on the website is the property of DevOps Ltd. Şti. and is protected by copyright laws.</p>

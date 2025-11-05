@@ -81,7 +81,7 @@ export const en: Translations = {
     learnMore: 'Learn More',
   },
   about: {
-    title: 'Why DevOps.com.tr?',
+    title: 'Why DevOps?',
     subtitle: 'Your trusted consultant for cloud and DevOps transformation',
     advantages: {
       bilingual: {
@@ -255,7 +255,7 @@ export const en: Translations = {
     terms: {
       title: 'Terms of Service',
       lastUpdated: 'Last Updated',
-      introduction: 'By using the DevOps.com.tr website, you agree to the following terms and conditions.',
+      introduction: 'By using the DevOps website, you agree to the following terms and conditions.',
     },
     kvkk: {
       title: 'Data Protection Notice',

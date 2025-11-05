@@ -239,7 +239,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                Projeniz için özel bir çözüm mü arıyorsunuz?
+                {t.servicesCta.title}
               </motion.h3>
               <motion.p
                 className="text-xl text-blue-100/80 mb-10 max-w-2xl mx-auto leading-relaxed"
@@ -248,7 +248,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                Uzman ekibimiz, işletmenizin benzersiz ihtiyaçlarına özel DevOps stratejileri geliştirmek için hazır.
+                {t.servicesCta.description}
               </motion.p>
               <motion.button
                 onClick={() => {
@@ -263,7 +263,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                <span className="relative z-10">Ücretsiz Danışın</span>
+                <span className="relative z-10">{t.servicesCta.button}</span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50"
                   initial={{ x: '-100%' }}

@@ -115,6 +115,61 @@ export const en: Translations = {
     clients: 'Happy Clients',
     success: 'Success Rate',
   },
+  whyChooseUs: {
+    title: 'Why Choose DevOps?',
+    subtitle: 'Accelerate your digital transformation with Turkey\'s most experienced DevOps team',
+    benefits: {
+      fastResult: {
+        title: 'Fast Results',
+        description: 'See concrete improvements within the first 30 days',
+        stat: '2-4 Weeks',
+      },
+      costOptimization: {
+        title: 'Cost Optimization',
+        description: 'We reduce your cloud costs by an average of 40%',
+        stat: '30-50%',
+      },
+      security: {
+        title: 'Security & Compliance',
+        description: 'GDPR, ISO 27001 compliant solutions',
+        stat: '100%',
+      },
+      fasterDeploy: {
+        title: 'Faster Deployment',
+        description: 'Increase deployment frequency by 10x',
+        stat: '10x',
+      },
+      support: {
+        title: '24/7 Support',
+        description: 'Technical support and monitoring in multiple languages',
+        stat: '24/7',
+      },
+      provenSuccess: {
+        title: 'Proven Success',
+        description: '50+ successful project portfolio',
+        stat: '99%',
+      },
+    },
+    trustBar: {
+      awsPartner: {
+        badge: '🏆 AWS Partner',
+        description: 'Certified AWS solution partner',
+      },
+      iso: {
+        badge: '🔒 ISO 27001',
+        description: 'International security standard',
+      },
+      kvkk: {
+        badge: '✓ GDPR Compliant',
+        description: 'Full compliance with data protection regulations',
+      },
+    },
+  },
+  servicesCta: {
+    title: 'Looking for a custom solution for your project?',
+    description: 'Our expert team is ready to develop tailored DevOps strategies for your business\'s unique needs.',
+    button: 'Get Free Consultation',
+  },
   contact: {
     title: 'Get Started Today',
     subtitle: 'Get free consultation for your DevOps transformation',

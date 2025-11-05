@@ -115,6 +115,61 @@ export const de: Translations = {
     clients: 'Zufriedene Kunden',
     success: 'Erfolgsquote',
   },
+  whyChooseUs: {
+    title: 'Warum DevOps?',
+    subtitle: 'Beschleunigen Sie Ihre digitale Transformation mit Türkeis erfahrenem DevOps-Team',
+    benefits: {
+      fastResult: {
+        title: 'Schnelle Ergebnisse',
+        description: 'Sehen Sie konkrete Verbesserungen innerhalb der ersten 30 Tage',
+        stat: '2-4 Wochen',
+      },
+      costOptimization: {
+        title: 'Kostenoptimierung',
+        description: 'Wir reduzieren Ihre Cloud-Kosten durchschnittlich um 40%',
+        stat: '30-50%',
+      },
+      security: {
+        title: 'Sicherheit & Compliance',
+        description: 'DSGVO, ISO 27001-konforme Lösungen',
+        stat: '100%',
+      },
+      fasterDeploy: {
+        title: 'Schnellere Bereitstellung',
+        description: 'Erhöhen Sie die Bereitstellungsfrequenz um das 10-fache',
+        stat: '10x',
+      },
+      support: {
+        title: '24/7 Support',
+        description: 'Technischer Support und Monitoring in mehreren Sprachen',
+        stat: '24/7',
+      },
+      provenSuccess: {
+        title: 'Bewährter Erfolg',
+        description: '50+ erfolgreiches Projekt-Portfolio',
+        stat: '99%',
+      },
+    },
+    trustBar: {
+      awsPartner: {
+        badge: '🏆 AWS Partner',
+        description: 'Zertifizierter AWS-Lösungspartner',
+      },
+      iso: {
+        badge: '🔒 ISO 27001',
+        description: 'Internationaler Sicherheitsstandard',
+      },
+      kvkk: {
+        badge: '✓ DSGVO-konform',
+        description: 'Vollständige Einhaltung der Datenschutzbestimmungen',
+      },
+    },
+  },
+  servicesCta: {
+    title: 'Suchen Sie eine maßgeschneiderte Lösung für Ihr Projekt?',
+    description: 'Unser Expertenteam ist bereit, maßgeschneiderte DevOps-Strategien für die individuellen Bedürfnisse Ihres Unternehmens zu entwickeln.',
+    button: 'Kostenlose Beratung erhalten',
+  },
   contact: {
     title: 'Jetzt starten',
     subtitle: 'Erhalten Sie kostenlose Beratung für Ihre DevOps-Transformation',

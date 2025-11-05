@@ -115,6 +115,61 @@ export const tr: Translations = {
     clients: 'Mutlu Müşteri',
     success: 'Başarı Oranı',
   },
+  whyChooseUs: {
+    title: 'Neden DevOps?',
+    subtitle: 'Türkiye\'nin en deneyimli DevOps ekibi ile dijital dönüşümünüzü hızlandırın',
+    benefits: {
+      fastResult: {
+        title: 'Hızlı Sonuç',
+        description: 'İlk 30 günde somut iyileştirmeler görün',
+        stat: '2-4 Hafta',
+      },
+      costOptimization: {
+        title: 'Maliyet Optimizasyonu',
+        description: 'Bulut maliyetlerinizi ortalama %40 azaltıyoruz',
+        stat: '%30-50',
+      },
+      security: {
+        title: 'Güvenlik & Compliance',
+        description: 'KVKK, ISO 27001 uyumlu çözümler',
+        stat: '100%',
+      },
+      fasterDeploy: {
+        title: 'Daha Hızlı Deploy',
+        description: 'Deploy sıklığını 10x artırın',
+        stat: '10x',
+      },
+      support: {
+        title: '7/24 Destek',
+        description: 'Türkçe teknik destek ve monitoring',
+        stat: '24/7',
+      },
+      provenSuccess: {
+        title: 'Kanıtlanmış Başarı',
+        description: '50+ başarılı proje portföyü',
+        stat: '%99',
+      },
+    },
+    trustBar: {
+      awsPartner: {
+        badge: '🏆 AWS Partner',
+        description: 'Sertifikalı AWS çözüm ortağı',
+      },
+      iso: {
+        badge: '🔒 ISO 27001',
+        description: 'Uluslararası güvenlik standardı',
+      },
+      kvkk: {
+        badge: '✓ KVKK Uyumlu',
+        description: 'Veri koruma kanununa tam uyum',
+      },
+    },
+  },
+  servicesCta: {
+    title: 'Projeniz için özel bir çözüm mü arıyorsunuz?',
+    description: 'Uzman ekibimiz, işletmenizin benzersiz ihtiyaçlarına özel DevOps stratejileri geliştirmek için hazır.',
+    button: 'Ücretsiz Danışın',
+  },
   contact: {
     title: 'Hemen Başlayın',
     subtitle: 'DevOps dönüşümünüz için ücretsiz danışmanlık alın',

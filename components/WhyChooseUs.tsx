@@ -1,61 +1,52 @@
 'use client';
 
+import { useLanguage } from '@/lib/context/LanguageContext';
 import { FaClock, FaDollarSign, FaShieldAlt, FaRocket, FaHeadset, FaAward } from 'react-icons/fa';
 
 export default function WhyChooseUs() {
+  const { t } = useLanguage();
+
   const benefits = [
     {
       icon: FaClock,
-      title: 'Hızlı Sonuç',
-      description: 'İlk 30 günde somut iyileştirmeler görün',
-      stat: '2-4 Hafta',
+      key: 'fastResult',
       gradient: 'from-blue-500 to-cyan-600'
     },
     {
       icon: FaDollarSign,
-      title: 'Maliyet Optimizasyonu',
-      description: 'Bulut maliyetlerinizi ortalama %40 azaltıyoruz',
-      stat: '%30-50',
+      key: 'costOptimization',
       gradient: 'from-green-500 to-emerald-600'
     },
     {
       icon: FaShieldAlt,
-      title: 'Güvenlik & Compliance',
-      description: 'KVKK, ISO 27001 uyumlu çözümler',
-      stat: '100%',
+      key: 'security',
       gradient: 'from-red-500 to-orange-600'
     },
     {
       icon: FaRocket,
-      title: 'Daha Hızlı Deploy',
-      description: 'Deploy sıklığını 10x artırın',
-      stat: '10x',
+      key: 'fasterDeploy',
       gradient: 'from-purple-500 to-pink-600'
     },
     {
       icon: FaHeadset,
-      title: '7/24 Destek',
-      description: 'Türkçe teknik destek ve monitoring',
-      stat: '24/7',
+      key: 'support',
       gradient: 'from-indigo-500 to-blue-600'
     },
     {
       icon: FaAward,
-      title: 'Kanıtlanmış Başarı',
-      description: '50+ başarılı proje portföyü',
-      stat: '%99',
+      key: 'provenSuccess',
       gradient: 'from-yellow-500 to-orange-600'
     },
-  ];
+  ] as const;
 
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="heading-2 mb-6">Neden DevOps?</h2>
+          <h2 className="heading-2 mb-6">{t.whyChooseUs.title}</h2>
           <p className="text-lg text-secondary-600 leading-relaxed">
-            Türkiye'nin en deneyimli DevOps ekibi ile dijital dönüşümünüzü hızlandırın
+            {t.whyChooseUs.subtitle}
           </p>
         </div>
 
@@ -63,9 +54,10 @@ export default function WhyChooseUs() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
+            const benefitData = t.whyChooseUs.benefits[benefit.key];
             return (
               <div
-                key={index}
+                key={benefit.key}
                 className="relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all p-8 border border-secondary-100 hover:border-primary-200 group overflow-hidden"
                 style={{
                   animation: 'fadeInUp 0.5s ease-out forwards',
@@ -83,17 +75,17 @@ export default function WhyChooseUs() {
                   </div>
                   <div className="text-right">
                     <div className={`text-3xl font-bold bg-gradient-to-r ${benefit.gradient} bg-clip-text text-transparent`}>
-                      {benefit.stat}
+                      {benefitData.stat}
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
                 <h3 className="text-xl font-bold text-secondary-900 mb-3">
-                  {benefit.title}
+                  {benefitData.title}
                 </h3>
                 <p className="text-secondary-600 leading-relaxed">
-                  {benefit.description}
+                  {benefitData.description}
                 </p>
               </div>
             );
@@ -104,16 +96,16 @@ export default function WhyChooseUs() {
         <div className="mt-16 pt-16 border-t border-secondary-100">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-primary-600 font-semibold mb-2">🏆 AWS Partner</div>
-              <p className="text-sm text-secondary-600">Sertifikalı AWS çözüm ortağı</p>
+              <div className="text-primary-600 font-semibold mb-2">{t.whyChooseUs.trustBar.awsPartner.badge}</div>
+              <p className="text-sm text-secondary-600">{t.whyChooseUs.trustBar.awsPartner.description}</p>
             </div>
             <div>
-              <div className="text-primary-600 font-semibold mb-2">🔒 ISO 27001</div>
-              <p className="text-sm text-secondary-600">Uluslararası güvenlik standardı</p>
+              <div className="text-primary-600 font-semibold mb-2">{t.whyChooseUs.trustBar.iso.badge}</div>
+              <p className="text-sm text-secondary-600">{t.whyChooseUs.trustBar.iso.description}</p>
             </div>
             <div>
-              <div className="text-primary-600 font-semibold mb-2">✓ KVKK Uyumlu</div>
-              <p className="text-sm text-secondary-600">Veri koruma kanununa tam uyum</p>
+              <div className="text-primary-600 font-semibold mb-2">{t.whyChooseUs.trustBar.kvkk.badge}</div>
+              <p className="text-sm text-secondary-600">{t.whyChooseUs.trustBar.kvkk.description}</p>
             </div>
           </div>
         </div>

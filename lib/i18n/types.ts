@@ -115,6 +115,61 @@ export interface Translations {
     clients: string;
     success: string;
   };
+  whyChooseUs: {
+    title: string;
+    subtitle: string;
+    benefits: {
+      fastResult: {
+        title: string;
+        description: string;
+        stat: string;
+      };
+      costOptimization: {
+        title: string;
+        description: string;
+        stat: string;
+      };
+      security: {
+        title: string;
+        description: string;
+        stat: string;
+      };
+      fasterDeploy: {
+        title: string;
+        description: string;
+        stat: string;
+      };
+      support: {
+        title: string;
+        description: string;
+        stat: string;
+      };
+      provenSuccess: {
+        title: string;
+        description: string;
+        stat: string;
+      };
+    };
+    trustBar: {
+      awsPartner: {
+        badge: string;
+        description: string;
+      };
+      iso: {
+        badge: string;
+        description: string;
+      };
+      kvkk: {
+        badge: string;
+        description: string;
+      };
+    };
+  };
+  servicesCta: {
+    title: string;
+    description: string;
+    button: string;
+  };
   contact: {
     title: string;
     subtitle: string;

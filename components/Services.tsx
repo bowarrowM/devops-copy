@@ -188,7 +188,7 @@ export default function Services() {
                         whileHover={{ x: 5 }}
                       >
                         <button className={`bg-gradient-to-r ${selectedTierData?.gradient} bg-clip-text text-transparent font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all`}>
-                          Detayları Gör
+                          {t.services.learnMore}
                           <motion.svg
                             className="w-4 h-4"
                             fill="none"

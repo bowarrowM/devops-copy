@@ -78,6 +78,7 @@ export const en: Translations = {
         description: '24/7 monitoring, incident response, and full DevOps team support.',
       },
     },
+    learnMore: 'Learn More',
   },
   about: {
     title: 'Why DevOps.com.tr?',
@@ -201,6 +202,49 @@ export const en: Translations = {
     legal: 'Legal',
     rights: 'All rights reserved.',
     trademark: 'DevOps® platform is a registered product/trademark of DevOps Ltd. Şti.',
+    blog: 'Blog',
+    career: 'Careers',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
+    kvkkPolicy: 'Data Protection',
+    cookiePolicy: 'Cookie Policy',
+    madeWithLove: 'Made with ❤️ in Turkey',
+  },
+  testimonials: {
+    title: 'What Our Clients Say',
+    subtitle: 'Leading Turkish companies choose us for their DevOps transformation',
+    cta: 'Ready to write your own success story?',
+    ctaButton: 'Get Free Consultation',
+    items: [
+      {
+        name: 'Mehmet Yılmaz',
+        position: 'CTO',
+        company: 'TechStartup Inc.',
+        content: 'Thanks to the DevOps team, we reduced our deployment time from 2 hours to 15 minutes. Our Kubernetes migration was completed smoothly and now we can deploy 10+ times per day.',
+        rating: 5,
+        result: '87% Faster Deployment'
+      },
+      {
+        name: 'Ayşe Demir',
+        position: 'Software Director',
+        company: 'E-Commerce Ltd.',
+        content: 'With CI/CD pipeline setup and AWS optimization, our costs dropped by 40% and system reliability increased. Their professional approach and continuous support are invaluable.',
+        rating: 5,
+        result: '40% Cost Savings'
+      },
+      {
+        name: 'Can Öztürk',
+        position: 'DevOps Lead',
+        company: 'FinTech Company',
+        content: 'We received expert support on DevSecOps integration. Thanks to GDPR compliance and security scanning automation, we transitioned to both compliant and fast development process.',
+        rating: 5,
+        result: '100% Compliance'
+      },
+    ],
+  },
+  common: {
+    backToHome: 'Back to Home',
+    contactCta: 'Have questions? Contact us at {email}.',
   },
   legal: {
     privacy: {

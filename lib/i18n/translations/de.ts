@@ -78,6 +78,7 @@ export const de: Translations = {
         description: '24/7 Überwachung, Incident Response und vollständiger DevOps-Team-Support.',
       },
     },
+    learnMore: 'Mehr erfahren',
   },
   about: {
     title: 'Warum DevOps.com.tr?',
@@ -201,6 +202,49 @@ export const de: Translations = {
     legal: 'Rechtliches',
     rights: 'Alle Rechte vorbehalten.',
     trademark: 'DevOps® Plattform ist ein eingetragenes Produkt/Marke von DevOps Ltd. Şti.',
+    blog: 'Blog',
+    career: 'Karriere',
+    privacyPolicy: 'Datenschutzerklärung',
+    termsOfService: 'Nutzungsbedingungen',
+    kvkkPolicy: 'Datenschutzhinweis',
+    cookiePolicy: 'Cookie-Richtlinie',
+    madeWithLove: 'Mit ❤️ in der Türkei gemacht',
+  },
+  testimonials: {
+    title: 'Was unsere Kunden sagen',
+    subtitle: 'Führende türkische Unternehmen wählen uns für ihre DevOps-Transformation',
+    cta: 'Sind Sie bereit, Ihre eigene Erfolgsgeschichte zu schreiben?',
+    ctaButton: 'Kostenlose Beratung erhalten',
+    items: [
+      {
+        name: 'Mehmet Yılmaz',
+        position: 'CTO',
+        company: 'TechStartup GmbH',
+        content: 'Dank des DevOps-Teams haben wir unsere Bereitstellungszeit von 2 Stunden auf 15 Minuten reduziert. Unsere Kubernetes-Migration wurde reibungslos abgeschlossen und jetzt können wir über 10 Mal pro Tag bereitstellen.',
+        rating: 5,
+        result: '87% schnellere Bereitstellung'
+      },
+      {
+        name: 'Ayşe Demir',
+        position: 'Softwaredirektorin',
+        company: 'E-Commerce GmbH',
+        content: 'Mit CI/CD-Pipeline-Setup und AWS-Optimierung sanken unsere Kosten um 40% und die Systemzuverlässigkeit stieg. Ihr professioneller Ansatz und die kontinuierliche Unterstützung sind von unschätzbarem Wert.',
+        rating: 5,
+        result: '40% Kosteneinsparung'
+      },
+      {
+        name: 'Can Öztürk',
+        position: 'DevOps Lead',
+        company: 'FinTech-Unternehmen',
+        content: 'Wir erhielten Expertenunterstützung bei der DevSecOps-Integration. Dank DSGVO-Konformität und Sicherheitsscanning-Automatisierung sind wir auf einen konformen und schnellen Entwicklungsprozess umgestiegen.',
+        rating: 5,
+        result: '100% Compliance'
+      },
+    ],
+  },
+  common: {
+    backToHome: 'Zurück zur Startseite',
+    contactCta: 'Haben Sie Fragen? Kontaktieren Sie uns unter {email}.',
   },
   legal: {
     privacy: {

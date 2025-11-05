@@ -31,7 +31,7 @@ export default function LegalPage({ type }: LegalPageProps) {
           className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium mb-8 transition-colors"
         >
           <FaArrowLeft />
-          <span>{locale === 'tr' ? 'Ana Sayfaya Dön' : locale === 'de' ? 'Zurück zur Startseite' : 'Back to Home'}</span>
+          <span>{t.common.backToHome}</span>
         </Link>
 
         {/* Page Header */}
@@ -61,13 +61,9 @@ export default function LegalPage({ type }: LegalPageProps) {
           {/* Contact CTA */}
           <div className="mt-12 p-6 bg-primary-50 rounded-xl border border-primary-200">
             <p className="text-secondary-700">
-              {locale === 'tr' ? (
-                <>Sorularınız mı var? <a href="mailto:info@devops.com.tr" className="text-primary-600 hover:text-primary-700 font-semibold">info@devops.com.tr</a> adresinden bize ulaşın.</>
-              ) : locale === 'de' ? (
-                <>Haben Sie Fragen? Kontaktieren Sie uns unter <a href="mailto:info@devops.com.tr" className="text-primary-600 hover:text-primary-700 font-semibold">info@devops.com.tr</a></>
-              ) : (
-                <>Have questions? Contact us at <a href="mailto:info@devops.com.tr" className="text-primary-600 hover:text-primary-700 font-semibold">info@devops.com.tr</a></>
-              )}
+              {t.common.contactCta.replace('{email}', '')}
+              <a href="mailto:info@devops.com.tr" className="text-primary-600 hover:text-primary-700 font-semibold">info@devops.com.tr</a>
+              {locale === 'tr' ? '.' : ''}
             </p>
           </div>
         </div>

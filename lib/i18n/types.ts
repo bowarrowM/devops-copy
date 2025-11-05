@@ -78,6 +78,7 @@ export interface Translations {
         description: string;
       };
     };
+    learnMore: string;
   };
   about: {
     title: string;
@@ -201,6 +202,31 @@ export interface Translations {
     legal: string;
     rights: string;
     trademark: string;
+    blog: string;
+    career: string;
+    privacyPolicy: string;
+    termsOfService: string;
+    kvkkPolicy: string;
+    cookiePolicy: string;
+    madeWithLove: string;
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    ctaButton: string;
+    items: Array<{
+      name: string;
+      position: string;
+      company: string;
+      content: string;
+      rating: number;
+      result: string;
+    }>;
+  };
+  common: {
+    backToHome: string;
+    contactCta: string;
   };
   legal: {
     privacy: {

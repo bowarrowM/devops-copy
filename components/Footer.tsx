@@ -63,11 +63,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">{t.footer.services}</h4>
             <ul className="space-y-2 text-secondary-400">
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">CI/CD Pipeline</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">Cloud Migration</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">Kubernetes</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">DevSecOps</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">Platform Engineering</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.cicd.title}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.cloudMigration.title}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.kubernetes.title}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.devsecops.title}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.platform.title}</button></li>
             </ul>
           </div>
 
@@ -78,8 +78,8 @@ export default function Footer() {
               <li><button onClick={() => scrollToSection('about')} className="hover:text-primary-400 transition-colors">{t.nav.about}</button></li>
               <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.nav.services}</button></li>
               <li><button onClick={() => scrollToSection('contact')} className="hover:text-primary-400 transition-colors">{t.nav.contact}</button></li>
-              <li><a href="/blog" className="hover:text-primary-400 transition-colors">Blog</a></li>
-              <li><a href="/career" className="hover:text-primary-400 transition-colors">Kariyer</a></li>
+              <li><a href="/blog" className="hover:text-primary-400 transition-colors">{t.footer.blog}</a></li>
+              <li><a href="/career" className="hover:text-primary-400 transition-colors">{t.footer.career}</a></li>
             </ul>
           </div>
 
@@ -87,10 +87,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">{t.footer.legal}</h4>
             <ul className="space-y-2 text-secondary-400">
-              <li><a href="/privacy" className="hover:text-primary-400 transition-colors">Gizlilik Politikası</a></li>
-              <li><a href="/terms" className="hover:text-primary-400 transition-colors">Kullanım Şartları</a></li>
-              <li><a href="/kvkk" className="hover:text-primary-400 transition-colors">KVKK</a></li>
-              <li><a href="/cookies" className="hover:text-primary-400 transition-colors">Çerez Politikası</a></li>
+              <li><a href="/privacy" className="hover:text-primary-400 transition-colors">{t.footer.privacyPolicy}</a></li>
+              <li><a href="/terms" className="hover:text-primary-400 transition-colors">{t.footer.termsOfService}</a></li>
+              <li><a href="/kvkk" className="hover:text-primary-400 transition-colors">{t.footer.kvkkPolicy}</a></li>
+              <li><a href="/cookies" className="hover:text-primary-400 transition-colors">{t.footer.cookiePolicy}</a></li>
             </ul>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-4 text-sm text-secondary-400">
-              <span>🇹🇷 Made with ❤️ in Turkey</span>
+              <span>🇹🇷 {t.footer.madeWithLove}</span>
             </div>
           </div>
         </div>

@@ -1,49 +1,25 @@
 'use client';
 
+import { useLanguage } from '@/lib/context/LanguageContext';
 import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: 'Mehmet Yılmaz',
-      position: 'CTO',
-      company: 'TechStartup A.Ş.',
-      content: 'DevOps ekibi sayesinde deployment süremizi 2 saatten 15 dakikaya indirdik. Kubernetes migrasyonumuz sorunsuz tamamlandı ve artık günde 10+ deploy yapabiliyoruz.',
-      rating: 5,
-      result: '%87 Daha Hızlı Deploy'
-    },
-    {
-      name: 'Ayşe Demir',
-      position: 'Yazılım Müdürü',
-      company: 'E-Ticaret Ltd.',
-      content: 'CI/CD pipeline kurulumu ve AWS optimizasyonu ile hem maliyetlerimiz %40 düştü hem de sistem güvenilirliği arttı. Profesyonel yaklaşımları ve sürekli destekleri çok değerli.',
-      rating: 5,
-      result: '%40 Maliyet Tasarrufu'
-    },
-    {
-      name: 'Can Öztürk',
-      position: 'DevOps Lead',
-      company: 'FinTech Şirketi',
-      content: 'DevSecOps entegrasyonu konusunda uzman desteği aldık. KVKK uyumluluğu ve güvenlik taraması otomasyonları sayesinde hem compliant hem de hızlı bir development sürecine geçtik.',
-      rating: 5,
-      result: '100% Compliance'
-    },
-  ];
+  const { t } = useLanguage();
 
   return (
     <section className="section-padding bg-gradient-to-br from-primary-50 to-secondary-50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="heading-2 mb-6">Müşterilerimiz Ne Diyor?</h2>
+          <h2 className="heading-2 mb-6">{t.testimonials.title}</h2>
           <p className="text-lg text-secondary-600 leading-relaxed">
-            Türkiye'nin önde gelen şirketleri DevOps dönüşümü için bizi tercih ediyor
+            {t.testimonials.subtitle}
           </p>
         </div>
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+          {t.testimonials.items.map((testimonial, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all p-8 border border-secondary-100 hover:border-primary-200 group"
@@ -96,7 +72,7 @@ export default function Testimonials() {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-lg text-secondary-700 mb-6">
-            Siz de başarı hikayenizi yazmak ister misiniz?
+            {t.testimonials.cta}
           </p>
           <button
             onClick={() => {
@@ -105,7 +81,7 @@ export default function Testimonials() {
             }}
             className="btn-primary text-lg px-10 py-4"
           >
-            Ücretsiz Danışmanlık Alın
+            {t.testimonials.ctaButton}
           </button>
         </div>
       </div>

@@ -10,7 +10,7 @@ export const en: Translations = {
   },
   hero: {
     title: 'Platform Engineering & GitOps Consulting',
-    subtitle: 'Deploy 40% faster, reduce infrastructure incidents by 65%. Build self-service developer platforms with GitOps and Platform Engineering on AWS, Azure, GCP. Automate AI workflows, LLMOps, and CI/CD systems.',
+    subtitle: 'Let developers write code, not manage infrastructure. Self-service platforms, automated deployments, and instant rollbacks with GitOps and Platform Engineering. Build Internal Developer Platforms (IDP) on AWS, Azure, GCP and boost team productivity with AI workflows, LLMOps, and cloud-native architectures.',
     cta: 'Free Consultation',
     ctaSecondary: 'Explore Services',
     badge: 'Platform Engineering & GitOps Experts',
@@ -117,17 +117,17 @@ export const en: Translations = {
   },
   whyChooseUs: {
     title: 'Benefits We Deliver',
-    subtitle: 'Accelerate deployments and reduce costs with Platform Engineering and GitOps',
+    subtitle: 'Free developers from operational burden and boost productivity with self-service infrastructure',
     benefits: {
       fastResult: {
-        title: '40% Faster Deployments',
-        description: 'Ship code to production faster with GitOps and automated CI/CD',
-        stat: '40%',
+        title: 'Faster Deployments',
+        description: 'Ship code to production quickly with GitOps and automated CI/CD',
+        stat: 'Fast',
       },
       costOptimization: {
-        title: '65% Fewer Incidents',
-        description: 'Minimize infrastructure errors with Platform Engineering and IaC',
-        stat: '65%',
+        title: 'Reliable Infrastructure',
+        description: 'Reduce infrastructure errors with Platform Engineering and IaC',
+        stat: 'Reliable',
       },
       security: {
         title: 'DevSecOps Integration',

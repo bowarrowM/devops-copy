@@ -10,7 +10,7 @@ export const tr: Translations = {
   },
   hero: {
     title: 'Platform Engineering & GitOps Danışmanlığı',
-    subtitle: 'Deployment sürenizi %40 kısaltın, altyapı sorunlarını %65 azaltın. AWS, Azure, GCP üzerinde GitOps ve Platform Engineering ile self-service developer platformları kuruyor, AI workflows, LLMOps ve otomatik CI/CD sistemleri sağlıyoruz.',
+    subtitle: 'Geliştiricileriniz kod yazsın, altyapı yönetmesin. GitOps ve Platform Engineering ile self-service platformlar, otomatik deploymentlar ve dakikalar içinde rollback. AWS, Azure, GCP\'de Internal Developer Platform (IDP) kuruyor, AI workflows, LLMOps ve cloud-native mimariler ile ekibinizin verimliliğini artırıyoruz.',
     cta: 'Ücretsiz Danışın',
     ctaSecondary: 'Hizmetleri Keşfedin',
     badge: 'Platform Engineering & GitOps Uzmanları',
@@ -117,17 +117,17 @@ export const tr: Translations = {
   },
   whyChooseUs: {
     title: 'Size Sağladığımız Faydalar',
-    subtitle: 'Platform Engineering ve GitOps ile deployment hızınızı artırın, maliyetleri düşürün',
+    subtitle: 'Geliştiricilerinizi operasyonel yükten kurtarın, self-service altyapı ile verimliliklerini artırın',
     benefits: {
       fastResult: {
-        title: '%40 Daha Hızlı Deploy',
-        description: 'GitOps ve automated CI/CD ile production\'a çıkma sürenizi kısaltın',
-        stat: '%40',
+        title: 'Hızlı Deployment',
+        description: 'GitOps ve otomatik CI/CD ile üretim ortamına daha hızlı çıkın',
+        stat: 'Hızlı',
       },
       costOptimization: {
-        title: '%65 Daha Az Sorun',
-        description: 'Platform Engineering ve IaC ile altyapı hatalarını minimize edin',
-        stat: '%65',
+        title: 'Güvenilir Altyapı',
+        description: 'Platform Engineering ve IaC ile altyapı hatalarını azaltın',
+        stat: 'Güvenilir',
       },
       security: {
         title: 'DevSecOps Entegrasyonu',

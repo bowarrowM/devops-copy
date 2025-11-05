@@ -95,7 +95,7 @@ export interface Translations {
         title: string;
         description: string;
       };
-      fixedPrice: {
+      expertise: {
         title: string;
         description: string;
       };

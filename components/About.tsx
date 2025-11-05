@@ -1,7 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { FaGlobe, FaRocket, FaMicrochip, FaTag, FaCheckCircle, FaCloudscale } from 'react-icons/fa';
+import { FaGlobe, FaRocket, FaMicrochip, FaUserGraduate, FaCheckCircle, FaCloudscale } from 'react-icons/fa';
 import StatsDisplay from './StatsDisplay';
 
 export default function About() {
@@ -11,7 +11,7 @@ export default function About() {
     { key: 'bilingual', icon: FaGlobe, gradient: 'from-blue-500 to-cyan-500' },
     { key: 'startup', icon: FaRocket, gradient: 'from-purple-500 to-pink-500' },
     { key: 'modern', icon: FaMicrochip, gradient: 'from-orange-500 to-red-500' },
-    { key: 'fixedPrice', icon: FaTag, gradient: 'from-green-500 to-emerald-500' },
+    { key: 'expertise', icon: FaUserGraduate, gradient: 'from-green-500 to-emerald-500' },
     { key: 'compliance', icon: FaCheckCircle, gradient: 'from-indigo-500 to-blue-500' },
     { key: 'multiCloud', icon: FaCloudscale, gradient: 'from-pink-500 to-rose-500' },
   ];

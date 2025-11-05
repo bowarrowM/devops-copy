@@ -43,7 +43,7 @@ export const tr: Translations = {
       },
       cicd: {
         title: 'CI/CD Pipeline Kurulumu',
-        description: 'GitLab, GitHub Actions veya Jenkins ile otomatik test ve deployment süreçleri.',
+        description: 'AWS CodePipeline, Azure DevOps, GitLab CI/CD veya GitHub Actions ile otomatik test ve deployment süreçleri.',
       },
       cloudMigration: {
         title: 'Bulut Migrasyonu',
@@ -55,7 +55,7 @@ export const tr: Translations = {
       },
       iac: {
         title: 'Infrastructure as Code (IaC)',
-        description: 'Terraform, Pulumi veya CloudFormation ile altyapı otomasyonu.',
+        description: 'AWS CloudFormation, Azure ARM/Bicep, Terraform veya Pulumi ile multi-cloud altyapı otomasyonu.',
       },
       devsecops: {
         title: 'DevSecOps Entegrasyonu',
@@ -67,11 +67,11 @@ export const tr: Translations = {
       },
       aiops: {
         title: 'AIOps & Observability',
-        description: 'Prometheus, Grafana, ELK veya Datadog ile yapay zeka destekli izleme.',
+        description: 'AWS CloudWatch, Azure Monitor, Prometheus, Grafana, Datadog ile yapay zeka destekli izleme.',
       },
       finops: {
         title: 'FinOps & Maliyet Optimizasyonu',
-        description: 'Bulut harcamalarınızı analiz eder ve optimize ederiz.',
+        description: 'AWS Cost Explorer, Azure Cost Management ve GCP Billing ile bulut harcamalarınızı analiz eder ve optimize ederiz.',
       },
       managed: {
         title: 'Yönetilen DevOps Hizmetleri',
@@ -266,6 +266,28 @@ export const tr: Translations = {
       title: 'Çerez Politikası',
       lastUpdated: 'Son Güncelleme',
       introduction: 'Web sitemizde çerezler kullanarak deneyiminizi geliştirmek ve hizmetlerimizi optimize etmek için veri topluyoruz.',
+    },
+  },
+  techStack: {
+    title: 'Kurumsal Teknoloji Yığını',
+    subtitle: 'AWS, Azure ve Google Cloud platformlarında endüstri standardı araçlarla güçlendirilmiş DevOps çözümleri',
+    cloudPlatforms: {
+      title: 'Multi-Cloud Uzmanlığı',
+      description: 'AWS, Microsoft Azure ve Google Cloud Platform\'da production-ready altyapı ve DevOps çözümleri sunuyoruz',
+    },
+    categories: {
+      cicd: 'CI/CD & Otomasyon',
+      gitops: 'GitOps & Deployment',
+      container: 'Container & Orchestration',
+      iac: 'Infrastructure as Code',
+      monitoring: 'Monitoring & Observability',
+      security: 'Security & Compliance',
+    },
+    badges: {
+      cloudNative: 'Cloud Native',
+      multiCloud: 'Multi-Cloud',
+      production: 'Production Ready',
+      enterprise: 'Enterprise Grade',
     },
   },
 };

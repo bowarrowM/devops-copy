@@ -43,7 +43,7 @@ export const en: Translations = {
       },
       cicd: {
         title: 'CI/CD Pipeline Implementation',
-        description: 'Automated testing and deployment with GitLab, GitHub Actions, or Jenkins.',
+        description: 'Automated testing and deployment with AWS CodePipeline, Azure DevOps, GitLab CI/CD, or GitHub Actions.',
       },
       cloudMigration: {
         title: 'Cloud Migration',
@@ -55,7 +55,7 @@ export const en: Translations = {
       },
       iac: {
         title: 'Infrastructure as Code (IaC)',
-        description: 'Infrastructure automation with Terraform, Pulumi, or CloudFormation.',
+        description: 'Multi-cloud infrastructure automation with AWS CloudFormation, Azure ARM/Bicep, Terraform, or Pulumi.',
       },
       devsecops: {
         title: 'DevSecOps Integration',
@@ -67,11 +67,11 @@ export const en: Translations = {
       },
       aiops: {
         title: 'AIOps & Observability',
-        description: 'AI-powered monitoring with Prometheus, Grafana, ELK, or Datadog.',
+        description: 'AI-powered monitoring with AWS CloudWatch, Azure Monitor, Prometheus, Grafana, and Datadog.',
       },
       finops: {
         title: 'FinOps & Cost Optimization',
-        description: 'Analyze and optimize your cloud spending.',
+        description: 'Analyze and optimize cloud spending with AWS Cost Explorer, Azure Cost Management, and GCP Billing.',
       },
       managed: {
         title: 'Managed DevOps Services',
@@ -266,6 +266,28 @@ export const en: Translations = {
       title: 'Cookie Policy',
       lastUpdated: 'Last Updated',
       introduction: 'We use cookies on our website to enhance your experience and optimize our services by collecting data.',
+    },
+  },
+  techStack: {
+    title: 'Enterprise Technology Stack',
+    subtitle: 'DevOps solutions powered by industry-standard tools on AWS, Azure, and Google Cloud platforms',
+    cloudPlatforms: {
+      title: 'Multi-Cloud Expertise',
+      description: 'We deliver production-ready infrastructure and DevOps solutions on AWS, Microsoft Azure, and Google Cloud Platform',
+    },
+    categories: {
+      cicd: 'CI/CD & Automation',
+      gitops: 'GitOps & Deployment',
+      container: 'Container & Orchestration',
+      iac: 'Infrastructure as Code',
+      monitoring: 'Monitoring & Observability',
+      security: 'Security & Compliance',
+    },
+    badges: {
+      cloudNative: 'Cloud Native',
+      multiCloud: 'Multi-Cloud',
+      production: 'Production Ready',
+      enterprise: 'Enterprise Grade',
     },
   },
 };

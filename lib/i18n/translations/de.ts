@@ -43,7 +43,7 @@ export const de: Translations = {
       },
       cicd: {
         title: 'CI/CD Pipeline-Implementierung',
-        description: 'Automatisierte Tests und Bereitstellung mit GitLab, GitHub Actions oder Jenkins.',
+        description: 'Automatisierte Tests und Bereitstellung mit AWS CodePipeline, Azure DevOps, GitLab CI/CD oder GitHub Actions.',
       },
       cloudMigration: {
         title: 'Cloud-Migration',
@@ -55,7 +55,7 @@ export const de: Translations = {
       },
       iac: {
         title: 'Infrastructure as Code (IaC)',
-        description: 'Infrastruktur-Automatisierung mit Terraform, Pulumi oder CloudFormation.',
+        description: 'Multi-Cloud-Infrastruktur-Automatisierung mit AWS CloudFormation, Azure ARM/Bicep, Terraform oder Pulumi.',
       },
       devsecops: {
         title: 'DevSecOps-Integration',
@@ -67,11 +67,11 @@ export const de: Translations = {
       },
       aiops: {
         title: 'AIOps & Observability',
-        description: 'KI-gestütztes Monitoring mit Prometheus, Grafana, ELK oder Datadog.',
+        description: 'KI-gestütztes Monitoring mit AWS CloudWatch, Azure Monitor, Prometheus, Grafana und Datadog.',
       },
       finops: {
         title: 'FinOps & Kostenoptimierung',
-        description: 'Analysieren und optimieren Sie Ihre Cloud-Ausgaben.',
+        description: 'Analysieren und optimieren Sie Cloud-Ausgaben mit AWS Cost Explorer, Azure Cost Management und GCP Billing.',
       },
       managed: {
         title: 'Managed DevOps Services',
@@ -266,6 +266,28 @@ export const de: Translations = {
       title: 'Cookie-Richtlinie',
       lastUpdated: 'Zuletzt aktualisiert',
       introduction: 'Wir verwenden Cookies auf unserer Website, um Ihre Erfahrung zu verbessern und unsere Dienste durch Datenerfassung zu optimieren.',
+    },
+  },
+  techStack: {
+    title: 'Unternehmens-Technologie-Stack',
+    subtitle: 'DevOps-Lösungen auf AWS, Azure und Google Cloud Plattformen mit branchenüblichen Tools',
+    cloudPlatforms: {
+      title: 'Multi-Cloud-Expertise',
+      description: 'Wir liefern produktionsreife Infrastruktur und DevOps-Lösungen auf AWS, Microsoft Azure und Google Cloud Platform',
+    },
+    categories: {
+      cicd: 'CI/CD & Automatisierung',
+      gitops: 'GitOps & Deployment',
+      container: 'Container & Orchestrierung',
+      iac: 'Infrastructure as Code',
+      monitoring: 'Monitoring & Observability',
+      security: 'Sicherheit & Compliance',
+    },
+    badges: {
+      cloudNative: 'Cloud Native',
+      multiCloud: 'Multi-Cloud',
+      production: 'Production Ready',
+      enterprise: 'Enterprise Grade',
     },
   },
 };

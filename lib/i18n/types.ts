@@ -250,4 +250,26 @@ export interface Translations {
       introduction: string;
     };
   };
+  techStack: {
+    title: string;
+    subtitle: string;
+    cloudPlatforms: {
+      title: string;
+      description: string;
+    };
+    categories: {
+      cicd: string;
+      gitops: string;
+      container: string;
+      iac: string;
+      monitoring: string;
+      security: string;
+    };
+    badges: {
+      cloudNative: string;
+      multiCloud: string;
+      production: string;
+      enterprise: string;
+    };
+  };
 }

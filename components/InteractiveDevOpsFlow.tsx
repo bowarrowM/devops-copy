@@ -522,14 +522,14 @@ export default function InteractiveDevOpsFlow() {
 
                   return (
                     <div
-                      className="p-8 rounded-3xl backdrop-blur-xl border-2 shadow-2xl"
+                      className="p-8 rounded-3xl backdrop-blur-xl border-2 shadow-2xl max-w-4xl mx-auto"
                       style={{
                         backgroundColor: `${phase.color}10`,
                         borderColor: `${phase.color}40`,
                         boxShadow: `0 0 60px ${phase.color}20`,
                       }}
                     >
-                      <div className="flex items-start gap-6">
+                      <div className="flex items-center gap-6">
                         <motion.div
                           className="w-20 h-20 rounded-2xl flex items-center justify-center text-white flex-shrink-0"
                           style={{ backgroundColor: phase.color }}
@@ -543,11 +543,11 @@ export default function InteractiveDevOpsFlow() {
                         >
                           <Icon className="w-10 h-10" />
                         </motion.div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between mb-3">
-                            <h3 className="text-3xl font-bold text-white">{details.title}</h3>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-4 mb-3 flex-wrap">
+                            <h3 className="text-2xl md:text-3xl font-bold text-white">{details.title}</h3>
                             <span
-                              className="px-4 py-1 rounded-full text-sm font-semibold"
+                              className="px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap"
                               style={{
                                 backgroundColor: phase.color,
                                 color: 'white',
@@ -556,7 +556,7 @@ export default function InteractiveDevOpsFlow() {
                               {phase.side === 'dev' ? 'DEV' : 'OPS'}
                             </span>
                           </div>
-                          <p className="text-lg text-blue-100/80 leading-relaxed">
+                          <p className="text-base md:text-lg text-blue-100/80 leading-relaxed">
                             {details.description}
                           </p>
                         </div>

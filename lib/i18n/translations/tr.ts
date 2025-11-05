@@ -13,7 +13,7 @@ export const tr: Translations = {
     subtitle: 'Deployment sürenizi %40 kısaltın, altyapı sorunlarını %65 azaltın. AWS, Azure, GCP üzerinde GitOps ve Platform Engineering ile self-service developer platformları kuruyor, AI workflows, LLMOps ve otomatik CI/CD sistemleri sağlıyoruz.',
     cta: 'Ücretsiz Danışın',
     ctaSecondary: 'Hizmetleri Keşfedin',
-    badge: 'Platform Engineering & GitOps Experts',
+    badge: 'Platform Engineering & GitOps Uzmanları',
   },
   services: {
     title: 'Hizmetlerimiz',
@@ -92,7 +92,7 @@ export const tr: Translations = {
         description: 'Startuplardan kurumsal şirketlere, her ölçekte işletme için özelleştirilmiş danışmanlık ve uygulama.',
       },
       modern: {
-        title: '2025 Teknoloji Trendleri',
+        title: 'Modern Teknolojiler',
         description: 'Platform Engineering, GitOps (ArgoCD/Flux), Terraform, Kubernetes, AI-driven CI/CD ve DevSecOps araçlarıyla çalışıyoruz.',
       },
       expertise: {
@@ -145,9 +145,9 @@ export const tr: Translations = {
         stat: 'Proaktif',
       },
       provenSuccess: {
-        title: '2025 Teknolojileri',
+        title: 'Modern Teknolojiler',
         description: 'Platform Engineering, GitOps, LLMOps, AgentOps uzmanlığı',
-        stat: '2025',
+        stat: 'Modern',
       },
     },
     trustBar: {

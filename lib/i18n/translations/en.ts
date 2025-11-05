@@ -92,7 +92,7 @@ export const en: Translations = {
         description: 'Customized consulting and implementation for businesses of all sizes, from startups to enterprises.',
       },
       modern: {
-        title: '2025 Technology Trends',
+        title: 'Modern Technologies',
         description: 'Platform Engineering, GitOps (ArgoCD/Flux), Terraform, Kubernetes, AI-driven CI/CD, and DevSecOps tools.',
       },
       expertise: {
@@ -145,9 +145,9 @@ export const en: Translations = {
         stat: 'Proactive',
       },
       provenSuccess: {
-        title: '2025 Technologies',
+        title: 'Modern Technologies',
         description: 'Platform Engineering, GitOps, LLMOps, AgentOps expertise',
-        stat: '2025',
+        stat: 'Modern',
       },
     },
     trustBar: {

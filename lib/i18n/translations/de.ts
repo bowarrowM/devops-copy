@@ -92,7 +92,7 @@ export const de: Translations = {
         description: 'Maßgeschneiderte Beratung und Implementierung für Unternehmen jeder Größe, von Startups bis zu Großunternehmen.',
       },
       modern: {
-        title: '2025 Technologie-Trends',
+        title: 'Moderne Technologien',
         description: 'Platform Engineering, GitOps (ArgoCD/Flux), Terraform, Kubernetes, AI-driven CI/CD und DevSecOps-Tools.',
       },
       expertise: {
@@ -145,9 +145,9 @@ export const de: Translations = {
         stat: 'Proaktiv',
       },
       provenSuccess: {
-        title: '2025 Technologien',
+        title: 'Moderne Technologien',
         description: 'Platform Engineering, GitOps, LLMOps, AgentOps Expertise',
-        stat: '2025',
+        stat: 'Modern',
       },
     },
     trustBar: {

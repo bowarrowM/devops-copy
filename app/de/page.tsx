@@ -14,9 +14,9 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
 
-export default function Home() {
+export default function GermanHome() {
   return (
-    <LanguageProvider locale="tr">
+    <LanguageProvider locale="de">
       <StructuredData />
       <main className="min-h-screen">
         <Navbar />

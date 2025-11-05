@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return [
+    // Turkish (default)
     {
       url: baseUrl,
       lastModified,
@@ -18,23 +19,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    // English
     {
-      url: `${baseUrl}#services`,
+      url: `${baseUrl}/en`,
       lastModified,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 1,
+      alternates: {
+        languages: {
+          tr: `${baseUrl}`,
+          en: `${baseUrl}/en`,
+          de: `${baseUrl}/de`,
+        },
+      },
     },
+    // German
     {
-      url: `${baseUrl}#about`,
+      url: `${baseUrl}/de`,
       lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}#contact`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
+      changeFrequency: 'weekly',
+      priority: 1,
+      alternates: {
+        languages: {
+          tr: `${baseUrl}`,
+          en: `${baseUrl}/en`,
+          de: `${baseUrl}/de`,
+        },
+      },
     },
   ];
 }

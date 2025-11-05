@@ -1,15 +1,14 @@
 'use client';
 
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { languages } from '@/lib/i18n';
+import { locales, localeNames, localeFlags, Locale } from '@/lib/i18n/config';
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function LanguageSwitcher() {
-  const { language, setLanguage } = useLanguage();
+  const { locale } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const currentLang = languages.find(l => l.code === language) || languages[0];
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -22,6 +21,13 @@ export default function LanguageSwitcher() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const getLocalePath = (targetLocale: Locale) => {
+    if (targetLocale === 'tr') {
+      return '/';
+    }
+    return `/${targetLocale}`;
+  };
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
@@ -29,8 +35,8 @@ export default function LanguageSwitcher() {
         className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary-100 transition-colors"
         aria-label="Change language"
       >
-        <span className="text-xl">{currentLang.flag}</span>
-        <span className="text-sm font-medium text-secondary-700">{currentLang.code.toUpperCase()}</span>
+        <span className="text-xl">{localeFlags[locale]}</span>
+        <span className="text-sm font-medium text-secondary-700">{locale.toUpperCase()}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -43,20 +49,18 @@ export default function LanguageSwitcher() {
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-secondary-200 py-1 z-50">
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => {
-                setLanguage(lang.code);
-                setIsOpen(false);
-              }}
+          {locales.map((loc) => (
+            <Link
+              key={loc}
+              href={getLocalePath(loc)}
+              onClick={() => setIsOpen(false)}
               className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-primary-50 transition-colors ${
-                language === lang.code ? 'bg-primary-50 text-primary-600' : 'text-secondary-700'
+                locale === loc ? 'bg-primary-50 text-primary-600' : 'text-secondary-700'
               }`}
             >
-              <span className="text-xl">{lang.flag}</span>
-              <span className="text-sm font-medium">{lang.name}</span>
-              {language === lang.code && (
+              <span className="text-xl">{localeFlags[loc]}</span>
+              <span className="text-sm font-medium">{localeNames[loc]}</span>
+              {locale === loc && (
                 <svg className="w-4 h-4 ml-auto" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
@@ -65,7 +69,7 @@ export default function LanguageSwitcher() {
                   />
                 </svg>
               )}
-            </button>
+            </Link>
           ))}
         </div>
       )}

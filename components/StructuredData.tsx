@@ -10,14 +10,14 @@ import {
 } from '@/lib/seo/structuredData';
 
 export default function StructuredData() {
-  const { language } = useLanguage();
+  const { locale } = useLanguage();
 
   const schemas = [
-    getOrganizationSchema(language),
-    getProfessionalServiceSchema(language),
-    getWebPageSchema(language),
+    getOrganizationSchema(locale),
+    getProfessionalServiceSchema(locale),
+    getWebPageSchema(locale),
     getBreadcrumbSchema(),
-    getFAQSchema(language),
+    getFAQSchema(locale),
   ];
 
   return (

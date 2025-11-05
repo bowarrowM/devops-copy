@@ -1,39 +1,28 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Language, Translations } from '../i18n/types';
-import { getTranslations, defaultLanguage } from '../i18n';
+import React, { createContext, useContext } from 'react';
+import { Locale, defaultLocale } from '../i18n/config';
+import { getTranslations } from '../i18n/get-translations';
+import { Translations } from '../i18n/types';
 
 interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  locale: Locale;
   t: Translations;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(defaultLanguage);
-  const [t, setT] = useState<Translations>(getTranslations(defaultLanguage));
-
-  useEffect(() => {
-    // Load language from localStorage on mount
-    const savedLang = localStorage.getItem('language') as Language;
-    if (savedLang && ['tr', 'en', 'de'].includes(savedLang)) {
-      setLanguageState(savedLang);
-      setT(getTranslations(savedLang));
-    }
-  }, []);
-
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    setT(getTranslations(lang));
-    localStorage.setItem('language', lang);
-    document.documentElement.lang = lang;
-  };
+export function LanguageProvider({
+  children,
+  locale = defaultLocale
+}: {
+  children: React.ReactNode;
+  locale?: Locale;
+}) {
+  const t = getTranslations(locale);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ locale, t }}>
       {children}
     </LanguageContext.Provider>
   );

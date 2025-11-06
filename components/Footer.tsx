@@ -1,7 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -25,37 +25,33 @@ export default function Footer() {
             <p className="text-secondary-400 mb-4">
               {t.footer.tagline}
             </p>
-            <div className="flex gap-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
-              >
-                <FaLinkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
-              >
-                <FaGithub className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
-              >
-                <FaTwitter className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:info@devops.com.tr"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
-              >
-                <FaEnvelope className="w-5 h-5" />
-              </a>
+            <div className="space-y-3 mt-6">
+              <div className="flex items-center gap-3 text-secondary-400">
+                <FaEnvelope className="w-4 h-4" />
+                <a href="mailto:info@devops.com.tr" className="hover:text-primary-400 transition-colors">
+                  info@devops.com.tr
+                </a>
+              </div>
+              <div className="flex gap-3 mt-4">
+                <a
+                  href="https://linkedin.com/company/devops-comtr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://github.com/devopscomtr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary-500 flex items-center justify-center transition-all transform hover:-translate-y-1"
+                  aria-label="GitHub"
+                >
+                  <FaGithub className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
 

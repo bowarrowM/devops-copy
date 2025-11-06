@@ -33,7 +33,7 @@ export default function ToolsPage() {
       icon: FaClipboardCheck,
       gradient: 'from-purple-600 to-pink-500',
       link: '/tools/assessment',
-      available: false,
+      available: true,
       highlights: [
         'Assess maturity (0-10)',
         'Industry benchmarking',

@@ -60,25 +60,6 @@ export default function About() {
             );
           })}
         </div>
-
-        {/* Technologies Section */}
-        <div className="mt-20 p-8 md:p-12 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-2xl shadow-2xl">
-          <h3 className="text-3xl font-bold text-white text-center mb-8">
-            {t.about.technologies}
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform', 'GitLab', 'GitHub Actions',
-              'ArgoCD', 'Flux CD', 'Helm', 'Ansible', 'Prometheus', 'Grafana', 'Datadog', 'ELK Stack',
-              'Elasticsearch', 'Kibana', 'Logstash', 'Jenkins', 'HashiCorp Vault', 'Istio', 'Consul', 'Redis'].map((tech) => (
-              <div
-                key={tech}
-                className="flex items-center justify-center p-4 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all transform hover:-translate-y-1"
-              >
-                <span className="text-white font-semibold text-sm text-center">{tech}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

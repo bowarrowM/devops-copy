@@ -10,11 +10,11 @@ export const tr: Translations = {
     tagline: 'Kurumsal DevOps Danışmanlığı',
   },
   hero: {
-    title: 'DevOps Danışmanlık & Platform Engineering',
-    subtitle: 'Geliştiricileriniz kod yazsın, altyapı yönetmesin. GitOps ve Platform Engineering ile self-service platformlar, otomatik deploymentlar ve dakikalar içinde rollback. AWS, Azure, GCP\'de Internal Developer Platform (IDP) kuruyor, AI workflows, LLMOps ve cloud-native mimariler ile ekibinizin verimliliğini artırıyoruz.',
+    title: 'DevOps Danışmanlık & Dönüşüm',
+    subtitle: 'Geliştiricileriniz kod yazsın, altyapı yönetmesin. GitOps ile self-service platformlar, otomatik deploymentlar ve dakikalar içinde rollback. AWS, Azure, GCP\'de modern DevOps çözümleri, AI workflows, LLMOps ve cloud-native mimariler ile ekibinizin verimliliğini artırıyoruz.',
     cta: 'Görüşme Talebi',
     ctaSecondary: 'Hizmetleri İnceleyin',
-    badge: 'DevOps & Platform Engineering Uzmanları',
+    badge: 'DevOps Uzmanları',
   },
   services: {
     title: 'Hizmetlerimiz',

@@ -10,11 +10,11 @@ export const en: Translations = {
     tagline: 'Enterprise DevOps Consulting',
   },
   hero: {
-    title: 'DevOps Consulting & Platform Engineering',
-    subtitle: 'Let developers write code, not manage infrastructure. Self-service platforms, automated deployments, and instant rollbacks with GitOps and Platform Engineering. Build Internal Developer Platforms (IDP) on AWS, Azure, GCP and boost team productivity with AI workflows, LLMOps, and cloud-native architectures.',
+    title: 'DevOps Consulting & Transformation',
+    subtitle: 'Let developers write code, not manage infrastructure. Self-service platforms, automated deployments, and instant rollbacks with GitOps. Modern DevOps solutions on AWS, Azure, GCP that boost team productivity with AI workflows, LLMOps, and cloud-native architectures.',
     cta: 'Request Consultation',
     ctaSecondary: 'View Services',
-    badge: 'DevOps & Platform Engineering Experts',
+    badge: 'DevOps Experts',
   },
   services: {
     title: 'Our Services',

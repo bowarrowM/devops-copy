@@ -85,22 +85,8 @@ export default function Contact() {
     { value: 'managed', label: t.services.items.managed.title },
   ];
 
-  // Localized contact info labels
-  const contactLabels = {
-    address: locale === 'tr' ? 'Adres' : locale === 'de' ? 'Adresse' : 'Address',
-    email: locale === 'tr' ? 'E-posta' : locale === 'de' ? 'E-Mail' : 'Email',
-    phone: locale === 'tr' ? 'Telefon' : locale === 'de' ? 'Telefon' : 'Phone',
-    social: locale === 'tr' ? 'Sosyal Medya' : locale === 'de' ? 'Soziale Medien' : 'Social Media',
-    freeConsulting: locale === 'tr' ? 'İhtiyaç Analizi' : locale === 'de' ? 'Bedarfsanalyse' : 'Needs Analysis',
-    consultingDesc: locale === 'tr'
-      ? 'DevOps yolculuğunuzda size nasıl yardımcı olabileceğimizi konuşalım.'
-      : locale === 'de'
-      ? 'Lassen Sie uns besprechen, wie wir Sie auf Ihrer DevOps-Reise unterstützen können.'
-      : 'Let\'s discuss how we can help you on your DevOps journey.',
-    benefit1: locale === 'tr' ? '30 dakikalık keşif görüşmesi' : locale === 'de' ? '30-minütiges Entdeckungsgespräch' : '30-minute discovery call',
-    benefit2: locale === 'tr' ? 'Detaylı altyapı analizi' : locale === 'de' ? 'Detaillierte Infrastrukturanalyse' : 'Detailed infrastructure analysis',
-    benefit3: locale === 'tr' ? 'Özel çözüm önerileri' : locale === 'de' ? 'Individuelle Lösungsvorschläge' : 'Custom solution proposals',
-  };
+  // Use translation system for labels
+  const contactLabels = t.contact.labels;
 
   return (
     <section id="contact" className="section-padding bg-gradient-to-b from-secondary-50 to-white">

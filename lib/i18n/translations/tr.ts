@@ -7,6 +7,7 @@ export const tr: Translations = {
     about: 'Hakkımızda',
     contact: 'İletişim',
     getStarted: 'İletişim',
+    tagline: 'Kurumsal DevOps Danışmanlığı',
   },
   hero: {
     title: 'DevOps Danışmanlık & Platform Engineering',
@@ -195,6 +196,17 @@ export const tr: Translations = {
       email: 'info@devops.com.tr',
       phone: '+90 (XXX) XXX XX XX',
     },
+    labels: {
+      address: 'Adres',
+      email: 'E-posta',
+      phone: 'Telefon',
+      social: 'Sosyal Medya',
+      freeConsulting: 'İhtiyaç Analizi',
+      consultingDesc: 'DevOps yolculuğunuzda size nasıl yardımcı olabileceğimizi konuşalım.',
+      benefit1: '30 dakikalık keşif görüşmesi',
+      benefit2: 'Detaylı altyapı analizi',
+      benefit3: 'Özel çözüm önerileri',
+    },
   },
   footer: {
     tagline: 'Türkiye\'nin DevOps dönüşüm partneri',
@@ -275,6 +287,9 @@ export const tr: Translations = {
     cloudPlatforms: {
       title: 'Multi-Cloud Uzmanlığı',
       description: 'AWS, Microsoft Azure ve Google Cloud Platform\'da production-ready altyapı ve DevOps çözümleri sunuyoruz',
+      aws: 'EKS, ECS, Lambda, RDS, S3, CloudFormation, CodePipeline',
+      azure: 'AKS, Azure DevOps, Functions, Cosmos DB, Azure Storage',
+      gcp: 'GKE, Cloud Run, BigQuery, Cloud Storage, Cloud Build',
     },
     categories: {
       cicd: 'CI/CD & Otomasyon',

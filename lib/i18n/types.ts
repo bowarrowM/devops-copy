@@ -7,6 +7,7 @@ export interface Translations {
     about: string;
     contact: string;
     getStarted: string;
+    tagline: string;
   };
   hero: {
     title: string;
@@ -195,6 +196,17 @@ export interface Translations {
       email: string;
       phone: string;
     };
+    labels: {
+      address: string;
+      email: string;
+      phone: string;
+      social: string;
+      freeConsulting: string;
+      consultingDesc: string;
+      benefit1: string;
+      benefit2: string;
+      benefit3: string;
+    };
   };
   footer: {
     tagline: string;
@@ -257,6 +269,9 @@ export interface Translations {
     cloudPlatforms: {
       title: string;
       description: string;
+      aws: string;
+      azure: string;
+      gcp: string;
     };
     categories: {
       cicd: string;

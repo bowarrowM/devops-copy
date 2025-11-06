@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { motion } from 'framer-motion';
-import { FaRocket, FaShieldAlt, FaClock, FaDollarSign } from 'react-icons/fa';
+import { FaRocket } from 'react-icons/fa';
 import Button from './atoms/Button';
 
 /**
@@ -27,42 +27,7 @@ export default function HeroModern() {
     }
   };
 
-  // Key benefits displayed as feature cards
-  const benefits = [
-    {
-      icon: FaRocket,
-      title: '10x Faster',
-      description: 'Deploy in minutes, not hours',
-      gradient: 'from-primary-500 to-primary-600',
-    },
-    {
-      icon: FaShieldAlt,
-      title: '99.9% Uptime',
-      description: 'Production-ready infrastructure',
-      gradient: 'from-success-500 to-success-600',
-    },
-    {
-      icon: FaClock,
-      title: '2-Week Setup',
-      description: 'From assessment to production',
-      gradient: 'from-warning-500 to-warning-600',
-    },
-    {
-      icon: FaDollarSign,
-      title: 'ROI in Year 1',
-      description: 'Transparent, fixed pricing',
-      gradient: 'from-primary-600 to-primary-700',
-    },
-  ];
-
-  // Client logos (placeholder - replace with real logos)
-  const clients = [
-    'AWS Partner',
-    'ISO 27001',
-    'KVKK Compliant',
-    'Kubernetes Certified',
-    'DevSecOps Ready',
-  ];
+  // Removed fake metrics and client badges per user request for professional corporate presentation
 
   return (
     <section
@@ -88,7 +53,7 @@ export default function HeroModern() {
               className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-8 text-white/90 text-sm font-medium shadow-xl"
             >
               <div className="w-2 h-2 bg-success-500 rounded-full animate-pulse" />
-              <span>Trusted by 50+ Companies</span>
+              <span>{t.hero.badge}</span>
             </motion.div>
 
             {/* Headline - Clear Value Proposition */}
@@ -99,7 +64,7 @@ export default function HeroModern() {
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight"
             >
               <span className="text-gradient-hero">
-                Deploy Faster. Scale Smarter.
+                {t.hero.title}
               </span>
             </motion.h1>
 
@@ -110,7 +75,7 @@ export default function HeroModern() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto leading-relaxed"
             >
-              Transform your infrastructure with DevOps automation that cuts deployment time by 90% and eliminates manual errors.
+              {t.hero.subtitle}
             </motion.p>
 
             {/* CTAs - Strategic placement */}
@@ -128,7 +93,7 @@ export default function HeroModern() {
                 iconPosition="right"
                 className="shadow-2xl"
               >
-                Get Free Assessment
+                {t.hero.cta}
               </Button>
 
               <Button
@@ -137,74 +102,10 @@ export default function HeroModern() {
                 onClick={() => scrollToSection('services')}
                 className="bg-white/10 backdrop-blur-xl border-2 border-white/20 text-white hover:bg-white/20 hover:border-white/30"
               >
-                View Services
+                {t.hero.ctaSecondary}
               </Button>
             </motion.div>
-
-            {/* Trust Bar - Social Proof */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-primary-200/60 text-sm"
-            >
-              <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-                {clients.map((client, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2"
-                  >
-                    <div className="w-1.5 h-1.5 bg-success-500 rounded-full" />
-                    <span>{client}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
           </div>
-
-          {/* Benefit Cards Grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto"
-          >
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                  whileHover={{ y: -4 }}
-                  className="group"
-                >
-                  <div className="relative glass p-6 rounded-2xl text-center hover:bg-white/20 transition-all duration-300">
-                    {/* Glow effect on hover */}
-                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 blur-xl transition-opacity`} />
-
-                    {/* Icon */}
-                    <div className="relative mb-4 inline-flex">
-                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center shadow-lg`}>
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="relative text-lg font-bold text-white mb-2">
-                      {benefit.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="relative text-sm text-primary-200/80">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
         </div>
       </div>
 

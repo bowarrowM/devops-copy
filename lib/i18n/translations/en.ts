@@ -7,6 +7,7 @@ export const en: Translations = {
     about: 'About',
     contact: 'Contact',
     getStarted: 'Contact',
+    tagline: 'Enterprise DevOps Consulting',
   },
   hero: {
     title: 'DevOps Consulting & Platform Engineering',
@@ -195,6 +196,17 @@ export const en: Translations = {
       email: 'info@devops.com.tr',
       phone: '+90 (XXX) XXX XX XX',
     },
+    labels: {
+      address: 'Address',
+      email: 'Email',
+      phone: 'Phone',
+      social: 'Social Media',
+      freeConsulting: 'Needs Analysis',
+      consultingDesc: 'Let\'s discuss how we can help you on your DevOps journey.',
+      benefit1: '30-minute discovery call',
+      benefit2: 'Detailed infrastructure analysis',
+      benefit3: 'Custom solution proposals',
+    },
   },
   footer: {
     tagline: 'Turkey\'s DevOps transformation partner',
@@ -275,6 +287,9 @@ export const en: Translations = {
     cloudPlatforms: {
       title: 'Multi-Cloud Expertise',
       description: 'We deliver production-ready infrastructure and DevOps solutions on AWS, Microsoft Azure, and Google Cloud Platform',
+      aws: 'EKS, ECS, Lambda, RDS, S3, CloudFormation, CodePipeline',
+      azure: 'AKS, Azure DevOps, Functions, Cosmos DB, Azure Storage',
+      gcp: 'GKE, Cloud Run, BigQuery, Cloud Storage, Cloud Build',
     },
     categories: {
       cicd: 'CI/CD & Automation',

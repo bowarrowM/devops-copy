@@ -80,7 +80,7 @@ export default function NavbarModern() {
                 DevOps.com.tr
               </div>
               <div className={`text-xs ${isScrolled ? 'text-neutral-600' : 'text-white/80'} transition-colors`}>
-                Cloud Native Solutions
+                {t.nav.tagline}
               </div>
             </div>
           </motion.button>

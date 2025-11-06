@@ -4,12 +4,7 @@ import dynamic from 'next/dynamic';
 import { LanguageProvider } from '@/lib/context/LanguageContext';
 import NavbarModern from '@/components/NavbarModern';
 import HeroModern from '@/components/HeroModern';
-import SocialProof from '@/components/SocialProof';
-
 import Services from '@/components/Services';
-import WhyChooseUsModern from '@/components/WhyChooseUsModern';
-
-
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
@@ -23,32 +18,32 @@ const About = dynamic(() => import('@/components/About'), {
   loading: () => <div className="h-96 bg-white animate-pulse" />,
 });
 
-
 /**
- * English Home Page - 2025 Redesign
- * URL Pattern: /en/
+ * English Home Page - Professional Corporate Website
+ *
+ * Clean, professional structure:
+ * 1. Hero - Value proposition
+ * 2. Services - DevOps, LLMOps, GitOps consulting
+ * 3. Tech Stack - Technologies and platforms
+ * 4. About - Company expertise
+ * 5. Contact - Lead capture
+ * 6. Footer - Information
+ *
+ * No marketing hype, no fake metrics, no packages.
+ * Professional corporate presentation only.
  */
-export default function EnglishHome() {
+export default function Home() {
   return (
     <LanguageProvider locale="en">
       <StructuredData />
       <main className="min-h-screen">
-        {/* Modern Components - Phase 3-9 */}
         <NavbarModern />
         <HeroModern />
-        <SocialProof />
-        
 
-        {/* Service & Value Proposition */}
         <Services />
-        <WhyChooseUsModern />
-        
-        
-
-        {/* Supporting Information */}
         <TechStack />
         <About />
-        
+
         <Contact />
         <Footer />
       </main>

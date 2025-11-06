@@ -4,9 +4,7 @@ import dynamic from 'next/dynamic';
 import { LanguageProvider } from '@/lib/context/LanguageContext';
 import NavbarModern from '@/components/NavbarModern';
 import HeroModern from '@/components/HeroModern';
-import SocialProof from '@/components/SocialProof';
 import Services from '@/components/Services';
-import WhyChooseUsModern from '@/components/WhyChooseUsModern';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
@@ -21,46 +19,31 @@ const About = dynamic(() => import('@/components/About'), {
 });
 
 /**
- * Home Page - 2025 Redesign
+ * Home Page - Professional Corporate Website
  *
- * Complete structure (Phases 3-9):
- * 1. Modern Hero - Simplified, conversion-focused
- * 2. Social Proof - Quick stats, testimonial, trust badges
- * 3. Client Logos - Companies + certifications (Phase 7)
- * 4. Services - Complete service portfolio
- * 5. Why Choose Us - Before/After framework
- * 6. Featured Case Study - Real success story with metrics (Phase 6)
- * 7. Statistics - Animated counters with impressive metrics (Phase 7)
- * 8. Tech Stack - Technologies showcase (lazy loaded - Phase 9)
- * 9. About - Company advantages (lazy loaded - Phase 9)
- * 10. Testimonials - Client reviews (lazy loaded - Phase 9)
- * 11. Contact - Lead capture form with email integration (Phase 8)
- * 12. Footer - Links and information
+ * Clean, professional structure:
+ * 1. Hero - Value proposition
+ * 2. Services - DevOps, LLMOps, GitOps consulting
+ * 3. Tech Stack - Technologies and platforms
+ * 4. About - Company expertise
+ * 5. Contact - Lead capture
+ * 6. Footer - Information
  *
- * Performance optimizations:
- * - Web Vitals monitoring active
- * - Below-the-fold components lazy loaded
- * - Code splitting for optimal bundle sizes
+ * No marketing hype, no fake metrics, no packages.
+ * Professional corporate presentation only.
  */
 export default function Home() {
   return (
     <LanguageProvider locale="tr">
       <StructuredData />
       <main className="min-h-screen">
-        {/* Authentic Content Only - No Fake Info */}
         <NavbarModern />
         <HeroModern />
-        <SocialProof />
 
-        {/* Core Services & Value */}
         <Services />
-        <WhyChooseUsModern />
-
-        {/* Technical Expertise */}
         <TechStack />
         <About />
 
-        {/* Contact & Footer */}
         <Contact />
         <Footer />
       </main>

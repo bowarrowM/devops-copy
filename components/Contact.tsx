@@ -74,10 +74,10 @@ export default function Contact() {
   // Service options based on translations
   const serviceOptions = [
     { value: 'assessment', label: t.services.items.assessment.title },
-    { value: 'cicd', label: t.services.items.cicd.title },
+    { value: 'gitops', label: t.services.items.gitops.title },
     { value: 'cloud', label: t.services.items.cloudMigration.title },
+    { value: 'llmops', label: t.services.items.llmops.title },
     { value: 'kubernetes', label: t.services.items.kubernetes.title },
-    { value: 'iac', label: t.services.items.iac.title },
     { value: 'devsecops', label: t.services.items.devsecops.title },
     { value: 'platform', label: t.services.items.platform.title },
     { value: 'aiops', label: t.services.items.aiops.title },

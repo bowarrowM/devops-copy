@@ -38,7 +38,7 @@ export interface Translations {
         title: string;
         description: string;
       };
-      cicd: {
+      gitops: {
         title: string;
         description: string;
       };
@@ -46,11 +46,11 @@ export interface Translations {
         title: string;
         description: string;
       };
-      kubernetes: {
+      llmops: {
         title: string;
         description: string;
       };
-      iac: {
+      kubernetes: {
         title: string;
         description: string;
       };

@@ -59,11 +59,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">{t.footer.services}</h4>
             <ul className="space-y-2 text-secondary-400">
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.cicd.title}</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.cloudMigration.title}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.llmops.title}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.gitops.title}</button></li>
               <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.kubernetes.title}</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.devsecops.title}</button></li>
               <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.platform.title}</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.services.items.aiops.title}</button></li>
             </ul>
           </div>
 

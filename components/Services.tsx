@@ -26,10 +26,10 @@ export default function Services() {
 
   const services = [
     { key: 'assessment', tier: 'foundation' },
-    { key: 'cicd', tier: 'foundation' },
+    { key: 'gitops', tier: 'foundation' },
     { key: 'cloudMigration', tier: 'foundation' },
+    { key: 'llmops', tier: 'transformation' },
     { key: 'kubernetes', tier: 'transformation' },
-    { key: 'iac', tier: 'transformation' },
     { key: 'devsecops', tier: 'transformation' },
     { key: 'platform', tier: 'advanced' },
     { key: 'aiops', tier: 'advanced' },

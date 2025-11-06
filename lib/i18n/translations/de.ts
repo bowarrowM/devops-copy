@@ -38,37 +38,37 @@ export const de: Translations = {
         title: 'DevOps-Bewertung & Strategie',
         description: 'Analyse des aktuellen Zustands, Bewertung des Technologie-Stacks und Roadmap-Entwicklung.',
       },
-      cicd: {
-        title: 'CI/CD Pipeline-Implementierung',
-        description: 'Automatisierte Tests und Bereitstellung mit AWS CodePipeline, Azure DevOps, GitLab CI/CD oder GitHub Actions.',
+      gitops: {
+        title: 'GitOps & Continuous Deployment',
+        description: 'Git-gesteuerte Bereitstellung mit ArgoCD, Flux CD. Automatisches Rollback, Drift-Detection und Kubernetes-native Continuous Delivery.',
       },
       cloudMigration: {
-        title: 'Cloud-Migration',
-        description: 'Sichere und optimierte Migration zu AWS, Azure oder GCP.',
+        title: 'Cloud-Migration & Optimierung',
+        description: 'Sichere Migration zu AWS, Azure, GCP mit Multi-Cloud-Strategie. Flexible Infrastruktur ohne Vendor Lock-in.',
+      },
+      llmops: {
+        title: 'LLMOps & AI Model Operations',
+        description: 'LLM-Modellbereitstellung, Prompt-Engineering, Vektordatenbanken, KI-Workflow-Automatisierung. MLflow, Kubernetes, GPU-Orchestrierung.',
       },
       kubernetes: {
         title: 'Kubernetes & Container-Orchestrierung',
-        description: 'Container-Management mit EKS, AKS oder GKE, Service Mesh und GitOps.',
-      },
-      iac: {
-        title: 'Infrastructure as Code (IaC)',
-        description: 'Multi-Cloud-Infrastruktur-Automatisierung mit AWS CloudFormation, Azure ARM/Bicep, Terraform oder Pulumi.',
+        description: 'Produktionsbereite Cluster-Einrichtung mit EKS, AKS, GKE. Service Mesh, Autoscaling und Monitoring.',
       },
       devsecops: {
-        title: 'DevSecOps-Integration',
-        description: 'Automatisierung von Sicherheitsscans, Compliance-Management und Schwachstellenbewertung.',
+        title: 'DevSecOps & KI-Sicherheit',
+        description: 'KI-gestützte Sicherheitsscans, Policy-as-Code, automatisierte Compliance und Schwachstellenmanagement.',
       },
       platform: {
-        title: 'Platform Engineering',
-        description: 'Interne Entwicklerplattformen und Self-Service-Infrastrukturlösungen.',
+        title: 'Platform Engineering & IDP',
+        description: 'Internal Developer Platform (IDP), Self-Service-Infrastruktur, Backstage. Fokus auf Developer Experience und Produktivität.',
       },
       aiops: {
-        title: 'AIOps & Observability',
-        description: 'KI-gestütztes Monitoring mit AWS CloudWatch, Azure Monitor, Prometheus, Grafana und Datadog.',
+        title: 'AIOps & Intelligentes Monitoring',
+        description: 'KI-gestützte prädiktive Analysen, automatisierte Incident Response, einheitliche Observability. Prometheus, Grafana, Datadog, Dynatrace.',
       },
       finops: {
-        title: 'FinOps & Kostenoptimierung',
-        description: 'Analysieren und optimieren Sie Cloud-Ausgaben mit AWS Cost Explorer, Azure Cost Management und GCP Billing.',
+        title: 'FinOps & Cloud-Kostenmanagement',
+        description: 'Cloud-Kostenoptimierung, Waste-Reduction, Reserved-Instances-Strategie. Erzielen Sie 15-40% Kosteneinsparungen. AWS, Azure, GCP Billing.',
       },
     },
   },

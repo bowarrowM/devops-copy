@@ -38,37 +38,37 @@ export const tr: Translations = {
         title: 'DevOps Değerlendirme & Strateji',
         description: 'Mevcut durumunuzu analiz eder, teknoloji stack değerlendirmesi yapar ve yol haritası oluştururuz.',
       },
-      cicd: {
-        title: 'CI/CD Pipeline Kurulumu',
-        description: 'AWS CodePipeline, Azure DevOps, GitLab CI/CD veya GitHub Actions ile otomatik test ve deployment süreçleri.',
+      gitops: {
+        title: 'GitOps & Continuous Deployment',
+        description: 'ArgoCD, Flux CD ile Git-driven deployment, otomatik rollback ve drift detection. Kubernetes-native continuous delivery.',
       },
       cloudMigration: {
-        title: 'Bulut Migrasyonu',
-        description: 'AWS, Azure veya GCP\'ye güvenli ve optimize edilmiş bulut geçişi.',
+        title: 'Bulut Migrasyonu & Optimizasyon',
+        description: 'AWS, Azure, GCP\'ye güvenli geçiş ve multi-cloud strateji. Vendor lock-in olmadan esnek altyapı.',
+      },
+      llmops: {
+        title: 'LLMOps & AI Model Operations',
+        description: 'LLM model deployment, prompt engineering, vector databases, AI workflow otomasyonu. MLflow, Kubernetes, GPU orchestration.',
       },
       kubernetes: {
         title: 'Kubernetes & Container Orchestration',
-        description: 'EKS, AKS veya GKE ile container yönetimi, service mesh ve GitOps implementasyonu.',
-      },
-      iac: {
-        title: 'Infrastructure as Code (IaC)',
-        description: 'AWS CloudFormation, Azure ARM/Bicep, Terraform veya Pulumi ile multi-cloud altyapı otomasyonu.',
+        description: 'EKS, AKS, GKE ile production-ready cluster setup, service mesh, autoscaling ve monitoring.',
       },
       devsecops: {
-        title: 'DevSecOps Entegrasyonu',
-        description: 'Güvenlik taraması otomasyonu, compliance yönetimi ve vulnerability management.',
+        title: 'DevSecOps & AI Security',
+        description: 'AI-powered security scanning, policy-as-code, automated compliance ve vulnerability management.',
       },
       platform: {
-        title: 'Platform Engineering',
-        description: 'Internal developer platform ve self-service altyapı çözümleri.',
+        title: 'Platform Engineering & IDP',
+        description: 'Internal Developer Platform (IDP), self-service infrastructure, Backstage. Developer experience ve productivity odaklı.',
       },
       aiops: {
-        title: 'AIOps & Observability',
-        description: 'AWS CloudWatch, Azure Monitor, Prometheus, Grafana, Datadog ile yapay zeka destekli izleme.',
+        title: 'AIOps & Intelligent Monitoring',
+        description: 'AI-powered predictive analytics, automated incident response, unified observability. Prometheus, Grafana, Datadog, Dynatrace.',
       },
       finops: {
-        title: 'FinOps & Maliyet Optimizasyonu',
-        description: 'AWS Cost Explorer, Azure Cost Management ve GCP Billing ile bulut harcamalarınızı analiz eder ve optimize ederiz.',
+        title: 'FinOps & Cloud Cost Management',
+        description: 'Cloud cost optimization, waste reduction, reserved instances stratejisi. 15-40% maliyet tasarrufu. AWS, Azure, GCP billing.',
       },
     },
   },

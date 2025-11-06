@@ -6,13 +6,13 @@ export const en: Translations = {
     services: 'Services',
     about: 'About',
     contact: 'Contact',
-    getStarted: 'Get Started',
+    getStarted: 'Contact',
   },
   hero: {
     title: 'DevOps Consulting & Platform Engineering',
     subtitle: 'Let developers write code, not manage infrastructure. Self-service platforms, automated deployments, and instant rollbacks with GitOps and Platform Engineering. Build Internal Developer Platforms (IDP) on AWS, Azure, GCP and boost team productivity with AI workflows, LLMOps, and cloud-native architectures.',
-    cta: 'Get Started',
-    ctaSecondary: 'Explore Services',
+    cta: 'Request Consultation',
+    ctaSecondary: 'View Services',
     badge: 'DevOps & Platform Engineering Experts',
   },
   services: {

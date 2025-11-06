@@ -6,13 +6,13 @@ export const tr: Translations = {
     services: 'Hizmetler',
     about: 'Hakkımızda',
     contact: 'İletişim',
-    getStarted: 'Başlayın',
+    getStarted: 'İletişim',
   },
   hero: {
     title: 'DevOps Danışmanlık & Platform Engineering',
     subtitle: 'Geliştiricileriniz kod yazsın, altyapı yönetmesin. GitOps ve Platform Engineering ile self-service platformlar, otomatik deploymentlar ve dakikalar içinde rollback. AWS, Azure, GCP\'de Internal Developer Platform (IDP) kuruyor, AI workflows, LLMOps ve cloud-native mimariler ile ekibinizin verimliliğini artırıyoruz.',
-    cta: 'Hemen Başlayın',
-    ctaSecondary: 'Hizmetleri Keşfedin',
+    cta: 'Görüşme Talebi',
+    ctaSecondary: 'Hizmetleri İnceleyin',
     badge: 'DevOps & Platform Engineering Uzmanları',
   },
   services: {

@@ -111,7 +111,7 @@ export default function WhyChooseUsModern() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="grid md:grid-cols-2 gap-4 md:gap-8 items-center"
+                className="relative grid md:grid-cols-2 gap-4 md:gap-8 items-center"
               >
                 {/* Before */}
                 <div className="card card-flat border-l-4 border-error-500 hover:shadow-md transition-shadow">
@@ -119,14 +119,14 @@ export default function WhyChooseUsModern() {
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-error-100 flex items-center justify-center">
                       <FaTimes className="text-error-500 text-xl" />
                     </div>
-                    <p className="text-neutral-700 line-through opacity-75">
+                    <p className="text-neutral-700 line-through opacity-75 flex-1">
                       {item.before}
                     </p>
                   </div>
                 </div>
 
                 {/* Arrow (hidden on mobile) */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 items-center justify-center shadow-primary z-10">
+                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 items-center justify-center shadow-primary z-10">
                   <FaArrowRight className="text-white" />
                 </div>
 
@@ -136,7 +136,7 @@ export default function WhyChooseUsModern() {
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-success-500 to-success-600 flex items-center justify-center shadow-success text-2xl">
                       {item.icon}
                     </div>
-                    <p className="text-neutral-800 font-medium">
+                    <p className="text-neutral-800 font-medium flex-1">
                       {item.after}
                     </p>
                   </div>

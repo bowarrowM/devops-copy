@@ -11,7 +11,7 @@ export const en: Translations = {
   hero: {
     title: 'DevOps Consulting & Platform Engineering',
     subtitle: 'Let developers write code, not manage infrastructure. Self-service platforms, automated deployments, and instant rollbacks with GitOps and Platform Engineering. Build Internal Developer Platforms (IDP) on AWS, Azure, GCP and boost team productivity with AI workflows, LLMOps, and cloud-native architectures.',
-    cta: 'Free Consultation',
+    cta: 'Get Started',
     ctaSecondary: 'Explore Services',
     badge: 'DevOps & Platform Engineering Experts',
   },
@@ -109,6 +109,7 @@ export const en: Translations = {
         description: 'Flexible cloud solutions on AWS, Azure, GCP platforms without vendor lock-in.',
       },
     },
+    technologies: 'Technologies We Use',
   },
   stats: {
     experience: 'Years Experience',
@@ -169,11 +170,11 @@ export const en: Translations = {
   servicesCta: {
     title: 'Looking for a custom solution for your project?',
     description: 'Our expert team is ready to develop tailored DevOps strategies for your business\'s unique needs.',
-    button: 'Get Free Consultation',
+    button: 'Contact Us',
   },
   contact: {
     title: 'Get Started Today',
-    subtitle: 'Get free consultation for your DevOps transformation',
+    subtitle: 'Let\'s discuss your DevOps transformation needs',
     form: {
       name: 'Full Name',
       email: 'Email',
@@ -214,7 +215,7 @@ export const en: Translations = {
     title: 'What Our Clients Say',
     subtitle: 'Leading Turkish companies choose us for their DevOps transformation',
     cta: 'Ready to write your own success story?',
-    ctaButton: 'Get Free Consultation',
+    ctaButton: 'Contact Us',
     items: [
       {
         name: 'Mehmet Yılmaz',
@@ -289,5 +290,6 @@ export const en: Translations = {
       production: 'Production Ready',
       enterprise: 'Enterprise Grade',
     },
+    allTools: 'All Tools',
   },
 };

@@ -11,7 +11,7 @@ export const de: Translations = {
   hero: {
     title: 'DevOps Beratung & Platform Engineering',
     subtitle: 'Entwickler sollen Code schreiben, nicht Infrastruktur verwalten. Self-Service-Plattformen, automatisierte Deployments und sofortiger Rollback mit GitOps und Platform Engineering. Internal Developer Platforms (IDP) auf AWS, Azure, GCP aufbauen und Teamproduktivität mit AI-Workflows, LLMOps und Cloud-Native-Architekturen steigern.',
-    cta: 'Kostenlose Beratung',
+    cta: 'Jetzt starten',
     ctaSecondary: 'Services erkunden',
     badge: 'DevOps & Platform Engineering Experten',
   },
@@ -109,6 +109,7 @@ export const de: Translations = {
         description: 'Flexible Cloud-Lösungen auf AWS, Azure, GCP-Plattformen ohne Vendor Lock-in.',
       },
     },
+    technologies: 'Technologien, die wir verwenden',
   },
   stats: {
     experience: 'Jahre Erfahrung',
@@ -169,11 +170,11 @@ export const de: Translations = {
   servicesCta: {
     title: 'Suchen Sie eine maßgeschneiderte Lösung für Ihr Projekt?',
     description: 'Unser Expertenteam ist bereit, maßgeschneiderte DevOps-Strategien für die individuellen Bedürfnisse Ihres Unternehmens zu entwickeln.',
-    button: 'Kostenlose Beratung erhalten',
+    button: 'Kontaktieren Sie uns',
   },
   contact: {
     title: 'Jetzt starten',
-    subtitle: 'Erhalten Sie kostenlose Beratung für Ihre DevOps-Transformation',
+    subtitle: 'Lassen Sie uns Ihre DevOps-Transformationsbedürfnisse besprechen',
     form: {
       name: 'Vollständiger Name',
       email: 'E-Mail',
@@ -214,7 +215,7 @@ export const de: Translations = {
     title: 'Was unsere Kunden sagen',
     subtitle: 'Führende türkische Unternehmen wählen uns für ihre DevOps-Transformation',
     cta: 'Sind Sie bereit, Ihre eigene Erfolgsgeschichte zu schreiben?',
-    ctaButton: 'Kostenlose Beratung erhalten',
+    ctaButton: 'Kontaktieren Sie uns',
     items: [
       {
         name: 'Mehmet Yılmaz',
@@ -289,5 +290,6 @@ export const de: Translations = {
       production: 'Production Ready',
       enterprise: 'Enterprise Grade',
     },
+    allTools: 'Alle Werkzeuge',
   },
 };

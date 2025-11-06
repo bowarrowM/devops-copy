@@ -109,6 +109,7 @@ export interface Translations {
         description: string;
       };
     };
+    technologies: string;
   };
   stats: {
     experience: string;
@@ -271,5 +272,6 @@ export interface Translations {
       production: string;
       enterprise: string;
     };
+    allTools: string;
   };
 }

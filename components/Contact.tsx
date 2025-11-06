@@ -91,13 +91,13 @@ export default function Contact() {
     email: locale === 'tr' ? 'E-posta' : locale === 'de' ? 'E-Mail' : 'Email',
     phone: locale === 'tr' ? 'Telefon' : locale === 'de' ? 'Telefon' : 'Phone',
     social: locale === 'tr' ? 'Sosyal Medya' : locale === 'de' ? 'Soziale Medien' : 'Social Media',
-    freeConsulting: locale === 'tr' ? 'Ücretsiz Danışmanlık' : locale === 'de' ? 'Kostenlose Beratung' : 'Free Consultation',
+    freeConsulting: locale === 'tr' ? 'İhtiyaç Analizi' : locale === 'de' ? 'Bedarfsanalyse' : 'Needs Analysis',
     consultingDesc: locale === 'tr'
       ? 'DevOps yolculuğunuzda size nasıl yardımcı olabileceğimizi konuşalım.'
       : locale === 'de'
       ? 'Lassen Sie uns besprechen, wie wir Sie auf Ihrer DevOps-Reise unterstützen können.'
       : 'Let\'s discuss how we can help you on your DevOps journey.',
-    benefit1: locale === 'tr' ? '30 dakikalık ücretsiz danışmanlık' : locale === 'de' ? '30-minütige kostenlose Beratung' : '30-minute free consultation',
+    benefit1: locale === 'tr' ? '30 dakikalık keşif görüşmesi' : locale === 'de' ? '30-minütiges Entdeckungsgespräch' : '30-minute discovery call',
     benefit2: locale === 'tr' ? 'Detaylı altyapı analizi' : locale === 'de' ? 'Detaillierte Infrastrukturanalyse' : 'Detailed infrastructure analysis',
     benefit3: locale === 'tr' ? 'Özel çözüm önerileri' : locale === 'de' ? 'Individuelle Lösungsvorschläge' : 'Custom solution proposals',
   };

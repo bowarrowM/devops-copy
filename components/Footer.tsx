@@ -78,8 +78,9 @@ export default function Footer() {
               <li><button onClick={() => scrollToSection('about')} className="hover:text-primary-400 transition-colors">{t.nav.about}</button></li>
               <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-400 transition-colors">{t.nav.services}</button></li>
               <li><button onClick={() => scrollToSection('contact')} className="hover:text-primary-400 transition-colors">{t.nav.contact}</button></li>
-              <li><a href="/blog" className="hover:text-primary-400 transition-colors">{t.footer.blog}</a></li>
-              <li><a href="/career" className="hover:text-primary-400 transition-colors">{t.footer.career}</a></li>
+              {/* TODO: Uncomment when pages are created */}
+              {/* <li><a href="/blog" className="hover:text-primary-400 transition-colors">{t.footer.blog}</a></li> */}
+              {/* <li><a href="/career" className="hover:text-primary-400 transition-colors">{t.footer.career}</a></li> */}
             </ul>
           </div>
 

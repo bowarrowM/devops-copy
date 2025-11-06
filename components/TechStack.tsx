@@ -237,7 +237,7 @@ export default function TechStack() {
                 : 'bg-white text-slate-700 border border-slate-200 hover:border-blue-300'
             }`}
           >
-            All Tools
+            {t.techStack.allTools}
           </button>
           {categories.map((cat) => (
             <button

@@ -11,7 +11,7 @@ export const tr: Translations = {
   hero: {
     title: 'DevOps Danışmanlık & Platform Engineering',
     subtitle: 'Geliştiricileriniz kod yazsın, altyapı yönetmesin. GitOps ve Platform Engineering ile self-service platformlar, otomatik deploymentlar ve dakikalar içinde rollback. AWS, Azure, GCP\'de Internal Developer Platform (IDP) kuruyor, AI workflows, LLMOps ve cloud-native mimariler ile ekibinizin verimliliğini artırıyoruz.',
-    cta: 'Ücretsiz Danışın',
+    cta: 'Hemen Başlayın',
     ctaSecondary: 'Hizmetleri Keşfedin',
     badge: 'DevOps & Platform Engineering Uzmanları',
   },
@@ -82,33 +82,34 @@ export const tr: Translations = {
   },
   about: {
     title: 'Neden DevOps?',
-    subtitle: 'İşletmenizin bulut ve DevOps dönüşümünde güvenilir danışmanınız',
+    subtitle: 'DevOps dönüşümünüzde stratejik ortağınız. Modern practices, proven frameworks, hands-on expertise',
     advantages: {
       bilingual: {
-        title: 'Çok Dilli Destek',
-        description: 'Türkçe, İngilizce ve Almanca iletişim ile global ve yerel projelerinizde yanınızdayız.',
+        title: 'Security-First DevSecOps',
+        description: 'Policy-as-code, otomatik güvenlik taramaları ve compliance denetimi ile güvenliği her aşamaya entegre ediyoruz. Siber güvenlik olaylarını azaltın.',
       },
       startup: {
-        title: 'Esnek Çözümler',
-        description: 'Startuplardan kurumsal şirketlere, her ölçekte işletme için özelleştirilmiş danışmanlık ve uygulama.',
+        title: 'Platform Engineering',
+        description: 'Internal Developer Platform (IDP) ile ekibinizin self-service altyapıya erişimini sağlıyoruz. Hızlı onboarding, standart governance, developer experience odaklı.',
       },
       modern: {
-        title: 'Modern Teknolojiler',
-        description: 'Platform Engineering, GitOps (ArgoCD/Flux), Terraform, Kubernetes, AI-driven CI/CD ve DevSecOps araçlarıyla çalışıyoruz.',
+        title: 'AI-Driven Automation',
+        description: 'LLMOps, AgentOps ve AI-powered workflows ile deployment süreçlerinizi otomatikleştiriyor, manuel hataları ortadan kaldırıyoruz.',
       },
       expertise: {
-        title: 'Modern Operasyon Uzmanlığı',
-        description: 'Platform Engineering, GitOps, AI workflows, LLMOps, AgentOps ve cloud-native mimarilerde deneyimli ekip.',
+        title: 'Observability-First',
+        description: 'Prometheus, Grafana, Datadog ile kapsamlı izleme. Sorunları ortaya çıkmadan önce tespit edin, güvenilir sistemler kurun.',
       },
       compliance: {
-        title: 'Güvenlik & Uyumluluk',
-        description: 'KVKK, ISO 27001, SOC2 standartlarına uygun altyapı tasarımı ve implementasyonu.',
+        title: 'FinOps & Cost Optimization',
+        description: 'Bulut harcamalarınızı analiz ediyor, gereksiz maliyetleri tespit ediyor ve optimize ediyoruz. Bütçenizi kontrol altına alın.',
       },
       multiCloud: {
-        title: 'Multi-Cloud Mimari',
-        description: 'AWS, Azure, GCP platformlarında vendor lock-in olmadan esnek bulut çözümleri.',
+        title: 'Multi-Cloud Expertise',
+        description: 'AWS, Azure, GCP platformlarında certified uzmanlarla vendor lock-in olmadan esnek, production-ready çözümler.',
       },
     },
+    technologies: 'Kullandığımız Teknolojiler',
   },
   stats: {
     experience: 'Yıllık Deneyim',
@@ -169,11 +170,11 @@ export const tr: Translations = {
   servicesCta: {
     title: 'Projeniz için özel bir çözüm mü arıyorsunuz?',
     description: 'Uzman ekibimiz, işletmenizin benzersiz ihtiyaçlarına özel DevOps stratejileri geliştirmek için hazır.',
-    button: 'Ücretsiz Danışın',
+    button: 'İletişime Geçin',
   },
   contact: {
     title: 'Hemen Başlayın',
-    subtitle: 'DevOps dönüşümünüz için ücretsiz danışmanlık alın',
+    subtitle: 'DevOps dönüşümünüz için ihtiyaçlarınızı görüşelim',
     form: {
       name: 'Adınız Soyadınız',
       email: 'E-posta',
@@ -214,7 +215,7 @@ export const tr: Translations = {
     title: 'Müşterilerimiz Ne Diyor?',
     subtitle: 'Türkiye\'nin önde gelen şirketleri DevOps dönüşümü için bizi tercih ediyor',
     cta: 'Siz de başarı hikayenizi yazmak ister misiniz?',
-    ctaButton: 'Ücretsiz Danışmanlık Alın',
+    ctaButton: 'İletişime Geçin',
     items: [
       {
         name: 'Mehmet Yılmaz',
@@ -289,5 +290,6 @@ export const tr: Translations = {
       production: 'Production Ready',
       enterprise: 'Enterprise Grade',
     },
+    allTools: 'Tüm Araçlar',
   },
 };

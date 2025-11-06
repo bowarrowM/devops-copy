@@ -46,7 +46,7 @@ export default function ToolsPage() {
       icon: FaDollarSign,
       gradient: 'from-yellow-600 to-orange-500',
       link: '/tools/cost-analyzer',
-      available: false,
+      available: true,
       highlights: [
         'Find cloud waste',
         'Optimization tips',

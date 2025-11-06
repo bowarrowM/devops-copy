@@ -221,17 +221,17 @@ export const tr: Translations = {
         name: 'Mehmet Yılmaz',
         position: 'CTO',
         company: 'TechStartup A.Ş.',
-        content: 'DevOps ekibi sayesinde deployment süremizi 2 saatten 15 dakikaya indirdik. Kubernetes migrasyonumuz sorunsuz tamamlandı ve artık günde 10+ deploy yapabiliyoruz.',
+        content: 'DevOps ekibi sayesinde deployment süremizi önemli ölçüde kısalttık. Kubernetes migrasyonumuz sorunsuz tamamlandı ve artık çok daha sık deployment yapabiliyoruz.',
         rating: 5,
-        result: '%87 Daha Hızlı Deploy'
+        result: 'Hızlı Deployment'
       },
       {
         name: 'Ayşe Demir',
         position: 'Yazılım Müdürü',
         company: 'E-Ticaret Ltd.',
-        content: 'CI/CD pipeline kurulumu ve AWS optimizasyonu ile hem maliyetlerimiz %40 düştü hem de sistem güvenilirliği arttı. Profesyonel yaklaşımları ve sürekli destekleri çok değerli.',
+        content: 'CI/CD pipeline kurulumu ve AWS optimizasyonu ile hem maliyetlerimiz düştü hem de sistem güvenilirliği arttı. Profesyonel yaklaşımları ve sürekli destekleri çok değerli.',
         rating: 5,
-        result: '%40 Maliyet Tasarrufu'
+        result: 'Maliyet Optimizasyonu'
       },
       {
         name: 'Can Öztürk',
@@ -239,7 +239,7 @@ export const tr: Translations = {
         company: 'FinTech Şirketi',
         content: 'DevSecOps entegrasyonu konusunda uzman desteği aldık. KVKK uyumluluğu ve güvenlik taraması otomasyonları sayesinde hem compliant hem de hızlı bir development sürecine geçtik.',
         rating: 5,
-        result: '100% Compliance'
+        result: 'Tam Uyumluluk'
       },
     ],
   },

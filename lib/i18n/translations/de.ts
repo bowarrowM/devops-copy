@@ -82,31 +82,31 @@ export const de: Translations = {
   },
   about: {
     title: 'Warum DevOps?',
-    subtitle: 'Ihr vertrauenswürdiger Berater für Cloud- und DevOps-Transformation',
+    subtitle: 'Ihr strategischer Partner bei der DevOps-Transformation. Moderne Praktiken, bewährte Frameworks, praktische Expertise',
     advantages: {
       bilingual: {
-        title: 'Mehrsprachiger Support',
-        description: 'Kommunikation in Türkisch, Englisch und Deutsch für Ihre globalen und lokalen Projekte.',
+        title: 'Security-First DevSecOps',
+        description: 'Integrieren Sie Sicherheit in jeder Phase mit Policy-as-Code, automatisiertem Sicherheitsscanning und Compliance-Audits. Reduzieren Sie Sicherheitsvorfälle.',
       },
       startup: {
-        title: 'Flexible Lösungen',
-        description: 'Maßgeschneiderte Beratung und Implementierung für Unternehmen jeder Größe, von Startups bis zu Großunternehmen.',
+        title: 'Platform Engineering',
+        description: 'Ermöglichen Sie Ihrem Team Self-Service-Infrastrukturzugriff durch Internal Developer Platforms (IDP). Schnelles Onboarding, standardisierte Governance, developer experience orientiert.',
       },
       modern: {
-        title: 'Moderne Technologien',
-        description: 'Platform Engineering, GitOps (ArgoCD/Flux), Terraform, Kubernetes, AI-driven CI/CD und DevSecOps-Tools.',
+        title: 'KI-gesteuerte Automatisierung',
+        description: 'Automatisieren Sie Deployment-Prozesse mit LLMOps, AgentOps und KI-gestützten Workflows, eliminieren Sie manuelle Fehler.',
       },
       expertise: {
-        title: 'Moderne Operations-Expertise',
-        description: 'Erfahrenes Team in Platform Engineering, GitOps, AI-Workflows, LLMOps, AgentOps und cloud-nativen Architekturen.',
+        title: 'Observability-First',
+        description: 'Umfassendes Monitoring mit Prometheus, Grafana und Datadog. Erkennen Sie Probleme, bevor sie auftreten, bauen Sie zuverlässige Systeme.',
       },
       compliance: {
-        title: 'Sicherheit & Compliance',
-        description: 'Infrastrukturdesign und -implementierung konform mit KVKK, ISO 27001 und SOC2-Standards.',
+        title: 'FinOps & Kostenoptimierung',
+        description: 'Analysieren Sie Cloud-Ausgaben, identifizieren Sie unnötige Kosten und optimieren Sie. Behalten Sie Ihr Budget unter Kontrolle.',
       },
       multiCloud: {
-        title: 'Multi-Cloud-Architektur',
-        description: 'Flexible Cloud-Lösungen auf AWS, Azure, GCP-Plattformen ohne Vendor Lock-in.',
+        title: 'Multi-Cloud-Expertise',
+        description: 'Flexible, produktionsreife Lösungen mit zertifizierten Experten auf AWS, Azure und GCP-Plattformen ohne Vendor Lock-in.',
       },
     },
     technologies: 'Technologien, die wir verwenden',
@@ -221,17 +221,17 @@ export const de: Translations = {
         name: 'Mehmet Yılmaz',
         position: 'CTO',
         company: 'TechStartup GmbH',
-        content: 'Dank des DevOps-Teams haben wir unsere Bereitstellungszeit von 2 Stunden auf 15 Minuten reduziert. Unsere Kubernetes-Migration wurde reibungslos abgeschlossen und jetzt können wir über 10 Mal pro Tag bereitstellen.',
+        content: 'Dank des DevOps-Teams haben wir unsere Bereitstellungszeit erheblich verkürzt. Unsere Kubernetes-Migration wurde reibungslos abgeschlossen und jetzt können wir viel häufiger bereitstellen.',
         rating: 5,
-        result: '87% schnellere Bereitstellung'
+        result: 'Schnelle Bereitstellung'
       },
       {
         name: 'Ayşe Demir',
         position: 'Softwaredirektorin',
         company: 'E-Commerce GmbH',
-        content: 'Mit CI/CD-Pipeline-Setup und AWS-Optimierung sanken unsere Kosten um 40% und die Systemzuverlässigkeit stieg. Ihr professioneller Ansatz und die kontinuierliche Unterstützung sind von unschätzbarem Wert.',
+        content: 'Mit CI/CD-Pipeline-Setup und AWS-Optimierung sanken unsere Kosten und die Systemzuverlässigkeit stieg. Ihr professioneller Ansatz und die kontinuierliche Unterstützung sind von unschätzbarem Wert.',
         rating: 5,
-        result: '40% Kosteneinsparung'
+        result: 'Kostenoptimierung'
       },
       {
         name: 'Can Öztürk',
@@ -239,7 +239,7 @@ export const de: Translations = {
         company: 'FinTech-Unternehmen',
         content: 'Wir erhielten Expertenunterstützung bei der DevSecOps-Integration. Dank DSGVO-Konformität und Sicherheitsscanning-Automatisierung sind wir auf einen konformen und schnellen Entwicklungsprozess umgestiegen.',
         rating: 5,
-        result: '100% Compliance'
+        result: 'Volle Compliance'
       },
     ],
   },

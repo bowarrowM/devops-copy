@@ -82,31 +82,31 @@ export const en: Translations = {
   },
   about: {
     title: 'Why DevOps?',
-    subtitle: 'Your trusted consultant for cloud and DevOps transformation',
+    subtitle: 'Your strategic partner in DevOps transformation. Modern practices, proven frameworks, hands-on expertise',
     advantages: {
       bilingual: {
-        title: 'Multilingual Support',
-        description: 'Communication in Turkish, English, and German for your global and local projects.',
+        title: 'Security-First DevSecOps',
+        description: 'Integrate security at every stage with policy-as-code, automated security scanning, and compliance audits. Reduce security incidents.',
       },
       startup: {
-        title: 'Flexible Solutions',
-        description: 'Customized consulting and implementation for businesses of all sizes, from startups to enterprises.',
+        title: 'Platform Engineering',
+        description: 'Enable your team with self-service infrastructure access through Internal Developer Platforms (IDP). Fast onboarding, standard governance, developer experience focused.',
       },
       modern: {
-        title: 'Modern Technologies',
-        description: 'Platform Engineering, GitOps (ArgoCD/Flux), Terraform, Kubernetes, AI-driven CI/CD, and DevSecOps tools.',
+        title: 'AI-Driven Automation',
+        description: 'Automate deployment processes with LLMOps, AgentOps, and AI-powered workflows, eliminating manual errors.',
       },
       expertise: {
-        title: 'Modern Operations Expertise',
-        description: 'Experienced team in Platform Engineering, GitOps, AI workflows, LLMOps, AgentOps, and cloud-native architectures.',
+        title: 'Observability-First',
+        description: 'Comprehensive monitoring with Prometheus, Grafana, and Datadog. Detect issues before they emerge, build reliable systems.',
       },
       compliance: {
-        title: 'Security & Compliance',
-        description: 'Infrastructure design and implementation compliant with KVKK, ISO 27001, and SOC2 standards.',
+        title: 'FinOps & Cost Optimization',
+        description: 'Analyze cloud spending, identify unnecessary costs, and optimize. Take control of your budget.',
       },
       multiCloud: {
-        title: 'Multi-Cloud Architecture',
-        description: 'Flexible cloud solutions on AWS, Azure, GCP platforms without vendor lock-in.',
+        title: 'Multi-Cloud Expertise',
+        description: 'Flexible, production-ready solutions with certified experts on AWS, Azure, and GCP platforms without vendor lock-in.',
       },
     },
     technologies: 'Technologies We Use',
@@ -221,17 +221,17 @@ export const en: Translations = {
         name: 'Mehmet Yılmaz',
         position: 'CTO',
         company: 'TechStartup Inc.',
-        content: 'Thanks to the DevOps team, we reduced our deployment time from 2 hours to 15 minutes. Our Kubernetes migration was completed smoothly and now we can deploy 10+ times per day.',
+        content: 'Thanks to the DevOps team, we significantly reduced our deployment time. Our Kubernetes migration was completed smoothly and now we can deploy much more frequently.',
         rating: 5,
-        result: '87% Faster Deployment'
+        result: 'Fast Deployment'
       },
       {
         name: 'Ayşe Demir',
         position: 'Software Director',
         company: 'E-Commerce Ltd.',
-        content: 'With CI/CD pipeline setup and AWS optimization, our costs dropped by 40% and system reliability increased. Their professional approach and continuous support are invaluable.',
+        content: 'With CI/CD pipeline setup and AWS optimization, our costs decreased and system reliability increased. Their professional approach and continuous support are invaluable.',
         rating: 5,
-        result: '40% Cost Savings'
+        result: 'Cost Optimization'
       },
       {
         name: 'Can Öztürk',
@@ -239,7 +239,7 @@ export const en: Translations = {
         company: 'FinTech Company',
         content: 'We received expert support on DevSecOps integration. Thanks to GDPR compliance and security scanning automation, we transitioned to both compliant and fast development process.',
         rating: 5,
-        result: '100% Compliance'
+        result: 'Full Compliance'
       },
     ],
   },

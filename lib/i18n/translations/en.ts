@@ -292,4 +292,131 @@ export const en: Translations = {
     },
     allTools: 'All Tools',
   },
+  featuredCaseStudy: {
+    badge: 'Success Story',
+    title: 'Real Results, Real Impact',
+    subtitle: 'See how we helped MegaShop achieve 99.99% uptime during Black Friday',
+    tags: {
+      ecommerce: 'E-Commerce',
+      employees: '500+ employees',
+      weeks: '12 weeks',
+    },
+    caseTitle: 'Scaling E-Commerce Platform to Handle Black Friday Traffic',
+    company: 'MegaShop',
+    challenge: {
+      title: 'The Challenge',
+      description: 'Severe downtime during peak shopping seasons. Monolithic architecture couldn\'t handle traffic spikes, resulting in lost revenue and frustrated customers. Deployments took 6-8 hours.',
+    },
+    solution: {
+      title: 'The Solution',
+      description: 'Migrated to microservices on Kubernetes, established CI/CD pipelines with automated testing, implemented auto-scaling, and set up comprehensive observability.',
+    },
+    results: {
+      title: 'Impressive Results',
+      uptime: { value: '99.99%', label: 'Uptime During Peak' },
+      deployments: { value: '87%', label: 'Faster Deployments' },
+      revenue: { value: '$2.4M', label: 'Revenue Saved' },
+      scaling: { value: '10x', label: 'Scaling Capacity' },
+    },
+    testimonial: {
+      quote: 'The transformation was incredible. We handled Black Friday with zero downtime for the first time in company history. Our engineering team can now deploy multiple times per day instead of once per week. The ROI was achieved in the first major shopping season.',
+      author: 'Sarah Chen',
+      position: 'CTO at MegaShop',
+    },
+    cta: 'Read More Success Stories',
+    quickStats: {
+      savings: { value: '$3.5M+', label: 'Total Client Savings Generated' },
+      uptime: { value: '99.9%', label: 'Average Client Uptime' },
+      deployments: { value: '87%', label: 'Faster Deployments on Average' },
+    },
+  },
+  clientLogos: {
+    title: 'Trusted Partner',
+    subtitle: 'Leading companies trust us for their DevOps transformation',
+    clients: {
+      retail: 'Leading Retail Chain',
+      fintech: 'Financial Technology Company',
+      saas: 'Enterprise SaaS Platform',
+      healthcare: 'Healthcare Technology Company',
+      logistics: 'Logistics and Cargo',
+      manufacturing: 'Manufacturing and Industry',
+      education: 'Education Technology',
+      insurance: 'Insurance and Finance',
+    },
+    certifications: {
+      aws: {
+        title: 'AWS Advanced Partner',
+        description: 'Certified AWS consulting partner with advanced tier status',
+      },
+      iso: {
+        title: 'ISO 27001 Certified',
+        description: 'Information security management system certified',
+      },
+      kvkk: {
+        title: 'GDPR Compliant',
+        description: 'Full compliance with personal data protection regulations',
+      },
+      microsoft: {
+        title: 'Microsoft Partner',
+        description: 'Certified partner in Azure and Microsoft technologies',
+      },
+    },
+    trustIndicators: {
+      clients: { value: '50+', label: 'Active Clients' },
+      projects: { value: '200+', label: 'Completed Projects' },
+      satisfaction: { value: '98%', label: 'Client Satisfaction' },
+      experience: { value: '5+ Years', label: 'DevOps Experience' },
+    },
+  },
+  statistics: {
+    title: 'Our Success in Numbers',
+    subtitle: 'We deliver concrete results for our clients',
+    stats: {
+      clients: {
+        value: '50+',
+        label: 'Happy Clients',
+        description: 'Serving Turkey\'s leading companies',
+      },
+      projects: {
+        value: '200+',
+        label: 'Completed Projects',
+        description: 'Successfully completed DevOps transformations',
+      },
+      savings: {
+        value: '$3.5M+',
+        label: 'Total Savings',
+        description: 'Cost optimization provided for our clients',
+      },
+      satisfaction: {
+        value: '98%',
+        label: 'Satisfaction',
+        description: 'Client satisfaction score',
+      },
+      deployments: {
+        value: '87%',
+        label: 'Faster',
+        description: 'Average improvement in deployment times',
+      },
+      uptime: {
+        value: '99.9%',
+        label: 'Uptime',
+        description: 'Average system availability rate',
+      },
+      servers: {
+        value: '1000+',
+        label: 'Managed Servers',
+        description: 'Cloud resources we actively manage',
+      },
+      certifications: {
+        value: '15+',
+        label: 'Certifications',
+        description: 'Professional certifications held by our team members',
+      },
+    },
+    cta: {
+      question: 'Want to see these results for your organization?',
+      calculateRoi: 'Calculate Your ROI',
+      scheduleConsultation: 'Schedule Consultation',
+    },
+  },
 };

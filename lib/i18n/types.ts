@@ -274,4 +274,87 @@ export interface Translations {
     };
     allTools: string;
   };
+  featuredCaseStudy: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    tags: {
+      ecommerce: string;
+      employees: string;
+      weeks: string;
+    };
+    caseTitle: string;
+    company: string;
+    challenge: {
+      title: string;
+      description: string;
+    };
+    solution: {
+      title: string;
+      description: string;
+    };
+    results: {
+      title: string;
+      uptime: { value: string; label: string };
+      deployments: { value: string; label: string };
+      revenue: { value: string; label: string };
+      scaling: { value: string; label: string };
+    };
+    testimonial: {
+      quote: string;
+      author: string;
+      position: string;
+    };
+    cta: string;
+    quickStats: {
+      savings: { value: string; label: string };
+      uptime: { value: string; label: string };
+      deployments: { value: string; label: string };
+    };
+  };
+  clientLogos: {
+    title: string;
+    subtitle: string;
+    clients: {
+      retail: string;
+      fintech: string;
+      saas: string;
+      healthcare: string;
+      logistics: string;
+      manufacturing: string;
+      education: string;
+      insurance: string;
+    };
+    certifications: {
+      aws: { title: string; description: string };
+      iso: { title: string; description: string };
+      kvkk: { title: string; description: string };
+      microsoft: { title: string; description: string };
+    };
+    trustIndicators: {
+      clients: { value: string; label: string };
+      projects: { value: string; label: string };
+      satisfaction: { value: string; label: string };
+      experience: { value: string; label: string };
+    };
+  };
+  statistics: {
+    title: string;
+    subtitle: string;
+    stats: {
+      clients: { value: string; label: string; description: string };
+      projects: { value: string; label: string; description: string };
+      savings: { value: string; label: string; description: string };
+      satisfaction: { value: string; label: string; description: string };
+      deployments: { value: string; label: string; description: string };
+      uptime: { value: string; label: string; description: string };
+      servers: { value: string; label: string; description: string };
+      certifications: { value: string; label: string; description: string };
+    };
+    cta: {
+      question: string;
+      calculateRoi: string;
+      scheduleConsultation: string;
+    };
+  };
 }

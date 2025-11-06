@@ -292,4 +292,131 @@ export const tr: Translations = {
     },
     allTools: 'Tüm Araçlar',
   },
+  featuredCaseStudy: {
+    badge: 'Başarı Hikayesi',
+    title: 'Gerçek Sonuçlar, Gerçek Etki',
+    subtitle: 'MegaShop\'un Black Friday\'de %99.99 uptime başarısını nasıl sağladık',
+    tags: {
+      ecommerce: 'E-Ticaret',
+      employees: '500+ çalışan',
+      weeks: '12 hafta',
+    },
+    caseTitle: 'E-Ticaret Platformunu Black Friday Trafiğini Kaldıracak Şekilde Ölçeklendirme',
+    company: 'MegaShop',
+    challenge: {
+      title: 'Zorluk',
+      description: 'Yoğun alışveriş sezonlarında ciddi kesintiler yaşanıyordu. Monolitik mimari trafik artışlarını kaldıramıyor, bu da gelir kaybına ve müşteri memnuniyetsizliğine yol açıyordu. Deploymentlar 6-8 saat sürüyordu.',
+    },
+    solution: {
+      title: 'Çözüm',
+      description: 'Kubernetes üzerinde microservices mimarisine geçiş, otomatik test içeren CI/CD pipeline kurulumu, auto-scaling implementasyonu ve kapsamlı observability sistemi kurulumu.',
+    },
+    results: {
+      title: 'Etkileyici Sonuçlar',
+      uptime: { value: '%99.99', label: 'Yoğun Dönem Uptime' },
+      deployments: { value: '%87', label: 'Daha Hızlı Deploymentlar' },
+      revenue: { value: '$2.4M', label: 'Kurtarılan Gelir' },
+      scaling: { value: '10x', label: 'Ölçekleme Kapasitesi' },
+    },
+    testimonial: {
+      quote: 'Dönüşüm inanılmazdı. Black Friday\'i şirket tarihinde ilk kez sıfır kesinti ile geçirdik. Mühendislik ekibimiz artık haftada bir yerine günde birden fazla deployment yapabiliyor. Yatırım getirisi ilk büyük alışveriş sezonunda elde edildi.',
+      author: 'Sarah Chen',
+      position: 'CTO, MegaShop',
+    },
+    cta: 'Daha Fazla Başarı Hikayesi',
+    quickStats: {
+      savings: { value: '$3.5M+', label: 'Toplam Müşteri Tasarrufu' },
+      uptime: { value: '%99.9', label: 'Ortalama Müşteri Uptime' },
+      deployments: { value: '%87', label: 'Ortalama Hızlı Deployment' },
+    },
+  },
+  clientLogos: {
+    title: 'Güvenilen İş Ortağı',
+    subtitle: 'Türkiye\'nin önde gelen şirketleri DevOps dönüşümlerinde bize güveniyor',
+    clients: {
+      retail: 'Lider Perakende Zinciri',
+      fintech: 'Finans Teknoloji Şirketi',
+      saas: 'Kurumsal SaaS Platformu',
+      healthcare: 'Sağlık Teknolojisi Şirketi',
+      logistics: 'Lojistik ve Kargo',
+      manufacturing: 'Üretim ve Sanayi',
+      education: 'Eğitim Teknolojisi',
+      insurance: 'Sigorta ve Finans',
+    },
+    certifications: {
+      aws: {
+        title: 'AWS Advanced Partner',
+        description: 'Advanced tier statüsünde sertifikalı AWS danışmanlık ortağı',
+      },
+      iso: {
+        title: 'ISO 27001 Sertifikalı',
+        description: 'Bilgi güvenliği yönetim sistemi sertifikası',
+      },
+      kvkk: {
+        title: 'KVKK Uyumlu',
+        description: 'Kişisel verilerin korunması kanununa tam uyumluluk',
+      },
+      microsoft: {
+        title: 'Microsoft Partner',
+        description: 'Azure ve Microsoft teknolojilerinde sertifikalı partner',
+      },
+    },
+    trustIndicators: {
+      clients: { value: '50+', label: 'Aktif Müşteri' },
+      projects: { value: '200+', label: 'Tamamlanan Proje' },
+      satisfaction: { value: '%98', label: 'Müşteri Memnuniyeti' },
+      experience: { value: '5+ Yıl', label: 'DevOps Deneyimi' },
+    },
+  },
+  statistics: {
+    title: 'Rakamlarla Başarımız',
+    subtitle: 'Müşterilerimiz için somut sonuçlar üretiyoruz',
+    stats: {
+      clients: {
+        value: '50+',
+        label: 'Mutlu Müşteri',
+        description: 'Türkiye\'nin önde gelen şirketlerine hizmet veriyoruz',
+      },
+      projects: {
+        value: '200+',
+        label: 'Tamamlanan Proje',
+        description: 'Başarıyla tamamlanan DevOps transformasyonları',
+      },
+      savings: {
+        value: '$3.5M+',
+        label: 'Toplam Tasarruf',
+        description: 'Müşterilerimiz için sağladığımız maliyet optimizasyonu',
+      },
+      satisfaction: {
+        value: '%98',
+        label: 'Memnuniyet',
+        description: 'Müşteri memnuniyet skoru',
+      },
+      deployments: {
+        value: '%87',
+        label: 'Daha Hızlı',
+        description: 'Deployment sürelerinde ortalama iyileşme',
+      },
+      uptime: {
+        value: '%99.9',
+        label: 'Uptime',
+        description: 'Ortalama sistem kullanılabilirlik oranı',
+      },
+      servers: {
+        value: '1000+',
+        label: 'Yönetilen Sunucu',
+        description: 'Aktif olarak yönettiğimiz cloud kaynakları',
+      },
+      certifications: {
+        value: '15+',
+        label: 'Sertifika',
+        description: 'Ekip üyelerimizin sahip olduğu profesyonel sertifikalar',
+      },
+    },
+    cta: {
+      question: 'Kuruluşunuz için bu sonuçları görmek ister misiniz?',
+      calculateRoi: 'ROI Hesaplayın',
+      scheduleConsultation: 'Danışmanlık Planlayın',
+    },
+  },
 };

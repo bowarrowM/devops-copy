@@ -292,4 +292,131 @@ export const de: Translations = {
     },
     allTools: 'Alle Werkzeuge',
   },
+  featuredCaseStudy: {
+    badge: 'Erfolgsgeschichte',
+    title: 'Echte Ergebnisse, Echte Wirkung',
+    subtitle: 'Sehen Sie, wie wir MegaShop geholfen haben, 99,99% Verfügbarkeit während des Black Friday zu erreichen',
+    tags: {
+      ecommerce: 'E-Commerce',
+      employees: '500+ Mitarbeiter',
+      weeks: '12 Wochen',
+    },
+    caseTitle: 'Skalierung der E-Commerce-Plattform für Black Friday Traffic',
+    company: 'MegaShop',
+    challenge: {
+      title: 'Die Herausforderung',
+      description: 'Schwere Ausfallzeiten während der Haupteinkaufssaison. Die monolithische Architektur konnte Verkehrsspitzen nicht bewältigen, was zu Umsatzverlusten und frustrierten Kunden führte. Bereitstellungen dauerten 6-8 Stunden.',
+    },
+    solution: {
+      title: 'Die Lösung',
+      description: 'Migration zu Microservices auf Kubernetes, Einrichtung von CI/CD-Pipelines mit automatisierten Tests, Implementierung von Auto-Scaling und umfassende Observability.',
+    },
+    results: {
+      title: 'Beeindruckende Ergebnisse',
+      uptime: { value: '99,99%', label: 'Verfügbarkeit Während Spitzenzeiten' },
+      deployments: { value: '87%', label: 'Schnellere Bereitstellungen' },
+      revenue: { value: '$2.4M', label: 'Geretteter Umsatz' },
+      scaling: { value: '10x', label: 'Skalierungskapazität' },
+    },
+    testimonial: {
+      quote: 'Die Transformation war unglaublich. Wir haben den Black Friday zum ersten Mal in der Firmengeschichte ohne Ausfallzeit gemeistert. Unser Engineering-Team kann jetzt mehrmals täglich deployen statt einmal pro Woche. Der ROI wurde in der ersten großen Einkaufssaison erreicht.',
+      author: 'Sarah Chen',
+      position: 'CTO bei MegaShop',
+    },
+    cta: 'Mehr Erfolgsgeschichten Lesen',
+    quickStats: {
+      savings: { value: '$3.5M+', label: 'Gesamte Kundeneinsparungen' },
+      uptime: { value: '99,9%', label: 'Durchschnittliche Kundenverfügbarkeit' },
+      deployments: { value: '87%', label: 'Durchschnittlich Schnellere Bereitstellungen' },
+    },
+  },
+  clientLogos: {
+    title: 'Vertrauenspartner',
+    subtitle: 'Führende Unternehmen vertrauen uns bei ihrer DevOps-Transformation',
+    clients: {
+      retail: 'Führende Einzelhandelskette',
+      fintech: 'Finanztechnologie-Unternehmen',
+      saas: 'Enterprise-SaaS-Plattform',
+      healthcare: 'Gesundheitstechnologie-Unternehmen',
+      logistics: 'Logistik und Fracht',
+      manufacturing: 'Fertigung und Industrie',
+      education: 'Bildungstechnologie',
+      insurance: 'Versicherung und Finanzen',
+    },
+    certifications: {
+      aws: {
+        title: 'AWS Advanced Partner',
+        description: 'Zertifizierter AWS-Beratungspartner mit Advanced-Tier-Status',
+      },
+      iso: {
+        title: 'ISO 27001 Zertifiziert',
+        description: 'Informationssicherheits-Managementsystem zertifiziert',
+      },
+      kvkk: {
+        title: 'DSGVO-Konform',
+        description: 'Vollständige Einhaltung der Datenschutzbestimmungen',
+      },
+      microsoft: {
+        title: 'Microsoft Partner',
+        description: 'Zertifizierter Partner für Azure und Microsoft-Technologien',
+      },
+    },
+    trustIndicators: {
+      clients: { value: '50+', label: 'Aktive Kunden' },
+      projects: { value: '200+', label: 'Abgeschlossene Projekte' },
+      satisfaction: { value: '98%', label: 'Kundenzufriedenheit' },
+      experience: { value: '5+ Jahre', label: 'DevOps-Erfahrung' },
+    },
+  },
+  statistics: {
+    title: 'Unser Erfolg in Zahlen',
+    subtitle: 'Wir liefern konkrete Ergebnisse für unsere Kunden',
+    stats: {
+      clients: {
+        value: '50+',
+        label: 'Zufriedene Kunden',
+        description: 'Wir bedienen führende Unternehmen der Türkei',
+      },
+      projects: {
+        value: '200+',
+        label: 'Abgeschlossene Projekte',
+        description: 'Erfolgreich abgeschlossene DevOps-Transformationen',
+      },
+      savings: {
+        value: '$3.5M+',
+        label: 'Gesamteinsparungen',
+        description: 'Kostenoptimierung für unsere Kunden',
+      },
+      satisfaction: {
+        value: '98%',
+        label: 'Zufriedenheit',
+        description: 'Kundenzufriedenheitswert',
+      },
+      deployments: {
+        value: '87%',
+        label: 'Schneller',
+        description: 'Durchschnittliche Verbesserung der Bereitstellungszeiten',
+      },
+      uptime: {
+        value: '99,9%',
+        label: 'Verfügbarkeit',
+        description: 'Durchschnittliche Systemverfügbarkeitsrate',
+      },
+      servers: {
+        value: '1000+',
+        label: 'Verwaltete Server',
+        description: 'Cloud-Ressourcen, die wir aktiv verwalten',
+      },
+      certifications: {
+        value: '15+',
+        label: 'Zertifizierungen',
+        description: 'Professionelle Zertifizierungen unserer Teammitglieder',
+      },
+    },
+    cta: {
+      question: 'Möchten Sie diese Ergebnisse für Ihr Unternehmen sehen?',
+      calculateRoi: 'ROI Berechnen',
+      scheduleConsultation: 'Beratung Vereinbaren',
+    },
+  },
 };

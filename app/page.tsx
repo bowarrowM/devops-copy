@@ -5,11 +5,8 @@ import { LanguageProvider } from '@/lib/context/LanguageContext';
 import NavbarModern from '@/components/NavbarModern';
 import HeroModern from '@/components/HeroModern';
 import SocialProof from '@/components/SocialProof';
-import ClientLogos from '@/components/ClientLogos';
 import Services from '@/components/Services';
 import WhyChooseUsModern from '@/components/WhyChooseUsModern';
-import FeaturedCaseStudy from '@/components/FeaturedCaseStudy';
-import Statistics from '@/components/Statistics';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
@@ -21,10 +18,6 @@ const TechStack = dynamic(() => import('@/components/TechStack'), {
 
 const About = dynamic(() => import('@/components/About'), {
   loading: () => <div className="h-96 bg-white animate-pulse" />,
-});
-
-const Testimonials = dynamic(() => import('@/components/Testimonials'), {
-  loading: () => <div className="h-96 bg-slate-50 animate-pulse" />,
 });
 
 /**
@@ -54,22 +47,20 @@ export default function Home() {
     <LanguageProvider locale="tr">
       <StructuredData />
       <main className="min-h-screen">
-        {/* Modern Components - Phase 3-7 */}
+        {/* Authentic Content Only - No Fake Info */}
         <NavbarModern />
         <HeroModern />
         <SocialProof />
-        <ClientLogos />
 
-        {/* Service & Value Proposition */}
+        {/* Core Services & Value */}
         <Services />
         <WhyChooseUsModern />
-        <FeaturedCaseStudy />
-        <Statistics />
 
-        {/* Supporting Information */}
+        {/* Technical Expertise */}
         <TechStack />
         <About />
-        <Testimonials />
+
+        {/* Contact & Footer */}
         <Contact />
         <Footer />
       </main>

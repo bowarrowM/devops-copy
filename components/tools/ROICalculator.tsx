@@ -57,6 +57,7 @@ export default function ROICalculator() {
   const [showResults, setShowResults] = useState(false);
   const [email, setEmail] = useState('');
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Calculate ROI whenever inputs change
   useEffect(() => {
@@ -138,10 +139,37 @@ export default function ROICalculator() {
     setShowResults(true);
   };
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Send email with detailed report (Phase 8)
-    setEmailSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const results = calculateROI();
+
+      const response = await fetch('/api/tools/roi-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          inputs,
+          results,
+        }),
+      });
+
+      if (response.ok) {
+        setEmailSubmitted(true);
+      } else {
+        const error = await response.json();
+        alert(`Failed to send report: ${error.error || 'Unknown error'}`);
+      }
+    } catch (error) {
+      console.error('Error sending report:', error);
+      alert('Failed to send report. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const formatCurrency = (value: number) => {

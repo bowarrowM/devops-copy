@@ -418,12 +418,38 @@ export default function MaturityAssessment() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Phase 8 - Integrate with backend to send detailed report
-    // For now, just simulate submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const dimensionScores = calculateResults();
+      const overallScore = dimensionScores.reduce((sum, dim) => sum + dim.score, 0) / dimensionScores.length;
+      const { level: overallLevel } = getMaturityLevel(overallScore);
+      const recommendations = getRecommendations(dimensionScores);
 
-    setIsSubmitting(false);
-    alert('Report sent! Check your email for detailed recommendations.');
+      const response = await fetch('/api/tools/assessment-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          dimensionScores,
+          overallScore,
+          overallLevel,
+          recommendations,
+        }),
+      });
+
+      if (response.ok) {
+        alert('Report sent! Check your email for detailed recommendations.');
+      } else {
+        const error = await response.json();
+        alert(`Failed to send report: ${error.error || 'Unknown error'}`);
+      }
+    } catch (error) {
+      console.error('Error sending report:', error);
+      alert('Failed to send report. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (showResults) {

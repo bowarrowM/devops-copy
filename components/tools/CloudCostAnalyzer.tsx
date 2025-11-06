@@ -212,11 +212,32 @@ export default function CloudCostAnalyzer() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Phase 8 - Integrate with backend to send detailed report
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const results = calculateResults();
 
-    setIsSubmitting(false);
-    alert('Report sent! Check your email for detailed optimization recommendations.');
+      const response = await fetch('/api/tools/cost-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          results,
+        }),
+      });
+
+      if (response.ok) {
+        alert('Report sent! Check your email for detailed optimization recommendations.');
+      } else {
+        const error = await response.json();
+        alert(`Failed to send report: ${error.error || 'Unknown error'}`);
+      }
+    } catch (error) {
+      console.error('Error sending report:', error);
+      alert('Failed to send report. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const formatCurrency = (amount: number): string => {

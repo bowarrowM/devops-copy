@@ -1,5 +1,4 @@
 import { ButtonHTMLAttributes, ReactNode, forwardRef } from 'react'
-import { motion } from 'framer-motion'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
@@ -122,19 +121,17 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     )
 
     return (
-      <motion.button
+      <button
         ref={ref}
         className={buttonClasses}
         disabled={disabled || loading}
-        whileHover={{ scale: disabled || loading ? 1 : 1.02 }}
-        whileTap={{ scale: disabled || loading ? 1 : 0.98 }}
         {...props}
       >
         {loading && <Spinner />}
         {!loading && icon && iconPosition === 'left' && icon}
         {children}
         {!loading && icon && iconPosition === 'right' && icon}
-      </motion.button>
+      </button>
     )
   }
 )

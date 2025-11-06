@@ -32,10 +32,6 @@ export interface Translations {
         title: string;
         description: string;
       };
-      managed: {
-        title: string;
-        description: string;
-      };
     };
     items: {
       assessment: {
@@ -71,10 +67,6 @@ export interface Translations {
         description: string;
       };
       finops: {
-        title: string;
-        description: string;
-      };
-      managed: {
         title: string;
         description: string;
       };

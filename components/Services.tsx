@@ -15,14 +15,13 @@ const serviceIcons = [
 
 export default function Services() {
   const { t } = useLanguage();
-  const [selectedTier, setSelectedTier] = useState<'foundation' | 'transformation' | 'advanced' | 'managed'>('foundation');
+  const [selectedTier, setSelectedTier] = useState<'foundation' | 'transformation' | 'advanced'>('foundation');
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const tiers = [
     { id: 'foundation' as const, gradient: 'from-blue-500 to-cyan-600', glow: 'rgba(59, 130, 246, 0.3)' },
     { id: 'transformation' as const, gradient: 'from-purple-500 to-pink-600', glow: 'rgba(139, 92, 246, 0.3)' },
     { id: 'advanced' as const, gradient: 'from-orange-500 to-red-600', glow: 'rgba(249, 115, 22, 0.3)' },
-    { id: 'managed' as const, gradient: 'from-green-500 to-emerald-600', glow: 'rgba(16, 185, 129, 0.3)' },
   ];
 
   const services = [
@@ -35,7 +34,6 @@ export default function Services() {
     { key: 'platform', tier: 'advanced' },
     { key: 'aiops', tier: 'advanced' },
     { key: 'finops', tier: 'advanced' },
-    { key: 'managed', tier: 'managed' },
   ];
 
   const filteredServices = services.filter(s => s.tier === selectedTier);

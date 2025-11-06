@@ -82,7 +82,6 @@ export default function Contact() {
     { value: 'platform', label: t.services.items.platform.title },
     { value: 'aiops', label: t.services.items.aiops.title },
     { value: 'finops', label: t.services.items.finops.title },
-    { value: 'managed', label: t.services.items.managed.title },
   ];
 
   // Use translation system for labels

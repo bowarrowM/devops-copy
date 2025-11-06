@@ -32,10 +32,6 @@ export const en: Translations = {
         title: 'Advanced',
         description: 'Enterprise-scale solutions',
       },
-      managed: {
-        title: 'Managed Services',
-        description: '24/7 support and management',
-      },
     },
     items: {
       assessment: {
@@ -73,10 +69,6 @@ export const en: Translations = {
       finops: {
         title: 'FinOps & Cost Optimization',
         description: 'Analyze and optimize cloud spending with AWS Cost Explorer, Azure Cost Management, and GCP Billing.',
-      },
-      managed: {
-        title: 'Managed DevOps Services',
-        description: '24/7 monitoring, incident response, and full DevOps team support.',
       },
     },
   },

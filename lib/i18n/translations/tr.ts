@@ -32,10 +32,6 @@ export const tr: Translations = {
         title: 'İleri Seviye',
         description: 'Kurumsal ölçekte çözümler',
       },
-      managed: {
-        title: 'Yönetilen Hizmetler',
-        description: '7/24 destek ve yönetim',
-      },
     },
     items: {
       assessment: {
@@ -73,10 +69,6 @@ export const tr: Translations = {
       finops: {
         title: 'FinOps & Maliyet Optimizasyonu',
         description: 'AWS Cost Explorer, Azure Cost Management ve GCP Billing ile bulut harcamalarınızı analiz eder ve optimize ederiz.',
-      },
-      managed: {
-        title: 'Yönetilen DevOps Hizmetleri',
-        description: '7/24 izleme, olay müdahalesi ve tam DevOps ekip desteği.',
       },
     },
   },

@@ -2,25 +2,11 @@
 
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import {
   SiAmazonaws,
   SiMicrosoftazure,
   SiGooglecloud,
-  SiDocker,
-  SiKubernetes,
-  SiTerraform,
-  SiGitlab,
-  SiGithubactions,
-  SiArgo,
-  SiPrometheus,
-  SiGrafana,
-  SiDatadog,
-  SiHashicorp,
-  SiHelm,
-  SiAnsible
 } from 'react-icons/si';
-import { FaShieldAlt, FaRocket } from 'react-icons/fa';
 
 interface Technology {
   name: string;
@@ -32,9 +18,8 @@ interface Technology {
 
 export default function TechStack() {
   const { t } = useLanguage();
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  // Cloud platforms - the stars of the show
+  // Cloud platforms
   const cloudPlatforms: Technology[] = [
     {
       name: 'AWS',
@@ -58,48 +43,6 @@ export default function TechStack() {
       description: t.techStack.cloudPlatforms.gcp
     },
   ];
-
-  // Other technologies grouped by category
-  const technologies: Technology[] = [
-    // GitOps & Deployment
-    { name: 'ArgoCD', icon: SiArgo, color: '#EF7B4D', category: 'gitops' },
-    { name: 'Helm', icon: SiHelm, color: '#0F1689', category: 'gitops' },
-    { name: 'Flux CD', icon: FaRocket, color: '#5468FF', category: 'gitops' },
-
-    // CI/CD & Automation
-    { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF', category: 'cicd' },
-    { name: 'GitLab', icon: SiGitlab, color: '#FC6D26', category: 'cicd' },
-
-    // Container & Orchestration
-    { name: 'Docker', icon: SiDocker, color: '#2496ED', category: 'container' },
-    { name: 'Kubernetes', icon: SiKubernetes, color: '#326CE5', category: 'container' },
-
-    // Infrastructure as Code
-    { name: 'Terraform', icon: SiTerraform, color: '#7B42BC', category: 'iac' },
-    { name: 'Ansible', icon: SiAnsible, color: '#EE0000', category: 'iac' },
-    { name: 'Vault', icon: SiHashicorp, color: '#000000', category: 'iac' },
-
-    // Monitoring & Observability
-    { name: 'Prometheus', icon: SiPrometheus, color: '#E6522C', category: 'monitoring' },
-    { name: 'Grafana', icon: SiGrafana, color: '#F46800', category: 'monitoring' },
-    { name: 'Datadog', icon: SiDatadog, color: '#632CA6', category: 'monitoring' },
-
-    // Security
-    { name: 'Security Tools', icon: FaShieldAlt, color: '#00A86B', category: 'security' },
-  ];
-
-  const categories = [
-    { id: 'gitops', label: t.techStack.categories.gitops, color: '#EF7B4D' },
-    { id: 'cicd', label: t.techStack.categories.cicd, color: '#2088FF' },
-    { id: 'container', label: t.techStack.categories.container, color: '#326CE5' },
-    { id: 'iac', label: t.techStack.categories.iac, color: '#7B42BC' },
-    { id: 'monitoring', label: t.techStack.categories.monitoring, color: '#E6522C' },
-    { id: 'security', label: t.techStack.categories.security, color: '#00A86B' },
-  ];
-
-  const filteredTechnologies = activeCategory
-    ? technologies.filter(tech => tech.category === activeCategory)
-    : technologies;
 
   return (
     <section className="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
@@ -187,22 +130,6 @@ export default function TechStack() {
                       <p className="text-sm text-slate-600 leading-relaxed">
                         {platform.description}
                       </p>
-
-                      {/* Market share indicator */}
-                      <div className="mt-6 flex items-center gap-2">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div
-                              key={i}
-                              className="w-2 h-2 rounded-full"
-                              style={{
-                                backgroundColor: platform.color,
-                                opacity: index === 0 ? 1 : index === 1 ? 0.8 : 0.6
-                              }}
-                            />
-                          ))}
-                        </div>
-                      </div>
                     </div>
 
                     {/* Corner decoration */}
@@ -219,94 +146,6 @@ export default function TechStack() {
               );
             })}
           </div>
-        </motion.div>
-
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          <button
-            onClick={() => setActiveCategory(null)}
-            className={`px-6 py-3 rounded-full font-semibold text-sm transition-all ${
-              activeCategory === null
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                : 'bg-white text-slate-700 border border-slate-200 hover:border-blue-300'
-            }`}
-          >
-            {t.techStack.allTools}
-          </button>
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
-              className={`px-6 py-3 rounded-full font-semibold text-sm transition-all ${
-                activeCategory === cat.id
-                  ? 'text-white shadow-lg'
-                  : 'bg-white text-slate-700 border border-slate-200 hover:border-slate-300'
-              }`}
-              style={{
-                backgroundColor: activeCategory === cat.id ? cat.color : undefined,
-              }}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Other Technologies Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto"
-        >
-          {filteredTechnologies.map((tech, index) => {
-            const Icon = tech.icon;
-
-            return (
-              <motion.div
-                key={`${tech.category}-${tech.name}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                whileHover={{ y: -8, scale: 1.05 }}
-                className="group"
-              >
-                <div className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300">
-                  {/* Glow effect */}
-                  <div
-                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"
-                    style={{ backgroundColor: `${tech.color}20` }}
-                  />
-
-                  {/* Content */}
-                  <div className="relative flex flex-col items-center gap-3">
-                    <motion.div
-                      className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-slate-50 to-slate-100"
-                      whileHover={{ rotateY: 360 }}
-                      transition={{ duration: 0.6 }}
-                      style={{ transformStyle: 'preserve-3d' }}
-                    >
-                      <Icon
-                        className="w-8 h-8"
-                        style={{ color: tech.color }}
-                      />
-                    </motion.div>
-
-                    <div className="text-center">
-                      <div className="text-sm font-bold text-slate-900">{tech.name}</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
         </motion.div>
 
         {/* Badges */}

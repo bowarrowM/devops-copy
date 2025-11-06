@@ -77,7 +77,7 @@ export default function NavbarModern() {
             </div>
             <div className="hidden sm:block">
               <div className={`font-bold text-lg ${isScrolled ? 'text-neutral-900' : 'text-white'} transition-colors`}>
-                DevOps.com.tr
+                DevOps
               </div>
               <div className={`text-xs ${isScrolled ? 'text-neutral-600' : 'text-white/80'} transition-colors`}>
                 {t.nav.tagline}

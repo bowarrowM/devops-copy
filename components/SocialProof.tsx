@@ -105,7 +105,7 @@ export default function SocialProof() {
 
               {/* Quote */}
               <blockquote className="text-xl md:text-2xl text-neutral-800 mb-6 leading-relaxed">
-                "DevOps.com.tr transformed our infrastructure in just 6 weeks. We went from manual deployments to fully automated CI/CD with 99.9% uptime. Game changer for our team."
+                "DevOps transformed our infrastructure in just 6 weeks. We went from manual deployments to fully automated CI/CD with 99.9% uptime. Game changer for our team."
               </blockquote>
 
               {/* Author */}

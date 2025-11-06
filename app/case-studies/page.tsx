@@ -84,7 +84,7 @@ const caseStudies: CaseStudy[] = [
       { metric: 'Audit Time Saved', value: '160 hours/year', icon: FaClock },
     ],
     testimonial: {
-      quote: 'We thought we had to choose between security and speed. DevOps.com.tr showed us how to have both. We achieved SOC 2 compliance in record time, and our deployment frequency actually increased. The automated compliance reporting alone saves us weeks during audits.',
+      quote: 'We thought we had to choose between security and speed. DevOps showed us how to have both. We achieved SOC 2 compliance in record time, and our deployment frequency actually increased. The automated compliance reporting alone saves us weeks during audits.',
       author: 'Michael Rodriguez',
       position: 'VP Engineering at PayFlow',
     },

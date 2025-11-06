@@ -84,7 +84,7 @@ export default function WhyChooseUsModern() {
             >
               <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-error-50 border border-error-200">
                 <FaTimes className="text-error-500" />
-                <span className="font-bold text-error-700">Before DevOps.com.tr</span>
+                <span className="font-bold text-error-700">Before DevOps</span>
               </div>
             </motion.div>
 
@@ -97,7 +97,7 @@ export default function WhyChooseUsModern() {
             >
               <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-success-50 border border-success-200">
                 <FaCheck className="text-success-500" />
-                <span className="font-bold text-success-700">After DevOps.com.tr</span>
+                <span className="font-bold text-success-700">After DevOps</span>
               </div>
             </motion.div>
           </div>

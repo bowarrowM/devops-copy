@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              DevOps<span className="text-primary-400">.com.tr</span>
+              DevOps
             </h3>
             <p className="text-secondary-400 mb-4">
               {t.footer.tagline}

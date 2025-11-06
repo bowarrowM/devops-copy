@@ -128,9 +128,9 @@ export async function POST(request: Request) {
 
       // Send confirmation to user
       await resend.emails.send({
-        from: process.env.RESEND_FROM_EMAIL || 'DevOps.com.tr <contact@devops.com.tr>',
+        from: process.env.RESEND_FROM_EMAIL || 'DevOps <contact@devops.com.tr>',
         to: email,
-        subject: 'Thank you for contacting DevOps.com.tr',
+        subject: 'Thank you for contacting DevOps',
         html: `
 <!DOCTYPE html>
 <html>
@@ -173,7 +173,7 @@ export async function POST(request: Request) {
   </div>
   <div class="content">
     <p>Hi ${name},</p>
-    <p>Thank you for reaching out to DevOps.com.tr. We've received your message and will get back to you within 24 hours.</p>
+    <p>Thank you for reaching out to DevOps. We've received your message and will get back to you within 24 hours.</p>
     <p>In the meantime, feel free to explore our free tools:</p>
     <ul>
       <li><strong>ROI Calculator:</strong> Calculate potential savings from DevOps automation</li>
@@ -183,7 +183,7 @@ export async function POST(request: Request) {
     <div style="text-align: center;">
       <a href="https://devops.com.tr/tools" class="button">Explore Free Tools</a>
     </div>
-    <p style="margin-top: 30px;">Best regards,<br><strong>DevOps.com.tr Team</strong></p>
+    <p style="margin-top: 30px;">Best regards,<br><strong>DevOps Team</strong></p>
   </div>
 </body>
 </html>

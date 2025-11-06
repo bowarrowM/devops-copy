@@ -279,7 +279,7 @@ export async function POST(request: Request) {
     </div>
 
     <div class="footer">
-      <p><strong>DevOps.com.tr</strong></p>
+      <p><strong>DevOps</strong></p>
       <p>Enterprise DevOps Transformation Experts</p>
       <p style="margin-top: 20px; font-size: 12px;">
         This report was generated based on conservative industry benchmarks from DORA research.

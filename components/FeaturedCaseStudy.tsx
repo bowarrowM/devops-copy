@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import PrefetchLink from './PrefetchLink';
 import {
   FaRocket,
   FaChartLine,
@@ -135,13 +135,13 @@ export default function FeaturedCaseStudy() {
 
             {/* CTA */}
             <div className="text-center pt-4">
-              <Link
+              <PrefetchLink
                 href="/case-studies"
                 className="btn btn-primary btn-lg inline-flex items-center gap-2"
               >
                 Read More Success Stories
                 <FaArrowRight />
-              </Link>
+              </PrefetchLink>
             </div>
           </div>
         </motion.div>

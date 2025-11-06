@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { generateMetadata } from '@/lib/seo/metadata'
+import WebVitals from '@/components/WebVitals'
 
 export const metadata: Metadata = generateMetadata('tr')
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://devops.com.tr" />
       </head>
       <body style={{ fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+        <WebVitals />
         {children}
       </body>
     </html>

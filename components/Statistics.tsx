@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import PrefetchLink from './PrefetchLink';
 import {
   FaRocket,
   FaUsers,
@@ -248,20 +249,20 @@ export default function Statistics() {
             Want to see these results for your organization?
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
+            <PrefetchLink
               href="/tools/roi-calculator"
               className="btn btn-lg bg-white text-primary-600 hover:bg-primary-50 shadow-xl inline-flex items-center gap-2"
             >
               Calculate Your ROI
               <FaChartLine />
-            </a>
-            <a
+            </PrefetchLink>
+            <PrefetchLink
               href="/#contact"
               className="btn btn-lg btn-outline border-white text-white hover:bg-white hover:text-primary-600 inline-flex items-center gap-2"
             >
               Schedule Consultation
               <FaRocket />
-            </a>
+            </PrefetchLink>
           </div>
         </motion.div>
       </div>

@@ -79,7 +79,6 @@ export const tr: Translations = {
         description: '7/24 izleme, olay müdahalesi ve tam DevOps ekip desteği.',
       },
     },
-    learnMore: 'Detayları Gör',
   },
   about: {
     title: 'Neden DevOps?',

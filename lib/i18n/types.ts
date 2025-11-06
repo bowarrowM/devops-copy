@@ -79,7 +79,6 @@ export interface Translations {
         description: string;
       };
     };
-    learnMore: string;
   };
   about: {
     title: string;

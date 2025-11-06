@@ -178,29 +178,9 @@ export default function Services() {
                       </h3>
 
                       {/* Description */}
-                      <p className="text-slate-600 leading-relaxed mb-6">
+                      <p className="text-slate-600 leading-relaxed">
                         {serviceData.description}
                       </p>
-
-                      {/* Learn More Link with animation */}
-                      <motion.div
-                        className="pt-6 border-t border-slate-100"
-                        whileHover={{ x: 5 }}
-                      >
-                        <button className={`bg-gradient-to-r ${selectedTierData?.gradient} bg-clip-text text-transparent font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all`}>
-                          {t.services.learnMore}
-                          <motion.svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2.5}
-                            viewBox="0 0 24 24"
-                            animate={{ x: isHovered ? 5 : 0 }}
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                          </motion.svg>
-                        </button>
-                      </motion.div>
                     </div>
 
                     {/* Decorative corner elements */}

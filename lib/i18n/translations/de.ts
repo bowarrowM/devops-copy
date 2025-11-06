@@ -79,7 +79,6 @@ export const de: Translations = {
         description: '24/7 Überwachung, Incident Response und vollständiger DevOps-Team-Support.',
       },
     },
-    learnMore: 'Mehr erfahren',
   },
   about: {
     title: 'Warum DevOps?',

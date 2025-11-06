@@ -34,7 +34,7 @@ export default function ServicesPage() {
         gradient: 'from-blue-600 to-blue-500',
         price: 'From $5K',
         link: '/services/assessment',
-        available: false, // Coming soon
+        available: true,
       },
       {
         title: 'CI/CD Pipeline Setup',
@@ -52,7 +52,7 @@ export default function ServicesPage() {
         gradient: 'from-cyan-600 to-blue-500',
         price: 'From $35K',
         link: '/services/cloud-migration',
-        available: false,
+        available: true,
       },
     ],
     transformation: [
@@ -72,7 +72,7 @@ export default function ServicesPage() {
         gradient: 'from-green-600 to-emerald-500',
         price: 'From $32K',
         link: '/services/iac',
-        available: false,
+        available: true,
       },
       {
         title: 'DevSecOps Integration',
@@ -81,7 +81,7 @@ export default function ServicesPage() {
         gradient: 'from-orange-600 to-red-500',
         price: 'From $40K',
         link: '/services/devsecops',
-        available: false,
+        available: true,
       },
     ],
     advanced: [
@@ -92,7 +92,7 @@ export default function ServicesPage() {
         gradient: 'from-indigo-600 to-purple-500',
         price: 'From $65K',
         link: '/services/platform',
-        available: false,
+        available: true,
       },
       {
         title: 'AIOps & Observability',
@@ -101,7 +101,7 @@ export default function ServicesPage() {
         gradient: 'from-pink-600 to-rose-500',
         price: 'From $50K',
         link: '/services/aiops',
-        available: false,
+        available: true,
       },
       {
         title: 'FinOps & Cost Optimization',
@@ -110,7 +110,7 @@ export default function ServicesPage() {
         gradient: 'from-yellow-600 to-orange-500',
         price: 'From $25K',
         link: '/services/finops',
-        available: false,
+        available: true,
       },
     ],
   };

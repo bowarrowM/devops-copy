@@ -3,10 +3,12 @@
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { locales, localeNames, localeFlags, Locale } from '@/lib/i18n/config';
 import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 export default function LanguageSwitcher() {
   const { locale } = useLanguage();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -22,10 +24,24 @@ export default function LanguageSwitcher() {
   }, []);
 
   const getLocalePath = (targetLocale: Locale) => {
-    if (targetLocale === 'tr') {
-      return '/';
+    // Get current path without locale prefix
+    let currentPath = pathname || '/';
+
+    // Remove current locale prefix if exists
+    if (currentPath.startsWith('/en')) {
+      currentPath = currentPath.substring(3) || '/';
+    } else if (currentPath.startsWith('/de')) {
+      currentPath = currentPath.substring(3) || '/';
     }
-    return `/${targetLocale}`;
+
+    // Build new path with target locale
+    if (targetLocale === 'tr') {
+      // Turkish is default, no prefix
+      return currentPath;
+    } else {
+      // Other languages use prefix
+      return `/${targetLocale}${currentPath === '/' ? '' : currentPath}`;
+    }
   };
 
   return (

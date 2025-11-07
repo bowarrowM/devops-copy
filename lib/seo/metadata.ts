@@ -15,10 +15,10 @@ export interface SEOMetadata {
 
 export const defaultMetadata = {
   tr: {
-    title: 'DevOps.com.tr - Türkiye\'nin DevOps Lideri | DevOps Danışmanlık & Bulut Çözümleri',
-    description: 'DevOps.com.tr - Türkiye\'nin patentli DevOps danışmanlık firması. CI/CD, Kubernetes, bulut migrasyonu, DevSecOps, platform engineering hizmetleri. Startup\'lar ve kurumsal şirketler için profesyonel DevOps dönüşüm çözümleri.',
+    title: 'DevOps - Türkiye\'nin DevOps Lideri | DevOps Danışmanlık & Bulut Çözümleri',
+    description: 'DevOps - Türkiye\'nin patentli DevOps danışmanlık firması. CI/CD, Kubernetes, bulut migrasyonu, DevSecOps, platform engineering hizmetleri. Startup\'lar ve kurumsal şirketler için profesyonel DevOps dönüşüm çözümleri.',
     keywords: 'DevOps, DevOps Türkiye, DevOps danışmanlık, CI/CD, Kubernetes, bulut migrasyonu, AWS, Azure, GCP, DevSecOps, Infrastructure as Code, Terraform, Docker, container orchestration, platform engineering, AIOps, FinOps, site reliability engineering, cloud native, microservices, GitOps, automation, continuous integration, continuous deployment, Istanbul DevOps, Türkiye cloud consulting, KVKK uyumlu DevOps',
-    ogTitle: 'DevOps.com.tr - Türkiye\'nin DevOps Dönüşüm Partneri',
+    ogTitle: 'DevOps - Türkiye\'nin DevOps Dönüşüm Partneri',
     ogDescription: 'Startup\'lardan enterprise şirketlere, modern DevOps çözümleri ile dijital dönüşümünüzü hızlandırın. CI/CD, Kubernetes, bulut migrasyonu, DevSecOps hizmetleri.',
     ogImage: 'https://devops.com.tr/og-image.jpg',
     twitterCard: 'summary_large_image',
@@ -27,10 +27,10 @@ export const defaultMetadata = {
     alternateLocales: ['en_US', 'de_DE'],
   },
   en: {
-    title: 'DevOps.com.tr - Turkey\'s DevOps Leader | DevOps Consulting & Cloud Solutions',
-    description: 'DevOps.com.tr - Turkey\'s patented DevOps consulting company. CI/CD, Kubernetes, cloud migration, DevSecOps, platform engineering services. Professional DevOps transformation solutions for startups and enterprises.',
+    title: 'DevOps - Turkey\'s DevOps Leader | DevOps Consulting & Cloud Solutions',
+    description: 'DevOps - Turkey\'s patented DevOps consulting company. CI/CD, Kubernetes, cloud migration, DevSecOps, platform engineering services. Professional DevOps transformation solutions for startups and enterprises.',
     keywords: 'DevOps, DevOps Turkey, DevOps consulting, CI/CD, Kubernetes, cloud migration, AWS, Azure, GCP, DevSecOps, Infrastructure as Code, Terraform, Docker, container orchestration, platform engineering, AIOps, FinOps, site reliability engineering, cloud native, microservices, GitOps, automation, continuous integration, continuous deployment, Istanbul DevOps, Turkey cloud consulting, Turkish DevOps company',
-    ogTitle: 'DevOps.com.tr - Turkey\'s DevOps Transformation Partner',
+    ogTitle: 'DevOps - Turkey\'s DevOps Transformation Partner',
     ogDescription: 'Accelerate your digital transformation with modern DevOps solutions from startups to enterprises. CI/CD, Kubernetes, cloud migration, DevSecOps services.',
     ogImage: 'https://devops.com.tr/og-image-en.jpg',
     twitterCard: 'summary_large_image',
@@ -39,10 +39,10 @@ export const defaultMetadata = {
     alternateLocales: ['tr_TR', 'de_DE'],
   },
   de: {
-    title: 'DevOps.com.tr - Türkeis DevOps-Führer | DevOps-Beratung & Cloud-Lösungen',
-    description: 'DevOps.com.tr - Türkeis patentiertes DevOps-Beratungsunternehmen. CI/CD, Kubernetes, Cloud-Migration, DevSecOps, Platform Engineering. Professionelle DevOps-Transformationslösungen für Startups und Unternehmen.',
+    title: 'DevOps - Türkeis DevOps-Führer | DevOps-Beratung & Cloud-Lösungen',
+    description: 'DevOps - Türkeis patentiertes DevOps-Beratungsunternehmen. CI/CD, Kubernetes, Cloud-Migration, DevSecOps, Platform Engineering. Professionelle DevOps-Transformationslösungen für Startups und Unternehmen.',
     keywords: 'DevOps, DevOps Türkei, DevOps Beratung, CI/CD, Kubernetes, Cloud Migration, AWS, Azure, GCP, DevSecOps, Infrastructure as Code, Terraform, Docker, Container-Orchestrierung, Platform Engineering, AIOps, FinOps, Site Reliability Engineering, Cloud Native, Microservices, GitOps, Automatisierung, Continuous Integration, Continuous Deployment, Istanbul DevOps, Türkei Cloud Consulting',
-    ogTitle: 'DevOps.com.tr - Türkeis DevOps-Transformationspartner',
+    ogTitle: 'DevOps - Türkeis DevOps-Transformationspartner',
     ogDescription: 'Beschleunigen Sie Ihre digitale Transformation mit modernen DevOps-Lösungen von Startups bis Unternehmen. CI/CD, Kubernetes, Cloud-Migration, DevSecOps.',
     ogImage: 'https://devops.com.tr/og-image-de.jpg',
     twitterCard: 'summary_large_image',
@@ -60,8 +60,8 @@ export function generateMetadata(language: 'tr' | 'en' | 'de'): Metadata {
     description: meta.description,
     keywords: meta.keywords,
     authors: [{ name: 'DevOps Turkey', url: 'https://devops.com.tr' }],
-    creator: 'DevOps.com.tr',
-    publisher: 'DevOps.com.tr',
+    creator: 'DevOps',
+    publisher: 'DevOps',
     formatDetection: {
       email: false,
       address: false,
@@ -83,13 +83,13 @@ export function generateMetadata(language: 'tr' | 'en' | 'de'): Metadata {
       url: meta.canonicalUrl,
       title: meta.ogTitle,
       description: meta.ogDescription,
-      siteName: 'DevOps.com.tr',
+      siteName: 'DevOps',
       images: [
         {
           url: meta.ogImage,
           width: 1200,
           height: 630,
-          alt: 'DevOps.com.tr - DevOps Consulting Services',
+          alt: 'DevOps - DevOps Consulting Services',
         },
       ],
     },

@@ -1,33 +1,49 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { LanguageProvider } from '@/lib/context/LanguageContext';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import InteractiveDevOpsFlow from '@/components/InteractiveDevOpsFlow';
-import AIFlowPipeline from '@/components/AIFlowPipeline';
-import TechStack from '@/components/TechStack';
+import NavbarModern from '@/components/NavbarModern';
+import HeroModern from '@/components/HeroModern';
 import Services from '@/components/Services';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import About from '@/components/About';
-import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
 
-export default function EnglishHome() {
+// Lazy load below-the-fold components for better performance
+const TechStack = dynamic(() => import('@/components/TechStack'), {
+  loading: () => <div className="h-96 bg-slate-50 animate-pulse" />,
+});
+
+const About = dynamic(() => import('@/components/About'), {
+  loading: () => <div className="h-96 bg-white animate-pulse" />,
+});
+
+/**
+ * English Home Page - Professional Corporate Website
+ *
+ * Clean, professional structure:
+ * 1. Hero - Value proposition
+ * 2. Services - DevOps, LLMOps, GitOps consulting
+ * 3. Tech Stack - Technologies and platforms
+ * 4. About - Company expertise
+ * 5. Contact - Lead capture
+ * 6. Footer - Information
+ *
+ * No marketing hype, no fake metrics, no packages.
+ * Professional corporate presentation only.
+ */
+export default function Home() {
   return (
     <LanguageProvider locale="en">
       <StructuredData />
       <main className="min-h-screen">
-        <Navbar />
-        <Hero />
-        <InteractiveDevOpsFlow />
-        <AIFlowPipeline />
+        <NavbarModern />
+        <HeroModern />
+
         <Services />
         <TechStack />
-        <WhyChooseUs />
         <About />
-        <Testimonials />
+
         <Contact />
         <Footer />
       </main>

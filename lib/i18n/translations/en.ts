@@ -6,14 +6,15 @@ export const en: Translations = {
     services: 'Services',
     about: 'About',
     contact: 'Contact',
-    getStarted: 'Get Started',
+    getStarted: 'Contact',
+    tagline: 'DevOps Consulting',
   },
   hero: {
-    title: 'DevOps Consulting & Platform Engineering',
-    subtitle: 'Let developers write code, not manage infrastructure. Self-service platforms, automated deployments, and instant rollbacks with GitOps and Platform Engineering. Build Internal Developer Platforms (IDP) on AWS, Azure, GCP and boost team productivity with AI workflows, LLMOps, and cloud-native architectures.',
-    cta: 'Get Started',
-    ctaSecondary: 'Explore Services',
-    badge: 'DevOps & Platform Engineering Experts',
+    title: 'DevOps Consulting & Transformation',
+    subtitle: 'Let developers write code, not manage infrastructure. Self-service platforms, automated deployments, and instant rollbacks with GitOps. Modern DevOps solutions on AWS, Azure, GCP that boost team productivity with AI workflows, LLMOps, and cloud-native architectures.',
+    cta: 'Request Consultation',
+    ctaSecondary: 'View Services',
+    badge: 'DevOps Experts',
   },
   services: {
     title: 'Our Services',
@@ -31,54 +32,45 @@ export const en: Translations = {
         title: 'Advanced',
         description: 'Enterprise-scale solutions',
       },
-      managed: {
-        title: 'Managed Services',
-        description: '24/7 support and management',
-      },
     },
     items: {
       assessment: {
         title: 'DevOps Assessment & Strategy',
         description: 'Analyze current state, evaluate technology stack, and develop roadmap.',
       },
-      cicd: {
-        title: 'CI/CD Pipeline Implementation',
-        description: 'Automated testing and deployment with AWS CodePipeline, Azure DevOps, GitLab CI/CD, or GitHub Actions.',
+      gitops: {
+        title: 'GitOps & Continuous Deployment',
+        description: 'Git-driven deployment with ArgoCD, Flux CD. Automated rollback, drift detection, and Kubernetes-native continuous delivery.',
       },
       cloudMigration: {
-        title: 'Cloud Migration',
-        description: 'Secure and optimized migration to AWS, Azure, or GCP.',
+        title: 'Cloud Migration & Optimization',
+        description: 'Secure migration to AWS, Azure, GCP with multi-cloud strategy. Flexible infrastructure without vendor lock-in.',
+      },
+      llmops: {
+        title: 'LLMOps & AI Model Operations',
+        description: 'LLM model deployment, prompt engineering, vector databases, AI workflow automation. MLflow, Kubernetes, GPU orchestration.',
       },
       kubernetes: {
         title: 'Kubernetes & Container Orchestration',
-        description: 'Container management with EKS, AKS, or GKE, service mesh, and GitOps.',
-      },
-      iac: {
-        title: 'Infrastructure as Code (IaC)',
-        description: 'Multi-cloud infrastructure automation with AWS CloudFormation, Azure ARM/Bicep, Terraform, or Pulumi.',
+        description: 'Production-ready cluster setup with EKS, AKS, GKE. Service mesh, autoscaling, and monitoring.',
       },
       devsecops: {
-        title: 'DevSecOps Integration',
-        description: 'Security scanning automation, compliance management, and vulnerability assessment.',
+        title: 'DevSecOps & AI Security',
+        description: 'AI-powered security scanning, policy-as-code, automated compliance, and vulnerability management.',
       },
       platform: {
-        title: 'Platform Engineering',
-        description: 'Internal developer platforms and self-service infrastructure solutions.',
+        title: 'Platform Engineering & IDP',
+        description: 'Internal Developer Platform (IDP), self-service infrastructure, Backstage. Focused on developer experience and productivity.',
       },
       aiops: {
-        title: 'AIOps & Observability',
-        description: 'AI-powered monitoring with AWS CloudWatch, Azure Monitor, Prometheus, Grafana, and Datadog.',
+        title: 'AIOps & Intelligent Monitoring',
+        description: 'AI-powered predictive analytics, automated incident response, unified observability. Prometheus, Grafana, Datadog, Dynatrace.',
       },
       finops: {
-        title: 'FinOps & Cost Optimization',
-        description: 'Analyze and optimize cloud spending with AWS Cost Explorer, Azure Cost Management, and GCP Billing.',
-      },
-      managed: {
-        title: 'Managed DevOps Services',
-        description: '24/7 monitoring, incident response, and full DevOps team support.',
+        title: 'FinOps & Cloud Cost Management',
+        description: 'Cloud cost optimization, waste reduction, reserved instances strategy. Achieve 15-40% cost savings. AWS, Azure, GCP billing.',
       },
     },
-    learnMore: 'Learn More',
   },
   about: {
     title: 'Why DevOps?',
@@ -189,11 +181,23 @@ export const en: Translations = {
       consentRequired: 'You must provide consent to continue',
       success: 'Your message has been sent successfully! We will contact you shortly.',
       error: 'An error occurred. Please try again or contact us directly via email.',
+      scheduleCall: 'Schedule a Call',
     },
     info: {
       address: 'Istanbul, Turkey',
       email: 'info@devops.com.tr',
       phone: '+90 (XXX) XXX XX XX',
+    },
+    labels: {
+      address: 'Address',
+      email: 'Email',
+      phone: 'Phone',
+      social: 'Social Media',
+      freeConsulting: 'Needs Analysis',
+      consultingDesc: 'Let\'s discuss how we can help you on your DevOps journey.',
+      benefit1: '30-minute discovery call',
+      benefit2: 'Detailed infrastructure analysis',
+      benefit3: 'Custom solution proposals',
     },
   },
   footer: {
@@ -275,6 +279,9 @@ export const en: Translations = {
     cloudPlatforms: {
       title: 'Multi-Cloud Expertise',
       description: 'We deliver production-ready infrastructure and DevOps solutions on AWS, Microsoft Azure, and Google Cloud Platform',
+      aws: 'EKS, ECS, Lambda, RDS, S3, CloudFormation, CodePipeline',
+      azure: 'AKS, Azure DevOps, Functions, Cosmos DB, Azure Storage',
+      gcp: 'GKE, Cloud Run, BigQuery, Cloud Storage, Cloud Build',
     },
     categories: {
       cicd: 'CI/CD & Automation',
@@ -291,5 +298,132 @@ export const en: Translations = {
       enterprise: 'Enterprise Grade',
     },
     allTools: 'All Tools',
+  },
+  featuredCaseStudy: {
+    badge: 'Success Story',
+    title: 'Real Results, Real Impact',
+    subtitle: 'See how we helped MegaShop achieve 99.99% uptime during Black Friday',
+    tags: {
+      ecommerce: 'E-Commerce',
+      employees: '500+ employees',
+      weeks: '12 weeks',
+    },
+    caseTitle: 'Scaling E-Commerce Platform to Handle Black Friday Traffic',
+    company: 'MegaShop',
+    challenge: {
+      title: 'The Challenge',
+      description: 'Severe downtime during peak shopping seasons. Monolithic architecture couldn\'t handle traffic spikes, resulting in lost revenue and frustrated customers. Deployments took 6-8 hours.',
+    },
+    solution: {
+      title: 'The Solution',
+      description: 'Migrated to microservices on Kubernetes, established CI/CD pipelines with automated testing, implemented auto-scaling, and set up comprehensive observability.',
+    },
+    results: {
+      title: 'Impressive Results',
+      uptime: { value: '99.99%', label: 'Uptime During Peak' },
+      deployments: { value: '87%', label: 'Faster Deployments' },
+      revenue: { value: '$2.4M', label: 'Revenue Saved' },
+      scaling: { value: '10x', label: 'Scaling Capacity' },
+    },
+    testimonial: {
+      quote: 'The transformation was incredible. We handled Black Friday with zero downtime for the first time in company history. Our engineering team can now deploy multiple times per day instead of once per week. The ROI was achieved in the first major shopping season.',
+      author: 'Sarah Chen',
+      position: 'CTO at MegaShop',
+    },
+    cta: 'Read More Success Stories',
+    quickStats: {
+      savings: { value: '$3.5M+', label: 'Total Client Savings Generated' },
+      uptime: { value: '99.9%', label: 'Average Client Uptime' },
+      deployments: { value: '87%', label: 'Faster Deployments on Average' },
+    },
+  },
+  clientLogos: {
+    title: 'Trusted Partner',
+    subtitle: 'Leading companies trust us for their DevOps transformation',
+    clients: {
+      retail: 'Leading Retail Chain',
+      fintech: 'Financial Technology Company',
+      saas: 'Enterprise SaaS Platform',
+      healthcare: 'Healthcare Technology Company',
+      logistics: 'Logistics and Cargo',
+      manufacturing: 'Manufacturing and Industry',
+      education: 'Education Technology',
+      insurance: 'Insurance and Finance',
+    },
+    certifications: {
+      aws: {
+        title: 'AWS Advanced Partner',
+        description: 'Certified AWS consulting partner with advanced tier status',
+      },
+      iso: {
+        title: 'ISO 27001 Certified',
+        description: 'Information security management system certified',
+      },
+      kvkk: {
+        title: 'GDPR Compliant',
+        description: 'Full compliance with personal data protection regulations',
+      },
+      microsoft: {
+        title: 'Microsoft Partner',
+        description: 'Certified partner in Azure and Microsoft technologies',
+      },
+    },
+    trustIndicators: {
+      clients: { value: '50+', label: 'Active Clients' },
+      projects: { value: '200+', label: 'Completed Projects' },
+      satisfaction: { value: '98%', label: 'Client Satisfaction' },
+      experience: { value: '5+ Years', label: 'DevOps Experience' },
+    },
+  },
+  statistics: {
+    title: 'Our Success in Numbers',
+    subtitle: 'We deliver concrete results for our clients',
+    stats: {
+      clients: {
+        value: '50+',
+        label: 'Happy Clients',
+        description: 'Serving Turkey\'s leading companies',
+      },
+      projects: {
+        value: '200+',
+        label: 'Completed Projects',
+        description: 'Successfully completed DevOps transformations',
+      },
+      savings: {
+        value: '$3.5M+',
+        label: 'Total Savings',
+        description: 'Cost optimization provided for our clients',
+      },
+      satisfaction: {
+        value: '98%',
+        label: 'Satisfaction',
+        description: 'Client satisfaction score',
+      },
+      deployments: {
+        value: '87%',
+        label: 'Faster',
+        description: 'Average improvement in deployment times',
+      },
+      uptime: {
+        value: '99.9%',
+        label: 'Uptime',
+        description: 'Average system availability rate',
+      },
+      servers: {
+        value: '1000+',
+        label: 'Managed Servers',
+        description: 'Cloud resources we actively manage',
+      },
+      certifications: {
+        value: '15+',
+        label: 'Certifications',
+        description: 'Professional certifications held by our team members',
+      },
+    },
+    cta: {
+      question: 'Want to see these results for your organization?',
+      calculateRoi: 'Calculate Your ROI',
+      scheduleConsultation: 'Schedule Consultation',
+    },
   },
 };

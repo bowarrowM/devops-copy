@@ -52,9 +52,9 @@ interface ServiceSchema {
 
 export function getOrganizationSchema(language: Language): OrganizationSchema {
   const descriptions = {
-    tr: 'DevOps.com.tr - Türkiye\'nin lider DevOps danışmanlık firması. Cloud migration, CI/CD, Kubernetes, DevSecOps ve platform engineering hizmetleri.',
-    en: 'DevOps.com.tr - Turkey\'s leading DevOps consulting company. Cloud migration, CI/CD, Kubernetes, DevSecOps and platform engineering services.',
-    de: 'DevOps.com.tr - Türkeis führendes DevOps-Beratungsunternehmen. Cloud-Migration, CI/CD, Kubernetes, DevSecOps und Platform Engineering.',
+    tr: 'DevOps - Türkiye\'nin lider DevOps danışmanlık firması. Cloud migration, CI/CD, Kubernetes, DevSecOps ve platform engineering hizmetleri.',
+    en: 'DevOps - Turkey\'s leading DevOps consulting company. Cloud migration, CI/CD, Kubernetes, DevSecOps and platform engineering services.',
+    de: 'DevOps - Türkeis führendes DevOps-Beratungsunternehmen. Cloud-Migration, CI/CD, Kubernetes, DevSecOps und Platform Engineering.',
   };
 
   const slogans = {
@@ -111,7 +111,7 @@ export function getProfessionalServiceSchema(language: Language): any {
     description: descriptions[language],
     provider: {
       '@type': 'Organization',
-      name: 'DevOps.com.tr',
+      name: 'DevOps',
       url: 'https://devops.com.tr',
     },
     areaServed: [
@@ -175,21 +175,21 @@ export function getProfessionalServiceSchema(language: Language): any {
 
 export function getWebPageSchema(language: Language): any {
   const descriptions = {
-    tr: 'DevOps.com.tr - Türkiye\'nin DevOps patentli danışmanlık şirketi. Startup\'lardan enterprise şirketlere DevOps transformation, cloud migration, Kubernetes, CI/CD ve DevSecOps hizmetleri.',
-    en: 'DevOps.com.tr - Turkey\'s DevOps patented consulting company. DevOps transformation, cloud migration, Kubernetes, CI/CD and DevSecOps services from startups to enterprises.',
-    de: 'DevOps.com.tr - Türkeis patentiertes DevOps-Beratungsunternehmen. DevOps-Transformation, Cloud-Migration, Kubernetes, CI/CD und DevSecOps-Services von Startups bis Unternehmen.',
+    tr: 'DevOps - Türkiye\'nin DevOps patentli danışmanlık şirketi. Startup\'lardan enterprise şirketlere DevOps transformation, cloud migration, Kubernetes, CI/CD ve DevSecOps hizmetleri.',
+    en: 'DevOps - Turkey\'s DevOps patented consulting company. DevOps transformation, cloud migration, Kubernetes, CI/CD and DevSecOps services from startups to enterprises.',
+    de: 'DevOps - Türkeis patentiertes DevOps-Beratungsunternehmen. DevOps-Transformation, Cloud-Migration, Kubernetes, CI/CD und DevSecOps-Services von Startups bis Unternehmen.',
   };
 
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'DevOps.com.tr - DevOps Consulting & Cloud Solutions',
+    name: 'DevOps - DevOps Consulting & Cloud Solutions',
     description: descriptions[language],
     url: 'https://devops.com.tr',
     inLanguage: language === 'tr' ? 'tr-TR' : language === 'en' ? 'en-US' : 'de-DE',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'DevOps.com.tr',
+      name: 'DevOps',
       url: 'https://devops.com.tr',
     },
     about: {

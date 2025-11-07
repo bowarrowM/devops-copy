@@ -15,27 +15,25 @@ const serviceIcons = [
 
 export default function Services() {
   const { t } = useLanguage();
-  const [selectedTier, setSelectedTier] = useState<'foundation' | 'transformation' | 'advanced' | 'managed'>('foundation');
+  const [selectedTier, setSelectedTier] = useState<'foundation' | 'transformation' | 'advanced'>('foundation');
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const tiers = [
     { id: 'foundation' as const, gradient: 'from-blue-500 to-cyan-600', glow: 'rgba(59, 130, 246, 0.3)' },
     { id: 'transformation' as const, gradient: 'from-purple-500 to-pink-600', glow: 'rgba(139, 92, 246, 0.3)' },
     { id: 'advanced' as const, gradient: 'from-orange-500 to-red-600', glow: 'rgba(249, 115, 22, 0.3)' },
-    { id: 'managed' as const, gradient: 'from-green-500 to-emerald-600', glow: 'rgba(16, 185, 129, 0.3)' },
   ];
 
   const services = [
     { key: 'assessment', tier: 'foundation' },
-    { key: 'cicd', tier: 'foundation' },
+    { key: 'gitops', tier: 'foundation' },
     { key: 'cloudMigration', tier: 'foundation' },
+    { key: 'llmops', tier: 'transformation' },
     { key: 'kubernetes', tier: 'transformation' },
-    { key: 'iac', tier: 'transformation' },
     { key: 'devsecops', tier: 'transformation' },
     { key: 'platform', tier: 'advanced' },
     { key: 'aiops', tier: 'advanced' },
     { key: 'finops', tier: 'advanced' },
-    { key: 'managed', tier: 'managed' },
   ];
 
   const filteredServices = services.filter(s => s.tier === selectedTier);
@@ -178,29 +176,9 @@ export default function Services() {
                       </h3>
 
                       {/* Description */}
-                      <p className="text-slate-600 leading-relaxed mb-6">
+                      <p className="text-slate-600 leading-relaxed">
                         {serviceData.description}
                       </p>
-
-                      {/* Learn More Link with animation */}
-                      <motion.div
-                        className="pt-6 border-t border-slate-100"
-                        whileHover={{ x: 5 }}
-                      >
-                        <button className={`bg-gradient-to-r ${selectedTierData?.gradient} bg-clip-text text-transparent font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all`}>
-                          {t.services.learnMore}
-                          <motion.svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2.5}
-                            viewBox="0 0 24 24"
-                            animate={{ x: isHovered ? 5 : 0 }}
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                          </motion.svg>
-                        </button>
-                      </motion.div>
                     </div>
 
                     {/* Decorative corner elements */}

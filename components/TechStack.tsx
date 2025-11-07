@@ -41,21 +41,21 @@ export default function TechStack() {
       icon: SiAmazonaws,
       color: '#FF9900',
       category: 'cloud',
-      description: 'EKS, ECS, Lambda, RDS, S3, CloudFormation, CodePipeline'
+      description: t.techStack.cloudPlatforms.aws
     },
     {
       name: 'Microsoft Azure',
       icon: SiMicrosoftazure,
       color: '#0089D6',
       category: 'cloud',
-      description: 'AKS, Azure DevOps, Functions, Cosmos DB, Azure Storage'
+      description: t.techStack.cloudPlatforms.azure
     },
     {
       name: 'Google Cloud',
       icon: SiGooglecloud,
       color: '#4285F4',
       category: 'cloud',
-      description: 'GKE, Cloud Run, BigQuery, Cloud Storage, Cloud Build'
+      description: t.techStack.cloudPlatforms.gcp
     },
   ];
 

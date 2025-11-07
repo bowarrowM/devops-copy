@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { generateMetadata } from '@/lib/seo/metadata'
+import WebVitals from '@/components/WebVitals'
 import '../globals.css'
 
 export const metadata: Metadata = generateMetadata('en')
@@ -39,6 +41,21 @@ export default function EnLayout({
         <link rel="alternate" hrefLang="x-default" href="https://devops.com.tr" />
       </head>
       <body style={{ fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GNJQXZTJKJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GNJQXZTJKJ');
+          `}
+        </Script>
+
+        <WebVitals />
         {children}
       </body>
     </html>

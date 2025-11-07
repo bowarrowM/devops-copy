@@ -6,14 +6,15 @@ export const de: Translations = {
     services: 'Dienstleistungen',
     about: 'Über uns',
     contact: 'Kontakt',
-    getStarted: 'Jetzt starten',
+    getStarted: 'Kontakt',
+    tagline: 'DevOps Beratung',
   },
   hero: {
-    title: 'DevOps Beratung & Platform Engineering',
-    subtitle: 'Entwickler sollen Code schreiben, nicht Infrastruktur verwalten. Self-Service-Plattformen, automatisierte Deployments und sofortiger Rollback mit GitOps und Platform Engineering. Internal Developer Platforms (IDP) auf AWS, Azure, GCP aufbauen und Teamproduktivität mit AI-Workflows, LLMOps und Cloud-Native-Architekturen steigern.',
-    cta: 'Jetzt starten',
+    title: 'DevOps Beratung & Transformation',
+    subtitle: 'Entwickler sollen Code schreiben, nicht Infrastruktur verwalten. Self-Service-Plattformen, automatisierte Deployments und sofortiger Rollback mit GitOps. Moderne DevOps-Lösungen auf AWS, Azure, GCP steigern Teamproduktivität mit AI-Workflows, LLMOps und Cloud-Native-Architekturen.',
+    cta: 'Beratung Anfragen',
     ctaSecondary: 'Services erkunden',
-    badge: 'DevOps & Platform Engineering Experten',
+    badge: 'DevOps Experten',
   },
   services: {
     title: 'Unsere Dienstleistungen',
@@ -31,54 +32,45 @@ export const de: Translations = {
         title: 'Erweitert',
         description: 'Enterprise-Lösungen',
       },
-      managed: {
-        title: 'Managed Services',
-        description: '24/7 Support und Verwaltung',
-      },
     },
     items: {
       assessment: {
         title: 'DevOps-Bewertung & Strategie',
         description: 'Analyse des aktuellen Zustands, Bewertung des Technologie-Stacks und Roadmap-Entwicklung.',
       },
-      cicd: {
-        title: 'CI/CD Pipeline-Implementierung',
-        description: 'Automatisierte Tests und Bereitstellung mit AWS CodePipeline, Azure DevOps, GitLab CI/CD oder GitHub Actions.',
+      gitops: {
+        title: 'GitOps & Continuous Deployment',
+        description: 'Git-gesteuerte Bereitstellung mit ArgoCD, Flux CD. Automatisches Rollback, Drift-Detection und Kubernetes-native Continuous Delivery.',
       },
       cloudMigration: {
-        title: 'Cloud-Migration',
-        description: 'Sichere und optimierte Migration zu AWS, Azure oder GCP.',
+        title: 'Cloud-Migration & Optimierung',
+        description: 'Sichere Migration zu AWS, Azure, GCP mit Multi-Cloud-Strategie. Flexible Infrastruktur ohne Vendor Lock-in.',
+      },
+      llmops: {
+        title: 'LLMOps & AI Model Operations',
+        description: 'LLM-Modellbereitstellung, Prompt-Engineering, Vektordatenbanken, KI-Workflow-Automatisierung. MLflow, Kubernetes, GPU-Orchestrierung.',
       },
       kubernetes: {
         title: 'Kubernetes & Container-Orchestrierung',
-        description: 'Container-Management mit EKS, AKS oder GKE, Service Mesh und GitOps.',
-      },
-      iac: {
-        title: 'Infrastructure as Code (IaC)',
-        description: 'Multi-Cloud-Infrastruktur-Automatisierung mit AWS CloudFormation, Azure ARM/Bicep, Terraform oder Pulumi.',
+        description: 'Produktionsbereite Cluster-Einrichtung mit EKS, AKS, GKE. Service Mesh, Autoscaling und Monitoring.',
       },
       devsecops: {
-        title: 'DevSecOps-Integration',
-        description: 'Automatisierung von Sicherheitsscans, Compliance-Management und Schwachstellenbewertung.',
+        title: 'DevSecOps & KI-Sicherheit',
+        description: 'KI-gestützte Sicherheitsscans, Policy-as-Code, automatisierte Compliance und Schwachstellenmanagement.',
       },
       platform: {
-        title: 'Platform Engineering',
-        description: 'Interne Entwicklerplattformen und Self-Service-Infrastrukturlösungen.',
+        title: 'Platform Engineering & IDP',
+        description: 'Internal Developer Platform (IDP), Self-Service-Infrastruktur, Backstage. Fokus auf Developer Experience und Produktivität.',
       },
       aiops: {
-        title: 'AIOps & Observability',
-        description: 'KI-gestütztes Monitoring mit AWS CloudWatch, Azure Monitor, Prometheus, Grafana und Datadog.',
+        title: 'AIOps & Intelligentes Monitoring',
+        description: 'KI-gestützte prädiktive Analysen, automatisierte Incident Response, einheitliche Observability. Prometheus, Grafana, Datadog, Dynatrace.',
       },
       finops: {
-        title: 'FinOps & Kostenoptimierung',
-        description: 'Analysieren und optimieren Sie Cloud-Ausgaben mit AWS Cost Explorer, Azure Cost Management und GCP Billing.',
-      },
-      managed: {
-        title: 'Managed DevOps Services',
-        description: '24/7 Überwachung, Incident Response und vollständiger DevOps-Team-Support.',
+        title: 'FinOps & Cloud-Kostenmanagement',
+        description: 'Cloud-Kostenoptimierung, Waste-Reduction, Reserved-Instances-Strategie. Erzielen Sie 15-40% Kosteneinsparungen. AWS, Azure, GCP Billing.',
       },
     },
-    learnMore: 'Mehr erfahren',
   },
   about: {
     title: 'Warum DevOps?',
@@ -189,11 +181,23 @@ export const de: Translations = {
       consentRequired: 'Sie müssen Ihre Zustimmung geben, um fortzufahren',
       success: 'Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.',
       error: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.',
+      scheduleCall: 'Termin vereinbaren',
     },
     info: {
       address: 'Istanbul, Türkei',
       email: 'info@devops.com.tr',
       phone: '+90 (XXX) XXX XX XX',
+    },
+    labels: {
+      address: 'Adresse',
+      email: 'E-Mail',
+      phone: 'Telefon',
+      social: 'Soziale Medien',
+      freeConsulting: 'Bedarfsanalyse',
+      consultingDesc: 'Lassen Sie uns besprechen, wie wir Sie auf Ihrer DevOps-Reise unterstützen können.',
+      benefit1: '30-minütiges Entdeckungsgespräch',
+      benefit2: 'Detaillierte Infrastrukturanalyse',
+      benefit3: 'Individuelle Lösungsvorschläge',
     },
   },
   footer: {
@@ -275,6 +279,9 @@ export const de: Translations = {
     cloudPlatforms: {
       title: 'Multi-Cloud-Expertise',
       description: 'Wir liefern produktionsreife Infrastruktur und DevOps-Lösungen auf AWS, Microsoft Azure und Google Cloud Platform',
+      aws: 'EKS, ECS, Lambda, RDS, S3, CloudFormation, CodePipeline',
+      azure: 'AKS, Azure DevOps, Functions, Cosmos DB, Azure Storage',
+      gcp: 'GKE, Cloud Run, BigQuery, Cloud Storage, Cloud Build',
     },
     categories: {
       cicd: 'CI/CD & Automatisierung',
@@ -291,5 +298,132 @@ export const de: Translations = {
       enterprise: 'Enterprise Grade',
     },
     allTools: 'Alle Werkzeuge',
+  },
+  featuredCaseStudy: {
+    badge: 'Erfolgsgeschichte',
+    title: 'Echte Ergebnisse, Echte Wirkung',
+    subtitle: 'Sehen Sie, wie wir MegaShop geholfen haben, 99,99% Verfügbarkeit während des Black Friday zu erreichen',
+    tags: {
+      ecommerce: 'E-Commerce',
+      employees: '500+ Mitarbeiter',
+      weeks: '12 Wochen',
+    },
+    caseTitle: 'Skalierung der E-Commerce-Plattform für Black Friday Traffic',
+    company: 'MegaShop',
+    challenge: {
+      title: 'Die Herausforderung',
+      description: 'Schwere Ausfallzeiten während der Haupteinkaufssaison. Die monolithische Architektur konnte Verkehrsspitzen nicht bewältigen, was zu Umsatzverlusten und frustrierten Kunden führte. Bereitstellungen dauerten 6-8 Stunden.',
+    },
+    solution: {
+      title: 'Die Lösung',
+      description: 'Migration zu Microservices auf Kubernetes, Einrichtung von CI/CD-Pipelines mit automatisierten Tests, Implementierung von Auto-Scaling und umfassende Observability.',
+    },
+    results: {
+      title: 'Beeindruckende Ergebnisse',
+      uptime: { value: '99,99%', label: 'Verfügbarkeit Während Spitzenzeiten' },
+      deployments: { value: '87%', label: 'Schnellere Bereitstellungen' },
+      revenue: { value: '$2.4M', label: 'Geretteter Umsatz' },
+      scaling: { value: '10x', label: 'Skalierungskapazität' },
+    },
+    testimonial: {
+      quote: 'Die Transformation war unglaublich. Wir haben den Black Friday zum ersten Mal in der Firmengeschichte ohne Ausfallzeit gemeistert. Unser Engineering-Team kann jetzt mehrmals täglich deployen statt einmal pro Woche. Der ROI wurde in der ersten großen Einkaufssaison erreicht.',
+      author: 'Sarah Chen',
+      position: 'CTO bei MegaShop',
+    },
+    cta: 'Mehr Erfolgsgeschichten Lesen',
+    quickStats: {
+      savings: { value: '$3.5M+', label: 'Gesamte Kundeneinsparungen' },
+      uptime: { value: '99,9%', label: 'Durchschnittliche Kundenverfügbarkeit' },
+      deployments: { value: '87%', label: 'Durchschnittlich Schnellere Bereitstellungen' },
+    },
+  },
+  clientLogos: {
+    title: 'Vertrauenspartner',
+    subtitle: 'Führende Unternehmen vertrauen uns bei ihrer DevOps-Transformation',
+    clients: {
+      retail: 'Führende Einzelhandelskette',
+      fintech: 'Finanztechnologie-Unternehmen',
+      saas: 'Enterprise-SaaS-Plattform',
+      healthcare: 'Gesundheitstechnologie-Unternehmen',
+      logistics: 'Logistik und Fracht',
+      manufacturing: 'Fertigung und Industrie',
+      education: 'Bildungstechnologie',
+      insurance: 'Versicherung und Finanzen',
+    },
+    certifications: {
+      aws: {
+        title: 'AWS Advanced Partner',
+        description: 'Zertifizierter AWS-Beratungspartner mit Advanced-Tier-Status',
+      },
+      iso: {
+        title: 'ISO 27001 Zertifiziert',
+        description: 'Informationssicherheits-Managementsystem zertifiziert',
+      },
+      kvkk: {
+        title: 'DSGVO-Konform',
+        description: 'Vollständige Einhaltung der Datenschutzbestimmungen',
+      },
+      microsoft: {
+        title: 'Microsoft Partner',
+        description: 'Zertifizierter Partner für Azure und Microsoft-Technologien',
+      },
+    },
+    trustIndicators: {
+      clients: { value: '50+', label: 'Aktive Kunden' },
+      projects: { value: '200+', label: 'Abgeschlossene Projekte' },
+      satisfaction: { value: '98%', label: 'Kundenzufriedenheit' },
+      experience: { value: '5+ Jahre', label: 'DevOps-Erfahrung' },
+    },
+  },
+  statistics: {
+    title: 'Unser Erfolg in Zahlen',
+    subtitle: 'Wir liefern konkrete Ergebnisse für unsere Kunden',
+    stats: {
+      clients: {
+        value: '50+',
+        label: 'Zufriedene Kunden',
+        description: 'Wir bedienen führende Unternehmen der Türkei',
+      },
+      projects: {
+        value: '200+',
+        label: 'Abgeschlossene Projekte',
+        description: 'Erfolgreich abgeschlossene DevOps-Transformationen',
+      },
+      savings: {
+        value: '$3.5M+',
+        label: 'Gesamteinsparungen',
+        description: 'Kostenoptimierung für unsere Kunden',
+      },
+      satisfaction: {
+        value: '98%',
+        label: 'Zufriedenheit',
+        description: 'Kundenzufriedenheitswert',
+      },
+      deployments: {
+        value: '87%',
+        label: 'Schneller',
+        description: 'Durchschnittliche Verbesserung der Bereitstellungszeiten',
+      },
+      uptime: {
+        value: '99,9%',
+        label: 'Verfügbarkeit',
+        description: 'Durchschnittliche Systemverfügbarkeitsrate',
+      },
+      servers: {
+        value: '1000+',
+        label: 'Verwaltete Server',
+        description: 'Cloud-Ressourcen, die wir aktiv verwalten',
+      },
+      certifications: {
+        value: '15+',
+        label: 'Zertifizierungen',
+        description: 'Professionelle Zertifizierungen unserer Teammitglieder',
+      },
+    },
+    cta: {
+      question: 'Möchten Sie diese Ergebnisse für Ihr Unternehmen sehen?',
+      calculateRoi: 'ROI Berechnen',
+      scheduleConsultation: 'Beratung Vereinbaren',
+    },
   },
 };

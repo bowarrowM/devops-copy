@@ -6,14 +6,15 @@ export const tr: Translations = {
     services: 'Hizmetler',
     about: 'Hakkımızda',
     contact: 'İletişim',
-    getStarted: 'Başlayın',
+    getStarted: 'İletişim',
+    tagline: 'DevOps Danışmanlığı',
   },
   hero: {
-    title: 'DevOps Danışmanlık & Platform Engineering',
-    subtitle: 'Geliştiricileriniz kod yazsın, altyapı yönetmesin. GitOps ve Platform Engineering ile self-service platformlar, otomatik deploymentlar ve dakikalar içinde rollback. AWS, Azure, GCP\'de Internal Developer Platform (IDP) kuruyor, AI workflows, LLMOps ve cloud-native mimariler ile ekibinizin verimliliğini artırıyoruz.',
-    cta: 'Hemen Başlayın',
-    ctaSecondary: 'Hizmetleri Keşfedin',
-    badge: 'DevOps & Platform Engineering Uzmanları',
+    title: 'DevOps Danışmanlık & Dönüşüm',
+    subtitle: 'Geliştiricileriniz kod yazsın, altyapı yönetmesin. GitOps ile self-service platformlar, otomatik deploymentlar ve dakikalar içinde rollback. AWS, Azure, GCP\'de modern DevOps çözümleri, AI workflows, LLMOps ve cloud-native mimariler ile ekibinizin verimliliğini artırıyoruz.',
+    cta: 'Görüşme Talebi',
+    ctaSecondary: 'Hizmetleri İnceleyin',
+    badge: 'DevOps Uzmanları',
   },
   services: {
     title: 'Hizmetlerimiz',
@@ -31,54 +32,45 @@ export const tr: Translations = {
         title: 'İleri Seviye',
         description: 'Kurumsal ölçekte çözümler',
       },
-      managed: {
-        title: 'Yönetilen Hizmetler',
-        description: '7/24 destek ve yönetim',
-      },
     },
     items: {
       assessment: {
         title: 'DevOps Değerlendirme & Strateji',
         description: 'Mevcut durumunuzu analiz eder, teknoloji stack değerlendirmesi yapar ve yol haritası oluştururuz.',
       },
-      cicd: {
-        title: 'CI/CD Pipeline Kurulumu',
-        description: 'AWS CodePipeline, Azure DevOps, GitLab CI/CD veya GitHub Actions ile otomatik test ve deployment süreçleri.',
+      gitops: {
+        title: 'GitOps & Continuous Deployment',
+        description: 'ArgoCD, Flux CD ile Git-driven deployment, otomatik rollback ve drift detection. Kubernetes-native continuous delivery.',
       },
       cloudMigration: {
-        title: 'Bulut Migrasyonu',
-        description: 'AWS, Azure veya GCP\'ye güvenli ve optimize edilmiş bulut geçişi.',
+        title: 'Bulut Migrasyonu & Optimizasyon',
+        description: 'AWS, Azure, GCP\'ye güvenli geçiş ve multi-cloud strateji. Vendor lock-in olmadan esnek altyapı.',
+      },
+      llmops: {
+        title: 'LLMOps & AI Model Operations',
+        description: 'LLM model deployment, prompt engineering, vector databases, AI workflow otomasyonu. MLflow, Kubernetes, GPU orchestration.',
       },
       kubernetes: {
         title: 'Kubernetes & Container Orchestration',
-        description: 'EKS, AKS veya GKE ile container yönetimi, service mesh ve GitOps implementasyonu.',
-      },
-      iac: {
-        title: 'Infrastructure as Code (IaC)',
-        description: 'AWS CloudFormation, Azure ARM/Bicep, Terraform veya Pulumi ile multi-cloud altyapı otomasyonu.',
+        description: 'EKS, AKS, GKE ile production-ready cluster setup, service mesh, autoscaling ve monitoring.',
       },
       devsecops: {
-        title: 'DevSecOps Entegrasyonu',
-        description: 'Güvenlik taraması otomasyonu, compliance yönetimi ve vulnerability management.',
+        title: 'DevSecOps & AI Security',
+        description: 'AI-powered security scanning, policy-as-code, automated compliance ve vulnerability management.',
       },
       platform: {
-        title: 'Platform Engineering',
-        description: 'Internal developer platform ve self-service altyapı çözümleri.',
+        title: 'Platform Engineering & IDP',
+        description: 'Internal Developer Platform (IDP), self-service infrastructure, Backstage. Developer experience ve productivity odaklı.',
       },
       aiops: {
-        title: 'AIOps & Observability',
-        description: 'AWS CloudWatch, Azure Monitor, Prometheus, Grafana, Datadog ile yapay zeka destekli izleme.',
+        title: 'AIOps & Intelligent Monitoring',
+        description: 'AI-powered predictive analytics, automated incident response, unified observability. Prometheus, Grafana, Datadog, Dynatrace.',
       },
       finops: {
-        title: 'FinOps & Maliyet Optimizasyonu',
-        description: 'AWS Cost Explorer, Azure Cost Management ve GCP Billing ile bulut harcamalarınızı analiz eder ve optimize ederiz.',
-      },
-      managed: {
-        title: 'Yönetilen DevOps Hizmetleri',
-        description: '7/24 izleme, olay müdahalesi ve tam DevOps ekip desteği.',
+        title: 'FinOps & Cloud Cost Management',
+        description: 'Cloud cost optimization, waste reduction, reserved instances stratejisi. 15-40% maliyet tasarrufu. AWS, Azure, GCP billing.',
       },
     },
-    learnMore: 'Detayları Gör',
   },
   about: {
     title: 'Neden DevOps?',
@@ -189,11 +181,23 @@ export const tr: Translations = {
       consentRequired: 'Devam etmek için onay vermelisiniz',
       success: 'Mesajınız başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.',
       error: 'Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan e-posta ile iletişime geçin.',
+      scheduleCall: 'Görüşme Takvimi',
     },
     info: {
       address: 'İstanbul, Türkiye',
       email: 'info@devops.com.tr',
       phone: '+90 (XXX) XXX XX XX',
+    },
+    labels: {
+      address: 'Adres',
+      email: 'E-posta',
+      phone: 'Telefon',
+      social: 'Sosyal Medya',
+      freeConsulting: 'İhtiyaç Analizi',
+      consultingDesc: 'DevOps yolculuğunuzda size nasıl yardımcı olabileceğimizi konuşalım.',
+      benefit1: '30 dakikalık keşif görüşmesi',
+      benefit2: 'Detaylı altyapı analizi',
+      benefit3: 'Özel çözüm önerileri',
     },
   },
   footer: {
@@ -275,6 +279,9 @@ export const tr: Translations = {
     cloudPlatforms: {
       title: 'Multi-Cloud Uzmanlığı',
       description: 'AWS, Microsoft Azure ve Google Cloud Platform\'da production-ready altyapı ve DevOps çözümleri sunuyoruz',
+      aws: 'EKS, ECS, Lambda, RDS, S3, CloudFormation, CodePipeline',
+      azure: 'AKS, Azure DevOps, Functions, Cosmos DB, Azure Storage',
+      gcp: 'GKE, Cloud Run, BigQuery, Cloud Storage, Cloud Build',
     },
     categories: {
       cicd: 'CI/CD & Otomasyon',
@@ -291,5 +298,132 @@ export const tr: Translations = {
       enterprise: 'Enterprise Grade',
     },
     allTools: 'Tüm Araçlar',
+  },
+  featuredCaseStudy: {
+    badge: 'Başarı Hikayesi',
+    title: 'Gerçek Sonuçlar, Gerçek Etki',
+    subtitle: 'MegaShop\'un Black Friday\'de %99.99 uptime başarısını nasıl sağladık',
+    tags: {
+      ecommerce: 'E-Ticaret',
+      employees: '500+ çalışan',
+      weeks: '12 hafta',
+    },
+    caseTitle: 'E-Ticaret Platformunu Black Friday Trafiğini Kaldıracak Şekilde Ölçeklendirme',
+    company: 'MegaShop',
+    challenge: {
+      title: 'Zorluk',
+      description: 'Yoğun alışveriş sezonlarında ciddi kesintiler yaşanıyordu. Monolitik mimari trafik artışlarını kaldıramıyor, bu da gelir kaybına ve müşteri memnuniyetsizliğine yol açıyordu. Deploymentlar 6-8 saat sürüyordu.',
+    },
+    solution: {
+      title: 'Çözüm',
+      description: 'Kubernetes üzerinde microservices mimarisine geçiş, otomatik test içeren CI/CD pipeline kurulumu, auto-scaling implementasyonu ve kapsamlı observability sistemi kurulumu.',
+    },
+    results: {
+      title: 'Etkileyici Sonuçlar',
+      uptime: { value: '%99.99', label: 'Yoğun Dönem Uptime' },
+      deployments: { value: '%87', label: 'Daha Hızlı Deploymentlar' },
+      revenue: { value: '$2.4M', label: 'Kurtarılan Gelir' },
+      scaling: { value: '10x', label: 'Ölçekleme Kapasitesi' },
+    },
+    testimonial: {
+      quote: 'Dönüşüm inanılmazdı. Black Friday\'i şirket tarihinde ilk kez sıfır kesinti ile geçirdik. Mühendislik ekibimiz artık haftada bir yerine günde birden fazla deployment yapabiliyor. Yatırım getirisi ilk büyük alışveriş sezonunda elde edildi.',
+      author: 'Sarah Chen',
+      position: 'CTO, MegaShop',
+    },
+    cta: 'Daha Fazla Başarı Hikayesi',
+    quickStats: {
+      savings: { value: '$3.5M+', label: 'Toplam Müşteri Tasarrufu' },
+      uptime: { value: '%99.9', label: 'Ortalama Müşteri Uptime' },
+      deployments: { value: '%87', label: 'Ortalama Hızlı Deployment' },
+    },
+  },
+  clientLogos: {
+    title: 'Güvenilen İş Ortağı',
+    subtitle: 'Türkiye\'nin önde gelen şirketleri DevOps dönüşümlerinde bize güveniyor',
+    clients: {
+      retail: 'Lider Perakende Zinciri',
+      fintech: 'Finans Teknoloji Şirketi',
+      saas: 'Kurumsal SaaS Platformu',
+      healthcare: 'Sağlık Teknolojisi Şirketi',
+      logistics: 'Lojistik ve Kargo',
+      manufacturing: 'Üretim ve Sanayi',
+      education: 'Eğitim Teknolojisi',
+      insurance: 'Sigorta ve Finans',
+    },
+    certifications: {
+      aws: {
+        title: 'AWS Advanced Partner',
+        description: 'Advanced tier statüsünde sertifikalı AWS danışmanlık ortağı',
+      },
+      iso: {
+        title: 'ISO 27001 Sertifikalı',
+        description: 'Bilgi güvenliği yönetim sistemi sertifikası',
+      },
+      kvkk: {
+        title: 'KVKK Uyumlu',
+        description: 'Kişisel verilerin korunması kanununa tam uyumluluk',
+      },
+      microsoft: {
+        title: 'Microsoft Partner',
+        description: 'Azure ve Microsoft teknolojilerinde sertifikalı partner',
+      },
+    },
+    trustIndicators: {
+      clients: { value: '50+', label: 'Aktif Müşteri' },
+      projects: { value: '200+', label: 'Tamamlanan Proje' },
+      satisfaction: { value: '%98', label: 'Müşteri Memnuniyeti' },
+      experience: { value: '5+ Yıl', label: 'DevOps Deneyimi' },
+    },
+  },
+  statistics: {
+    title: 'Rakamlarla Başarımız',
+    subtitle: 'Müşterilerimiz için somut sonuçlar üretiyoruz',
+    stats: {
+      clients: {
+        value: '50+',
+        label: 'Mutlu Müşteri',
+        description: 'Türkiye\'nin önde gelen şirketlerine hizmet veriyoruz',
+      },
+      projects: {
+        value: '200+',
+        label: 'Tamamlanan Proje',
+        description: 'Başarıyla tamamlanan DevOps transformasyonları',
+      },
+      savings: {
+        value: '$3.5M+',
+        label: 'Toplam Tasarruf',
+        description: 'Müşterilerimiz için sağladığımız maliyet optimizasyonu',
+      },
+      satisfaction: {
+        value: '%98',
+        label: 'Memnuniyet',
+        description: 'Müşteri memnuniyet skoru',
+      },
+      deployments: {
+        value: '%87',
+        label: 'Daha Hızlı',
+        description: 'Deployment sürelerinde ortalama iyileşme',
+      },
+      uptime: {
+        value: '%99.9',
+        label: 'Uptime',
+        description: 'Ortalama sistem kullanılabilirlik oranı',
+      },
+      servers: {
+        value: '1000+',
+        label: 'Yönetilen Sunucu',
+        description: 'Aktif olarak yönettiğimiz cloud kaynakları',
+      },
+      certifications: {
+        value: '15+',
+        label: 'Sertifika',
+        description: 'Ekip üyelerimizin sahip olduğu profesyonel sertifikalar',
+      },
+    },
+    cta: {
+      question: 'Kuruluşunuz için bu sonuçları görmek ister misiniz?',
+      calculateRoi: 'ROI Hesaplayın',
+      scheduleConsultation: 'Danışmanlık Planlayın',
+    },
   },
 };

@@ -21,7 +21,7 @@ export default function About() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-2 mb-4">{t.about.title}</h2>
-          <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
             {t.about.subtitle}
           </p>
         </div>
@@ -49,35 +49,16 @@ export default function About() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-secondary-900 mb-3">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-3">
                     {advantageData.title}
                   </h3>
-                  <p className="text-secondary-600 leading-relaxed">
+                  <p className="text-neutral-600 leading-relaxed">
                     {advantageData.description}
                   </p>
                 </div>
               </div>
             );
           })}
-        </div>
-
-        {/* Technologies Section */}
-        <div className="mt-20 p-8 md:p-12 bg-gradient-to-br from-secondary-900 to-secondary-800 rounded-2xl shadow-2xl">
-          <h3 className="text-3xl font-bold text-white text-center mb-8">
-            {t.about.technologies}
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform', 'GitLab', 'GitHub Actions',
-              'ArgoCD', 'Flux CD', 'Helm', 'Ansible', 'Prometheus', 'Grafana', 'Datadog', 'ELK Stack',
-              'Elasticsearch', 'Kibana', 'Logstash', 'Jenkins', 'HashiCorp Vault', 'Istio', 'Consul', 'Redis'].map((tech) => (
-              <div
-                key={tech}
-                className="flex items-center justify-center p-4 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all transform hover:-translate-y-1"
-              >
-                <span className="text-white font-semibold text-sm text-center">{tech}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

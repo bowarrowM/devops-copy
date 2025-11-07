@@ -94,18 +94,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-secondary-800 pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <div className="flex flex-col gap-2">
-              <p className="text-secondary-400 text-sm">
-                © {new Date().getFullYear()} DevOps. {t.footer.rights}
-              </p>
-              <p className="text-secondary-500 text-xs">
-                {t.footer.trademark}
-              </p>
-            </div>
-            <div className="flex items-center gap-4 text-sm text-secondary-400">
-              <span>🇹🇷 {t.footer.madeWithLove}</span>
-            </div>
+          <div className="text-center">
+            <p className="text-secondary-400 text-sm">
+              © {new Date().getFullYear()} DevOps
+            </p>
           </div>
         </div>
       </div>

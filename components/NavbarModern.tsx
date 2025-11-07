@@ -7,6 +7,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
 import Button from './atoms/Button';
 
+const CALENDLY_URL = 'https://calendly.com/devops-info/30min';
+
 /**
  * Modern Navbar Component - 2025 Redesign
  *
@@ -103,13 +105,18 @@ export default function NavbarModern() {
             <LanguageSwitcher />
 
             {/* CTA Button */}
-            <Button
-              variant="primary"
-              size="md"
-              onClick={() => scrollToSection('contact')}
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {t.hero.cta || 'Get Started'}
-            </Button>
+              <Button
+                variant="primary"
+                size="md"
+              >
+                {t.hero.cta || 'Get Started'}
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -161,14 +168,20 @@ export default function NavbarModern() {
                   transition={{ delay: navItems.length * 0.1 }}
                   className="pt-4 border-t border-neutral-200"
                 >
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    fullWidth
-                    onClick={() => scrollToSection('contact')}
+                  <a
+                    href={CALENDLY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
                   >
-                    {t.hero.cta || 'Get Started'}
-                  </Button>
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      fullWidth
+                    >
+                      {t.hero.cta || 'Get Started'}
+                    </Button>
+                  </a>
                 </motion.div>
               </div>
             </div>

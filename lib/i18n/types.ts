@@ -181,6 +181,7 @@ export interface Translations {
       consentRequired: string;
       success: string;
       error: string;
+      scheduleCall: string;
     };
     info: {
       address: string;

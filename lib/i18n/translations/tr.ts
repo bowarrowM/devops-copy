@@ -7,7 +7,7 @@ export const tr: Translations = {
     about: 'Hakkımızda',
     contact: 'İletişim',
     getStarted: 'İletişim',
-    tagline: 'Kurumsal DevOps Danışmanlığı',
+    tagline: 'DevOps Danışmanlığı',
   },
   hero: {
     title: 'DevOps Danışmanlık & Dönüşüm',
@@ -181,6 +181,7 @@ export const tr: Translations = {
       consentRequired: 'Devam etmek için onay vermelisiniz',
       success: 'Mesajınız başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.',
       error: 'Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan e-posta ile iletişime geçin.',
+      scheduleCall: 'Görüşme Takvimi',
     },
     info: {
       address: 'İstanbul, Türkiye',

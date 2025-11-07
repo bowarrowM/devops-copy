@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { FaRocket } from 'react-icons/fa';
 import Button from './atoms/Button';
 
+const CALENDLY_URL = 'https://calendly.com/devops-info/30min';
+
 /**
  * Modern Hero Component - 2025 Redesign
  *
@@ -85,16 +87,21 @@ export default function HeroModern() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
             >
-              <Button
-                variant="primary"
-                size="lg"
-                onClick={() => scrollToSection('contact')}
-                icon={<FaRocket />}
-                iconPosition="right"
-                className="shadow-2xl"
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                {t.hero.cta}
-              </Button>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  icon={<FaRocket />}
+                  iconPosition="right"
+                  className="shadow-2xl"
+                >
+                  {t.hero.cta}
+                </Button>
+              </a>
 
               <Button
                 variant="secondary"

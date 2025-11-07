@@ -1,264 +1,81 @@
 'use client';
 
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
+import { FaEnvelope, FaCalendarAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+
+const CALENDLY_URL = 'https://calendly.com/devops-info/30min';
 
 export default function Contact() {
-  const { t, locale } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: '',
-    message: '',
-  });
-  const [consent, setConsent] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const { t } = useLanguage();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!consent) {
-      alert(t.contact.form.consentRequired);
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          consent,
-          locale,
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          service: '',
-          message: '',
-        });
-        setConsent(false);
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  // Service options based on translations
-  const serviceOptions = [
-    { value: 'assessment', label: t.services.items.assessment.title },
-    { value: 'gitops', label: t.services.items.gitops.title },
-    { value: 'cloud', label: t.services.items.cloudMigration.title },
-    { value: 'llmops', label: t.services.items.llmops.title },
-    { value: 'kubernetes', label: t.services.items.kubernetes.title },
-    { value: 'devsecops', label: t.services.items.devsecops.title },
-    { value: 'platform', label: t.services.items.platform.title },
-    { value: 'aiops', label: t.services.items.aiops.title },
-    { value: 'finops', label: t.services.items.finops.title },
-  ];
-
-  // Use translation system for labels
   const contactLabels = t.contact.labels;
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-b from-secondary-50 to-white">
+    <section id="contact" className="section-padding bg-gradient-to-b from-neutral-50 to-white">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-2 mb-4">{t.contact.title}</h2>
-          <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
             {t.contact.subtitle}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="card">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-secondary-700 mb-2">
-                  {t.contact.form.name}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-500 focus:outline-none transition-colors"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-secondary-700 mb-2">
-                    {t.contact.form.email}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-500 focus:outline-none transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-secondary-700 mb-2">
-                    {t.contact.form.phone}
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-500 focus:outline-none transition-colors"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="company" className="block text-sm font-semibold text-secondary-700 mb-2">
-                  {t.contact.form.company}
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-500 focus:outline-none transition-colors"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-sm font-semibold text-secondary-700 mb-2">
-                  {t.contact.form.service}
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-500 focus:outline-none transition-colors"
-                >
-                  <option value="">{t.contact.form.selectPlaceholder}</option>
-                  {serviceOptions.map(option => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-secondary-700 mb-2">
-                  {t.contact.form.message}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary-200 focus:border-primary-500 focus:outline-none transition-colors resize-none"
-                ></textarea>
-              </div>
-
-              {/* Consent Checkbox */}
-              <div className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  id="consent"
-                  checked={consent}
-                  onChange={(e) => setConsent(e.target.checked)}
-                  className="mt-1 w-4 h-4 text-primary-600 border-secondary-300 rounded focus:ring-primary-500"
-                />
-                <label htmlFor="consent" className="text-sm text-secondary-600">
-                  {t.contact.form.consent}
-                </label>
-              </div>
-
-              {/* Success Message */}
-              {submitStatus === 'success' && (
-                <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <FaCheckCircle className="text-green-600 text-xl flex-shrink-0" />
-                  <p className="text-green-800 text-sm">{t.contact.form.success}</p>
-                </div>
-              )}
-
-              {/* Error Message */}
-              {submitStatus === 'error' && (
-                <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
-                  <FaExclamationCircle className="text-red-600 text-xl flex-shrink-0" />
-                  <p className="text-red-800 text-sm">{t.contact.form.error}</p>
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="btn-primary w-full text-lg disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? t.contact.form.submitting : t.contact.form.submit}
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-8">
-            {/* Info Cards */}
-            <div className="card">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white flex-shrink-0">
-                  <FaMapMarkerAlt className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-secondary-900 mb-1">{contactLabels.address}</h3>
-                  <p className="text-secondary-600">{t.contact.info.address}</p>
-                </div>
+        <div className="max-w-4xl mx-auto">
+          {/* Calendly CTA Card */}
+          <div className="card bg-gradient-to-br from-primary-500 to-primary-600 text-white p-12 mb-12 text-center">
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                <FaCalendarAlt className="w-10 h-10" />
               </div>
             </div>
 
+            <h3 className="text-3xl font-bold mb-4">{contactLabels.freeConsulting}</h3>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              {contactLabels.consultingDesc}
+            </p>
+
+            <ul className="space-y-3 mb-10 text-left max-w-md mx-auto">
+              <li className="flex items-center gap-3">
+                <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-lg">{contactLabels.benefit1}</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-lg">{contactLabels.benefit2}</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-lg">{contactLabels.benefit3}</span>
+              </li>
+            </ul>
+
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary-600 rounded-lg font-bold text-lg hover:bg-neutral-50 transition-all transform hover:scale-105 shadow-2xl"
+            >
+              <FaCalendarAlt className="w-5 h-5" />
+              {t.contact.form.scheduleCall}
+            </a>
+          </div>
+
+          {/* Contact Info Grid */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="card">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white flex-shrink-0">
                   <FaEnvelope className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-secondary-900 mb-1">{contactLabels.email}</h3>
+                  <h3 className="font-bold text-neutral-900 mb-1">{contactLabels.email}</h3>
                   <a href={`mailto:${t.contact.info.email}`} className="text-primary-600 hover:text-primary-700 transition-colors">
                     {t.contact.info.email}
                   </a>
@@ -268,75 +85,39 @@ export default function Contact() {
 
             <div className="card">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white flex-shrink-0">
-                  <FaPhone className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white flex-shrink-0">
+                  <FaCalendarAlt className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-secondary-900 mb-1">{contactLabels.phone}</h3>
-                  <a href={`tel:${t.contact.info.phone}`} className="text-primary-600 hover:text-primary-700 transition-colors">
-                    {t.contact.info.phone}
-                  </a>
+                  <h3 className="font-bold text-neutral-900 mb-1">{contactLabels.social}</h3>
+                  <div className="flex gap-3 mt-2">
+                    <a
+                      href="https://linkedin.com/company/devops-comtr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-lg bg-neutral-100 hover:bg-primary-500 hover:text-white flex items-center justify-center text-neutral-600 transition-all"
+                    >
+                      <FaLinkedin className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://github.com/devopscomtr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-lg bg-neutral-100 hover:bg-neutral-900 hover:text-white flex items-center justify-center text-neutral-600 transition-all"
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-lg bg-neutral-100 hover:bg-blue-400 hover:text-white flex items-center justify-center text-neutral-600 transition-all"
+                    >
+                      <FaTwitter className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Social Media */}
-            <div className="card bg-gradient-to-br from-secondary-900 to-secondary-800">
-              <h3 className="font-bold text-white mb-4">{contactLabels.social}</h3>
-              <div className="flex gap-4">
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all transform hover:-translate-y-1"
-                >
-                  <FaLinkedin className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all transform hover:-translate-y-1"
-                >
-                  <FaGithub className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all transform hover:-translate-y-1"
-                >
-                  <FaTwitter className="w-6 h-6" />
-                </a>
-              </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="card bg-gradient-to-r from-primary-500 to-primary-600 text-white">
-              <h3 className="text-2xl font-bold mb-3">{contactLabels.freeConsulting}</h3>
-              <p className="text-white/90 mb-4">
-                {contactLabels.consultingDesc}
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span>{contactLabels.benefit1}</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span>{contactLabels.benefit2}</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span>{contactLabels.benefit3}</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

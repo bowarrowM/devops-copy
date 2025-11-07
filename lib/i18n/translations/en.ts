@@ -7,7 +7,7 @@ export const en: Translations = {
     about: 'About',
     contact: 'Contact',
     getStarted: 'Contact',
-    tagline: 'Enterprise DevOps Consulting',
+    tagline: 'DevOps Consulting',
   },
   hero: {
     title: 'DevOps Consulting & Transformation',
@@ -181,6 +181,7 @@ export const en: Translations = {
       consentRequired: 'You must provide consent to continue',
       success: 'Your message has been sent successfully! We will contact you shortly.',
       error: 'An error occurred. Please try again or contact us directly via email.',
+      scheduleCall: 'Schedule a Call',
     },
     info: {
       address: 'Istanbul, Turkey',

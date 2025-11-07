@@ -7,7 +7,7 @@ export const de: Translations = {
     about: 'Über uns',
     contact: 'Kontakt',
     getStarted: 'Kontakt',
-    tagline: 'Unternehmens-DevOps Beratung',
+    tagline: 'DevOps Beratung',
   },
   hero: {
     title: 'DevOps Beratung & Transformation',
@@ -181,6 +181,7 @@ export const de: Translations = {
       consentRequired: 'Sie müssen Ihre Zustimmung geben, um fortzufahren',
       success: 'Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.',
       error: 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.',
+      scheduleCall: 'Termin vereinbaren',
     },
     info: {
       address: 'Istanbul, Türkei',

@@ -5,9 +5,6 @@ import { useLanguage } from '@/lib/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
-import Button from './atoms/Button';
-
-const CALENDLY_URL = 'https://calendly.com/devops-info/30min';
 
 /**
  * Modern Navbar Component - 2025 Redesign
@@ -102,26 +99,12 @@ export default function NavbarModern() {
             ))}
 
             {/* Language Switcher */}
-            <LanguageSwitcher />
-
-            {/* CTA Button */}
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="primary"
-                size="md"
-              >
-                {t.hero.cta || 'Get Started'}
-              </Button>
-            </a>
+            <LanguageSwitcher isScrolled={isScrolled} />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden items-center gap-4">
-            <LanguageSwitcher />
+            <LanguageSwitcher isScrolled={isScrolled} />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-lg transition-colors ${
@@ -161,28 +144,6 @@ export default function NavbarModern() {
                     {item.label}
                   </motion.button>
                 ))}
-
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navItems.length * 0.1 }}
-                  className="pt-4 border-t border-neutral-200"
-                >
-                  <a
-                    href={CALENDLY_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <Button
-                      variant="primary"
-                      size="lg"
-                      fullWidth
-                    >
-                      {t.hero.cta || 'Get Started'}
-                    </Button>
-                  </a>
-                </motion.div>
               </div>
             </div>
           </motion.div>

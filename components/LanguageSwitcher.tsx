@@ -6,7 +6,11 @@ import { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  isScrolled?: boolean;
+}
+
+export default function LanguageSwitcher({ isScrolled = false }: LanguageSwitcherProps) {
   const { locale } = useLanguage();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -48,11 +52,15 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary-100 transition-colors"
+        className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+          isScrolled
+            ? 'hover:bg-neutral-100 text-neutral-700'
+            : 'hover:bg-white/10 text-white/90'
+        }`}
         aria-label="Change language"
       >
         <span className="text-xl">{localeFlags[locale]}</span>
-        <span className="text-sm font-medium text-secondary-700">{locale.toUpperCase()}</span>
+        <span className="text-sm font-medium">{locale.toUpperCase()}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -64,14 +72,14 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-secondary-200 py-1 z-50">
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-neutral-200 py-1 z-50">
           {locales.map((loc) => (
             <Link
               key={loc}
               href={getLocalePath(loc)}
               onClick={() => setIsOpen(false)}
               className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-primary-50 transition-colors ${
-                locale === loc ? 'bg-primary-50 text-primary-600' : 'text-secondary-700'
+                locale === loc ? 'bg-primary-50 text-primary-600' : 'text-neutral-700'
               }`}
             >
               <span className="text-xl">{localeFlags[loc]}</span>

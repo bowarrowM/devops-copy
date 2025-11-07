@@ -1,7 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { FaEnvelope, FaCalendarAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 const CALENDLY_URL = 'https://calendly.com/devops-info/30min';
 
@@ -65,60 +65,6 @@ export default function Contact() {
               <FaCalendarAlt className="w-5 h-5" />
               {t.contact.form.scheduleCall}
             </a>
-          </div>
-
-          {/* Contact Info Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="card">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white flex-shrink-0">
-                  <FaEnvelope className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-neutral-900 mb-1">{contactLabels.email}</h3>
-                  <a href={`mailto:${t.contact.info.email}`} className="text-primary-600 hover:text-primary-700 transition-colors">
-                    {t.contact.info.email}
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white flex-shrink-0">
-                  <FaCalendarAlt className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-neutral-900 mb-1">{contactLabels.social}</h3>
-                  <div className="flex gap-3 mt-2">
-                    <a
-                      href="https://linkedin.com/company/devops-comtr"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-lg bg-neutral-100 hover:bg-primary-500 hover:text-white flex items-center justify-center text-neutral-600 transition-all"
-                    >
-                      <FaLinkedin className="w-5 h-5" />
-                    </a>
-                    <a
-                      href="https://github.com/devopscomtr"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-lg bg-neutral-100 hover:bg-neutral-900 hover:text-white flex items-center justify-center text-neutral-600 transition-all"
-                    >
-                      <FaGithub className="w-5 h-5" />
-                    </a>
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-lg bg-neutral-100 hover:bg-blue-400 hover:text-white flex items-center justify-center text-neutral-600 transition-all"
-                    >
-                      <FaTwitter className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

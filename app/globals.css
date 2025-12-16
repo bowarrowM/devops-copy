@@ -97,7 +97,7 @@
 
   /* Button Variants */
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-500 text-white shadow-lg;
+    @apply bg-gradient-to-r from-primary-500 to-primary-200/60 text-white shadow-lg;
     @apply hover:shadow-primary hover:scale-105 active:scale-95;
     @apply focus-visible:outline-primary-500;
   }

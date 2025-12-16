@@ -34,85 +34,82 @@ export default function HeroModern() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-primary-900 to-primary-800"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900"
     >
-      {/* Simplified background - CSS grid pattern only */}
-      <div className="absolute inset-0 grid-pattern opacity-40" />
+      {/* Mesh gradient background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent" />
 
-      {/* Single gradient orb - static, subtle */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
+      {/* Subtle grid */}
+      <div className="absolute inset-0 opacity-[0.15]" style={{
+        backgroundImage: `
+      linear-gradient(to right, rgb(59, 130, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(59, 130, 246, 0.1) 1px, transparent 1px)
+    `,
+        backgroundSize: '80px 80px'
+      }} />
+
+      {/* Animated gradient orbs */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s', animationDuration: '4s' }} />
+
+      {/* Noise texture overlay */}
+      <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay" style={{
+        backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 400 400\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' /%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\' /%3E%3C/svg%3E")'
+      }} />
 
       {/* Content */}
-      <div className="container-custom section-padding-lg relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Main Content - Centered */}
-          <div className="text-center mb-16">
-            {/* Badge - Simple, focused */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-8 text-white/90 text-sm font-medium shadow-xl"
-            >
-              <div className="w-2 h-2 bg-success-500 rounded-full animate-pulse" />
-              <span>{t.hero.badge}</span>
-            </motion.div>
+      <div className="container mx-auto max-w-7xl px-4 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-12 lg:py-20">
 
-            {/* Headline - Clear Value Proposition */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight"
-            >
-              <span className="text-gradient-hero">
-                {t.hero.title}
-              </span>
-            </motion.h1>
+          {/* Left Column - Main Message */}
+          <div className="space-y-8">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+              {t.hero.title}
+            </h1>
 
-            {/* Subheadline - Benefit-driven */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto leading-relaxed"
-            >
+            <p className="text-lg lg:text-xl text-blue-100 leading-relaxed">
               {t.hero.subtitle}
-            </motion.p>
+            </p>
 
-            {/* CTAs - Strategic placement */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-            >
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button
+                variant="primary"
+                size="lg"
+                icon={<FaRocket />}
+                iconPosition="right"
+                className="shadow-2xl"
               >
-                <Button
-                  variant="primary"
-                  size="lg"
-                  icon={<FaRocket />}
-                  iconPosition="right"
-                  className="shadow-2xl"
-                >
-                  {t.hero.cta}
-                </Button>
-              </a>
-
+                {t.hero.cta}
+              </Button>
               <Button
                 variant="secondary"
                 size="lg"
                 onClick={() => scrollToSection('services')}
-                className="bg-white/10 backdrop-blur-xl border-2 border-white/20 text-white hover:bg-white/20 hover:border-white/30"
+                className="bg-[#BDB193]/75 backdrop-blur-xl border-2 border-white/20 text-white hover:bg-[#DDD3B5]/70 hover:border-white/30"
               >
                 {t.hero.ctaSecondary}
               </Button>
-            </motion.div>
+            </div>
           </div>
+
+          {/* Right Column - Quick Links/Features */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h2 className="text-2xl font-bold text-white mb-6">
+              Neden DevOps?
+            </h2>
+            <div className="space-y-4">
+              {['Hızlı deployment döngüleri', 'Otomatik CI/CD pipeline\'ları', 'Cloud-native altyapı', 'Sürekli izleme ve optimizasyon'].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <svg className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: '#BDB193' }} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fillRule="evenodd" d="M3 4a1 1 0 0 0-.822 1.57L6.632 12l-4.454 6.43A1 1 0 0 0 3 20h13.153a1 1 0 0 0 .822-.43l4.847-7a1 1 0 0 0 0-1.14l-4.847-7a1 1 0 0 0-.822-.43H3Z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-blue-100">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
 

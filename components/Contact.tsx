@@ -11,7 +11,7 @@ export default function Contact() {
   const contactLabels = t.contact.labels;
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+    <section id="contact" className="section-padding bg-gradient-to-b from-[#BDB193]/5 to-white">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -23,10 +23,13 @@ export default function Contact() {
 
         <div className="max-w-4xl mx-auto">
           {/* Calendly CTA Card */}
-          <div className="card bg-gradient-to-br from-primary-500 to-primary-600 text-white p-12 mb-12 text-center">
+          <div className="card bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white p-12 mb-12 text-center">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent" />
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                <FaCalendarAlt className="w-10 h-10" />
+                <FaCalendarAlt className="w-10 h-10 " />
               </div>
             </div>
 
@@ -60,7 +63,7 @@ export default function Contact() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary-600 rounded-lg font-bold text-lg hover:bg-neutral-50 transition-all transform hover:scale-105 shadow-2xl"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-[#BDB193]/75 text-white rounded-lg font-bold text-lg hover:bg-neutral-50 transition-all transform hover:scale-105 shadow-2xl"
             >
               <FaCalendarAlt className="w-5 h-5" />
               {t.contact.form.scheduleCall}

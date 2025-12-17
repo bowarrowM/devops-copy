@@ -19,9 +19,9 @@ export default function Services() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const tiers = [
-    { id: 'foundation' as const, gradient: 'from-blue-500 to-cyan-600', glow: 'rgba(59, 130, 246, 0.3)' },
-    { id: 'transformation' as const, gradient: 'from-purple-500 to-pink-600', glow: 'rgba(139, 92, 246, 0.3)' },
-    { id: 'advanced' as const, gradient: 'from-orange-500 to-red-600', glow: 'rgba(249, 115, 22, 0.3)' },
+    { id: 'foundation' as const, gradient: 'from-primary-800 to-primary-900', glow: 'rgba(167, 156, 130, 0.3)' },
+    { id: 'transformation' as const, gradient: 'from-[#a79c82] to-[#a79c82]', glow: 'rgba(167, 156, 130, 0.3)' },
+    { id: 'advanced' as const, gradient: 'from-[#a79c82] to-primary-800', glow: 'rgba(167, 156, 130, 0.4)' },
   ];
 
   const services = [
@@ -54,12 +54,12 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+            <span className="bg-gradient-to-r from-primary-900 to-primary-900 bg-clip-text text-transparent">
               {t.services.title}
             </span>
           </h2>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <p className="text-xl text-neutral-600 leading-relaxed">
             {t.services.subtitle}
           </p>
         </motion.div>
@@ -76,11 +76,10 @@ export default function Services() {
             <motion.button
               key={tier.id}
               onClick={() => setSelectedTier(tier.id)}
-              className={`relative px-8 py-5 rounded-2xl font-semibold transition-all duration-300 overflow-hidden ${
-                selectedTier === tier.id
-                  ? 'text-white shadow-2xl scale-105'
-                  : 'bg-white text-slate-700 hover:shadow-lg border-2 border-slate-200 hover:border-slate-300'
-              }`}
+              className={`relative px-8 py-5 rounded-2xl font-semibold transition-all duration-300 overflow-hidden ${selectedTier === tier.id
+                ? 'text-white shadow-2xl scale-105'
+                : 'bg-white text-slate-700 hover:shadow-lg border-2 border-slate-200 hover:border-slate-300'
+                }`}
               whileHover={{ scale: selectedTier === tier.id ? 1.05 : 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -205,7 +204,7 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-24"
         >
-          <div className="relative max-w-5xl mx-auto bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 rounded-3xl p-12 md:p-16 shadow-2xl overflow-hidden">
+          <div className="relative max-w-5xl mx-auto bg-gradient-to-r from-slate-900 via-blue-900 to-primary-900 rounded-3xl p-12 md:p-16 shadow-2xl overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.2),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.2),transparent_50%)]" />
@@ -228,12 +227,12 @@ export default function Services() {
               >
                 {t.servicesCta.description}
               </motion.p>
-              <motion.button
+              <motion.div
                 onClick={() => {
-                  const element = document.getElementById('contact');
+                  const element = document.getElementById('#');
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="relative group bg-white text-slate-900 font-bold py-5 px-12 rounded-2xl overflow-hidden shadow-xl text-lg"
+                className="relative group font-bold py-5 px-12 rounded-2xl overflow-hidden shadow-sm text-lg cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -241,14 +240,22 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                <span className="relative z-10">{t.servicesCta.button}</span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50"
-                  initial={{ x: '-100%' }}
-                  whileHover={{ x: '100%' }}
-                  transition={{ duration: 0.5 }}
-                />
-              </motion.button>
+                <motion.svg
+                  className="w-10 h-10 text-white mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </motion.svg>
+              </motion.div>
             </div>
           </div>
         </motion.div>

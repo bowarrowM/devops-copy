@@ -36,27 +36,27 @@ export default function TechStack() {
 
   // Cloud platforms - the stars of the show
   const cloudPlatforms: Technology[] = [
-    {
-      name: 'AWS',
-      icon: SiAmazonaws,
-      color: '#FF9900',
-      category: 'cloud',
-      description: t.techStack.cloudPlatforms.aws
-    },
-    {
-      name: 'Microsoft Azure',
-      icon: SiMicrosoftazure,
-      color: '#0089D6',
-      category: 'cloud',
-      description: t.techStack.cloudPlatforms.azure
-    },
-    {
-      name: 'Google Cloud',
-      icon: SiGooglecloud,
-      color: '#4285F4',
-      category: 'cloud',
-      description: t.techStack.cloudPlatforms.gcp
-    },
+    // {
+    //   name: 'AWS',
+    //   icon: SiAmazonaws,
+    //   color: '#FF9900',
+    //   category: 'cloud',
+    //   description: t.techStack.cloudPlatforms.aws
+    // },
+    // {
+    //   name: 'Microsoft Azure',
+    //   icon: SiMicrosoftazure,
+    //   color: '#0089D6',
+    //   category: 'cloud',
+    //   description: t.techStack.cloudPlatforms.azure
+    // },
+    // {
+    //   name: 'Google Cloud',
+    //   icon: SiGooglecloud,
+    //   color: '#4285F4',
+    //   category: 'cloud',
+    //   description: t.techStack.cloudPlatforms.gcp
+    // },
   ];
 
   // Other technologies grouped by category
@@ -89,12 +89,12 @@ export default function TechStack() {
   ];
 
   const categories = [
-    { id: 'gitops', label: t.techStack.categories.gitops, color: '#EF7B4D' },
-    { id: 'cicd', label: t.techStack.categories.cicd, color: '#2088FF' },
-    { id: 'container', label: t.techStack.categories.container, color: '#326CE5' },
-    { id: 'iac', label: t.techStack.categories.iac, color: '#7B42BC' },
-    { id: 'monitoring', label: t.techStack.categories.monitoring, color: '#E6522C' },
-    { id: 'security', label: t.techStack.categories.security, color: '#00A86B' },
+    { id: 'gitops', label: t.techStack.categories.gitops, color: '#a79c82' },
+    { id: 'cicd', label: t.techStack.categories.cicd, color: '#a79c82' },
+    { id: 'container', label: t.techStack.categories.container, color: '#a79c82' },
+    { id: 'iac', label: t.techStack.categories.iac, color: '#a79c82' },
+    { id: 'monitoring', label: t.techStack.categories.monitoring, color: '#a79c82' },
+    { id: 'security', label: t.techStack.categories.security, color: '#a79c82' },
   ];
 
   const filteredTechnologies = activeCategory
@@ -102,10 +102,10 @@ export default function TechStack() {
     : technologies;
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-white via-white to-white relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.08),transparent_50%)]" />
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.08),transparent_50%)]" /> */}
 
       <div className="container-custom relative z-10">
         {/* Section Header */}
@@ -116,8 +116,8 @@ export default function TechStack() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 heading-1">
+            <span className="bg-gradient-to-r from-primary-900 to-primary-900 bg-clip-text text-transparent">
               {t.techStack.title}
             </span>
           </h2>
@@ -132,16 +132,16 @@ export default function TechStack() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-20"
+          className="mb-5"
         >
-          <div className="text-center mb-10">
+          {/* <div className="text-center mb-10">
             <h3 className="text-3xl font-bold text-slate-900 mb-4">
               {t.techStack.cloudPlatforms.title}
             </h3>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               {t.techStack.cloudPlatforms.description}
             </p>
-          </div>
+          </div> */}
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {cloudPlatforms.map((platform, index) => {
@@ -233,8 +233,8 @@ export default function TechStack() {
             onClick={() => setActiveCategory(null)}
             className={`px-6 py-3 rounded-full font-semibold text-sm transition-all ${
               activeCategory === null
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                : 'bg-white text-slate-700 border border-slate-200 hover:border-blue-300'
+                ? 'bg-gradient-to-r from-[#a79c82]/50 to-[#a79c82] text-white shadow-lg'
+                : 'bg-white text-slate-700 border border-[#a79c82]/50 hover:border-[#a79c82]'
             }`}
           >
             {t.techStack.allTools}
@@ -325,7 +325,7 @@ export default function TechStack() {
           ].map((badge, i) => (
             <div
               key={i}
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 text-blue-700 font-semibold text-sm shadow-md hover:shadow-lg transition-shadow"
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-[#a79c82]/10 to-[#a79c82]/20 border-2 border-[#a79c82]/30 text-primary-900 font-semibold text-sm shadow-md hover:shadow-lg transition-shadow"
             >
               {badge}
             </div>

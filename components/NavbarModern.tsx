@@ -136,7 +136,7 @@ export default function NavbarModern() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left py-3 px-4 rounded-lg text-neutral-700 hover:bg-[#DDD3B5]/10 hover:text-primary-800 font-medium transition-colors"
+                    className="text-left py-3 px-4 rounded-lg text-neutral-700 hover:bg-[#DDD3B5]/10 hover:text-primary-900 font-medium transition-colors"
                   >
                     {item.label}
                   </motion.button>

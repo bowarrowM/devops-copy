@@ -78,8 +78,8 @@ export default function LanguageSwitcher({ isScrolled = false }: LanguageSwitche
               key={loc}
               href={getLocalePath(loc)}
               onClick={() => setIsOpen(false)}
-              className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-primary-50 transition-colors ${
-                locale === loc ? 'bg-primary-50 text-primary-600' : 'text-neutral-700'
+              className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-[#DDD3B5]/10 hover:text-primary-600 transition-colors ${
+                locale === loc ? 'bg-[#DDD3B5]/20 text-primary-800' : 'text-neutral-700'
               }`}
             >
               <span className="text-xl">{localeFlags[loc]}</span>

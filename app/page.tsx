@@ -39,10 +39,10 @@ export default function Home() {
       <main className="min-h-screen">
         <NavbarModern />
         <HeroModern />
-
+        <About />
         <Services />
         <TechStack />
-        <About />
+
 
         <Contact />
         <Footer />

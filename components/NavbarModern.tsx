@@ -43,8 +43,8 @@ export default function NavbarModern() {
   // Navigation items
   const navItems = [
     { label: t.nav.home, id: 'home' },
-    { label: t.nav.services, id: 'services' },
     { label: t.nav.about, id: 'about' },
+    { label: t.nav.services, id: 'services' },
     { label: t.nav.contact, id: 'contact' },
   ];
 
@@ -53,11 +53,10 @@ export default function NavbarModern() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-sticky transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-md'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-sticky transition-all duration-300 ${isScrolled
+        ? 'bg-white/90 backdrop-blur-xl shadow-md'
+        : 'bg-transparent'
+        }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
@@ -69,7 +68,7 @@ export default function NavbarModern() {
             whileTap={{ scale: 0.98 }}
           >
             <div className="relative">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center shadow-lg group-hover:shadow-primary transition-shadow">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#a79c82] to-primary-800 flex items-center justify-center shadow-md group-hover:shadow-[#f5ebcc] transition-shadow">
                 <span className="text-white font-bold text-xl">D</span>
               </div>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-success-500 rounded-full animate-pulse" />
@@ -90,9 +89,8 @@ export default function NavbarModern() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-medium transition-colors hover:text-primary-600 ${
-                  isScrolled ? 'text-neutral-700' : 'text-white/90 hover:text-white'
-                }`}
+                className={`font-medium transition-colors hover:text-[#DDD3B5] ${isScrolled ? 'text-neutral-700' : 'text-white/90 hover:text-white'
+                  }`}
               >
                 {item.label}
               </button>
@@ -107,11 +105,10 @@ export default function NavbarModern() {
             <LanguageSwitcher isScrolled={isScrolled} />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-lg transition-colors ${
-                isScrolled
-                  ? 'text-neutral-700 hover:bg-neutral-100'
-                  : 'text-white hover:bg-white/10'
-              }`}
+              className={`p-2 rounded-lg transition-colors ${isScrolled
+                ? 'text-neutral-700 hover:bg-neutral-100'
+                : 'text-white hover:bg-white/10'
+                }`}
               aria-label="Toggle menu"
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -139,7 +136,7 @@ export default function NavbarModern() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left py-3 px-4 rounded-lg text-neutral-700 hover:bg-primary-50 hover:text-primary-600 font-medium transition-colors"
+                    className="text-left py-3 px-4 rounded-lg text-neutral-700 hover:bg-[#DDD3B5]/10 hover:text-primary-800 font-medium transition-colors"
                   >
                     {item.label}
                   </motion.button>

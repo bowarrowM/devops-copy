@@ -1,336 +1,179 @@
 'use client';
 
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import {
-  SiAmazonaws,
-  SiMicrosoftazure,
-  SiGooglecloud,
-  SiDocker,
-  SiKubernetes,
-  SiTerraform,
-  SiGitlab,
-  SiGithubactions,
-  SiArgo,
-  SiPrometheus,
-  SiGrafana,
-  SiDatadog,
-  SiHashicorp,
-  SiHelm,
-  SiAnsible
+  SiGithub, SiGitlab, SiSnyk, SiArgo, SiKubernetes,
+  SiTerraform, SiHashicorp, SiPrometheus, SiElasticsearch,
+  SiCheckio, SiSonarqube, SiBitbucket, SiTrivy,
 } from 'react-icons/si';
-import { FaShieldAlt, FaRocket } from 'react-icons/fa';
-
-interface Technology {
-  name: string;
-  icon: any;
-  color: string;
-  category: string;
-  description?: string;
-}
+import { HiShieldCheck } from "react-icons/hi2";
+import { LuActivity, LuTerminal } from "react-icons/lu";
 
 export default function TechStack() {
   const { t } = useLanguage();
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>('all');
 
-  // Cloud platforms - the stars of the show
-  const cloudPlatforms: Technology[] = [
-    // {
-    //   name: 'AWS',
-    //   icon: SiAmazonaws,
-    //   color: '#FF9900',
-    //   category: 'cloud',
-    //   description: t.techStack.cloudPlatforms.aws
-    // },
-    // {
-    //   name: 'Microsoft Azure',
-    //   icon: SiMicrosoftazure,
-    //   color: '#0089D6',
-    //   category: 'cloud',
-    //   description: t.techStack.cloudPlatforms.azure
-    // },
-    // {
-    //   name: 'Google Cloud',
-    //   icon: SiGooglecloud,
-    //   color: '#4285F4',
-    //   category: 'cloud',
-    //   description: t.techStack.cloudPlatforms.gcp
-    // },
-  ];
+  const technologies = [
+    // --- Git & Delivery ---
+    { name: 'GitHub Enterprise', icon: SiGithub, color: '#181717', category: 'git', level: 'Core' },
+    { name: 'GitLab Ultimate', icon: SiGitlab, color: '#FC6D26', category: 'git', level: 'Advanced' },
+    { name: 'ArgoCD', icon: SiArgo, color: '#EF7B4D', category: 'delivery', level: 'GitOps' },
 
-  // Other technologies grouped by category
-  const technologies: Technology[] = [
-    // GitOps & Deployment
-    { name: 'ArgoCD', icon: SiArgo, color: '#EF7B4D', category: 'gitops' },
-    { name: 'Helm', icon: SiHelm, color: '#0F1689', category: 'gitops' },
-    { name: 'Flux CD', icon: FaRocket, color: '#5468FF', category: 'gitops' },
+    // --- Security & Policy (DevSecOps Focus) ---
+    { name: 'Snyk', icon: SiSnyk, color: '#4C4A73', category: 'security', level: 'Shift-Left' },
+    { name: 'HashiCorp Vault', icon: SiHashicorp, color: '#000000', category: 'security', level: 'Secrets' },
+    { name: 'OPA / Kyverno', icon: HiShieldCheck, color: '#00A86B', category: 'security', level: 'Policy-as-Code' },
+    { name: 'Trivy', icon: SiTrivy, color: '#2496ED', category: 'security', level: 'Scanning' },
+    { name: 'Checkov', icon: SiCheckio, color: '#2496ED', category: 'security', level: 'IaC Security' },
 
-    // CI/CD & Automation
-    { name: 'GitHub Actions', icon: SiGithubactions, color: '#2088FF', category: 'cicd' },
-    { name: 'GitLab', icon: SiGitlab, color: '#FC6D26', category: 'cicd' },
-
-    // Container & Orchestration
-    { name: 'Docker', icon: SiDocker, color: '#2496ED', category: 'container' },
-    { name: 'Kubernetes', icon: SiKubernetes, color: '#326CE5', category: 'container' },
-
-    // Infrastructure as Code
-    { name: 'Terraform', icon: SiTerraform, color: '#7B42BC', category: 'iac' },
-    { name: 'Ansible', icon: SiAnsible, color: '#EE0000', category: 'iac' },
-    { name: 'Vault', icon: SiHashicorp, color: '#000000', category: 'iac' },
-
-    // Monitoring & Observability
-    { name: 'Prometheus', icon: SiPrometheus, color: '#E6522C', category: 'monitoring' },
-    { name: 'Grafana', icon: SiGrafana, color: '#F46800', category: 'monitoring' },
-    { name: 'Datadog', icon: SiDatadog, color: '#632CA6', category: 'monitoring' },
-
-    // Security
-    { name: 'Security Tools', icon: FaShieldAlt, color: '#00A86B', category: 'security' },
+    // --- SRE & Platform ---
+    { name: 'Kubernetes', icon: SiKubernetes, color: '#326CE5', category: 'platform', level: 'Orchestration' },
+    { name: 'Terraform', icon: SiTerraform, color: '#7B42BC', category: 'platform', level: 'Provisioning' },
+    { name: 'OpenTelemetry', icon: LuActivity, color: '#000000', category: 'sre', level: 'Observability' },
+    { name: 'Prometheus', icon: SiPrometheus, color: '#E6522C', category: 'sre', level: 'Metrics' },
   ];
 
   const categories = [
-    { id: 'gitops', label: t.techStack.categories.gitops, color: '#a79c82' },
-    { id: 'cicd', label: t.techStack.categories.cicd, color: '#a79c82' },
-    { id: 'container', label: t.techStack.categories.container, color: '#a79c82' },
-    { id: 'iac', label: t.techStack.categories.iac, color: '#a79c82' },
-    { id: 'monitoring', label: t.techStack.categories.monitoring, color: '#a79c82' },
-    { id: 'security', label: t.techStack.categories.security, color: '#a79c82' },
+    { id: 'all', label: t.techStack.allTools || 'Tüm Ekosistem' },
+    { id: 'git', label: t.techStack.categories.gitops || 'Git & Source' },
+    { id: 'security', label: t.techStack.categories.security || 'Security & Policy' },
+    { id: 'platform', label: t.techStack.categories.container || 'Platform Eng.' },
+    { id: 'sre', label: t.techStack.categories.monitoring || 'SRE & Obs.' },
   ];
 
-  const filteredTechnologies = activeCategory
-    ? technologies.filter(tech => tech.category === activeCategory)
-    : technologies;
-
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-white to-white relative overflow-hidden">
-      {/* Background decoration */}
-      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.08),transparent_50%)]" /> */}
+    <section className="py-12 bg-white relative overflow-hidden">
+      <div className="container-custom">
 
-      <div className="container-custom relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 heading-1">
-            <span className="bg-gradient-to-r from-primary-900 to-primary-900 bg-clip-text text-transparent">
-              {t.techStack.title}
-            </span>
-          </h2>
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            {t.techStack.subtitle}
-          </p>
-        </motion.div>
-
-        {/* Cloud Platforms - Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-5"
-        >
-          {/* <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-slate-900 mb-4">
-              {t.techStack.cloudPlatforms.title}
-            </h3>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              {t.techStack.cloudPlatforms.description}
-            </p>
-          </div> */}
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {cloudPlatforms.map((platform, index) => {
-              const Icon = platform.icon;
-
-              return (
-                <motion.div
-                  key={platform.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className="group"
-                >
-                  <div className="relative p-10 rounded-3xl bg-white border-2 border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                    {/* Glow effect */}
-                    <div
-                      className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500"
-                      style={{ backgroundColor: `${platform.color}15` }}
-                    />
-
-                    {/* Content */}
-                    <div className="relative flex flex-col items-center text-center">
-                      {/* Large icon */}
-                      <motion.div
-                        className="w-28 h-28 mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 shadow-lg group-hover:shadow-xl transition-shadow"
-                        whileHover={{ rotate: [0, -5, 5, 0] }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <Icon
-                          className="w-16 h-16"
-                          style={{ color: platform.color }}
-                        />
-                      </motion.div>
-
-                      {/* Platform name */}
-                      <h4 className="text-2xl font-bold text-slate-900 mb-3">
-                        {platform.name}
-                      </h4>
-
-                      {/* Services */}
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {platform.description}
-                      </p>
-
-                      {/* Market share indicator */}
-                      <div className="mt-6 flex items-center gap-2">
-                        <div className="flex gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <div
-                              key={i}
-                              className="w-2 h-2 rounded-full"
-                              style={{
-                                backgroundColor: platform.color,
-                                opacity: index === 0 ? 1 : index === 1 ? 0.8 : 0.6
-                              }}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Corner decoration */}
-                    <div
-                      className="absolute top-4 right-4 w-3 h-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                      style={{ backgroundColor: platform.color }}
-                    />
-                    <div
-                      className="absolute bottom-4 left-4 w-3 h-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                      style={{ backgroundColor: platform.color }}
-                    />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          <button
-            onClick={() => setActiveCategory(null)}
-            className={`px-6 py-3 rounded-full font-semibold text-sm transition-all ${
-              activeCategory === null
-                ? 'bg-gradient-to-r from-[#a79c82]/50 to-[#a79c82] text-white shadow-lg'
-                : 'bg-white text-slate-700 border border-[#a79c82]/50 hover:border-[#a79c82]'
-            }`}
+        {/* --- SECTION HEADER --- */}
+        <div className="mb-24">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-4 mb-6"
           >
-            {t.techStack.allTools}
-          </button>
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
-              className={`px-6 py-3 rounded-full font-semibold text-sm transition-all ${
-                activeCategory === cat.id
-                  ? 'text-white shadow-lg'
-                  : 'bg-white text-slate-700 border border-slate-200 hover:border-slate-300'
-              }`}
-              style={{
-                backgroundColor: activeCategory === cat.id ? cat.color : undefined,
-              }}
+            <div className="h-px w-12 bg-[#a79c82]" />
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#a79c82] mb-4 ">
+              Technical Foundation
+            </span>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-12 gap-8 items-end">
+            <motion.div
+              className="lg:col-span-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >
-              {cat.label}
-            </button>
-          ))}
-        </motion.div>
+              <h2 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-[0.9]">
+                {t.techStack.title.split(' ')[0]} <br />
+                <span className="text-[#a79c82] italic font-light tracking-normal">
+                  {t.techStack.title.split(' ').slice(1).join(' ')}
+                </span>
+              </h2>
+            </motion.div>
+            <motion.div
+              className="lg:col-span-4 pb-2"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <p className="text-slate-500 font-light border-l border-slate-100 pl-6 leading-relaxed">
+                {t.techStack.subtitle}
+              </p>
+            </motion.div>
+          </div>
+        </div>
 
-        {/* Other Technologies Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto"
-        >
-          {filteredTechnologies.map((tech, index) => {
-            const Icon = tech.icon;
+        <div className="flex flex-col lg:flex-row gap-20">
 
-            return (
-              <motion.div
-                key={`${tech.category}-${tech.name}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                whileHover={{ y: -8, scale: 1.05 }}
-                className="group"
-              >
-                <div className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300">
-                  {/* Glow effect */}
-                  <div
-                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"
-                    style={{ backgroundColor: `${tech.color}20` }}
-                  />
+          {/* --- LEFT: ARCHITECTURAL NAVIGATION --- */}
+          <aside className="lg:w-64 flex-shrink-0">
+            <div className="sticky top-32">
+              <div className="flex items-center gap-3 mb-10">
+                <LuTerminal size={14} className="text-[#a79c82]" />
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Filter_Stack</span>
+              </div>
 
-                  {/* Content */}
-                  <div className="relative flex flex-col items-center gap-3">
-                    <motion.div
-                      className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-slate-50 to-slate-100"
-                      whileHover={{ rotateY: 360 }}
-                      transition={{ duration: 0.6 }}
-                      style={{ transformStyle: 'preserve-3d' }}
-                    >
-                      <Icon
-                        className="w-8 h-8"
-                        style={{ color: tech.color }}
+              <nav className="flex flex-col gap-6">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className="group flex items-center justify-between text-left outline-none py-1"
+                  >
+                    <span className={`text-[11px] font-black uppercase tracking-widest transition-all duration-300 ${activeCategory === cat.id ? 'text-slate-900 translate-x-2' : 'text-slate-300 group-hover:text-slate-500'
+                      }`}>
+                      {cat.label}
+                    </span>
+                    {activeCategory === cat.id && (
+                      <motion.div
+                        layoutId="activePointer"
+                        className="w-1 h-1 rounded-full bg-[#a79c82]"
                       />
-                    </motion.div>
+                    )}
+                  </button>
+                ))}
+              </nav>
 
-                    <div className="text-center">
-                      <div className="text-sm font-bold text-slate-900">{tech.name}</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        {/* Badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 flex flex-wrap justify-center gap-4"
-        >
-          {[
-            t.techStack.badges.cloudNative,
-            t.techStack.badges.multiCloud,
-            t.techStack.badges.production,
-            t.techStack.badges.enterprise,
-          ].map((badge, i) => (
-            <div
-              key={i}
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-[#a79c82]/10 to-[#a79c82]/20 border-2 border-[#a79c82]/30 text-primary-900 font-semibold text-sm shadow-md hover:shadow-lg transition-shadow"
-            >
-              {badge}
+              <div className="mt-20 pt-10 border-t border-slate-50">
+                <div className="text-[9px] text-slate-300 uppercase tracking-[0.2em] mb-4">Integrity Status</div>
+                <p className="text-[10px] text-slate-500 font-medium uppercase tracking-widest leading-loose">
+                  Focusing on <span className="text-slate-900">Production-Grade</span> <br />
+                  DevSecOps Tooling.
+                </p>
+              </div>
             </div>
-          ))}
-        </motion.div>
+          </aside>
+
+          {/* --- RIGHT: TECHNICAL GRID --- */}
+          <main className="flex-grow">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px bg-slate-100 border border-slate-100">
+              <AnimatePresence mode="popLayout">
+                {(activeCategory === 'all' ? technologies : technologies.filter(t => t.category === activeCategory)).map((tech, index) => (
+                  <motion.div
+                    key={tech.name}
+                    layout
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="group bg-white p-10 hover:bg-slate-50/80 transition-all duration-500 relative overflow-hidden"
+                  >
+                    <div className="flex justify-between items-start mb-12">
+                      <div className="grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
+                        <tech.icon size={34} style={{ color: tech.color }} />
+                      </div>
+                      <span className="text-[9px] font-mono text-slate-200 group-hover:text-[#a79c82] transition-colors">
+                        MTX-0{index + 1}
+                      </span>
+                    </div>
+
+                    <h4 className="text-xl font-bold text-slate-900 mb-1 tracking-tight italic">
+                      {tech.name}
+                    </h4>
+
+                    <div className="flex items-center gap-2">
+                      <div className="w-1 h-1 rounded-full bg-[#a79c82]" />
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[#a79c82]">
+                        {tech.level}
+                      </span>
+                    </div>
+
+                    <div className="mt-8 pt-6 border-t border-slate-50 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                      <span className="text-[9px] font-mono text-slate-400 uppercase tracking-tighter">
+                        Systems Ready // Verified 2025
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+          </main>
+
+        </div>
       </div>
     </section>
   );

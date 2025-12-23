@@ -4,261 +4,145 @@ import { useLanguage } from '@/lib/context/LanguageContext';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FaSearch, FaCodeBranch, FaCloud, FaDocker, FaCode, FaShieldAlt,
-  FaCubes, FaChartLine, FaDollarSign, FaHeadset
-} from 'react-icons/fa';
-
-const serviceIcons = [
-  FaSearch, FaCodeBranch, FaCloud, FaDocker, FaCode,
-  FaShieldAlt, FaCubes, FaChartLine, FaDollarSign, FaHeadset
-];
+  LuSearch, LuGitBranch, LuCloud, LuBrainCircuit,
+  LuTerminal, LuContainer, LuShieldCheck, LuActivity,
+  LuCoins, LuChevronRight, LuHeadphones
+} from "react-icons/lu";
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Services() {
   const { t } = useLanguage();
   const [selectedTier, setSelectedTier] = useState<'foundation' | 'transformation' | 'advanced'>('foundation');
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const tiers = [
-    { id: 'foundation' as const, gradient: 'from-primary-800 to-primary-900', glow: 'rgba(167, 156, 130, 0.3)' },
-    { id: 'transformation' as const, gradient: 'from-[#a79c82] to-[#a79c82]', glow: 'rgba(167, 156, 130, 0.3)' },
-    { id: 'advanced' as const, gradient: 'from-[#a79c82] to-primary-800', glow: 'rgba(167, 156, 130, 0.4)' },
+    { id: 'foundation' as const, label: t.services.tiers.foundation.title },
+    { id: 'transformation' as const, label: t.services.tiers.transformation.title },
+    { id: 'advanced' as const, label: t.services.tiers.advanced.title },
   ];
 
   const services = [
-    { key: 'assessment', tier: 'foundation' },
-    { key: 'gitops', tier: 'foundation' },
-    { key: 'cloudMigration', tier: 'foundation' },
-    { key: 'llmops', tier: 'transformation' },
-    { key: 'kubernetes', tier: 'transformation' },
-    { key: 'devsecops', tier: 'transformation' },
-    { key: 'platform', tier: 'advanced' },
-    { key: 'aiops', tier: 'advanced' },
-    { key: 'finops', tier: 'advanced' },
+    { key: 'assessment', tier: 'foundation', icon: LuSearch },
+    { key: 'gitops', tier: 'foundation', icon: LuGitBranch },
+    { key: 'cloudMigration', tier: 'foundation', icon: LuCloud },
+    { key: 'llmops', tier: 'transformation', icon: LuBrainCircuit },
+    { key: 'platform', tier: 'transformation', icon: LuTerminal },
+    { key: 'kubernetes', tier: 'transformation', icon: LuContainer },
+    { key: 'devsecops', tier: 'advanced', icon: LuShieldCheck },
+    { key: 'aiops', tier: 'advanced', icon: LuActivity },
+    { key: 'finops', tier: 'advanced', icon: LuCoins, hasDashboard: true },
   ];
 
   const filteredServices = services.filter(s => s.tier === selectedTier);
-  const selectedTierData = tiers.find(t => t.id === selectedTier);
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl" />
+    <section id="services" className="py-24 bg-white relative">
+      {/* Top Border Indicator */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-slate-200 to-transparent" />
 
-      <div className="container-custom relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16 max-w-3xl mx-auto"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-            <span className="bg-gradient-to-r from-primary-900 to-primary-900 bg-clip-text text-transparent">
-              {t.services.title}
-            </span>
-          </h2>
-          <p className="text-xl text-neutral-600 leading-relaxed">
-            {t.services.subtitle}
-          </p>
-        </motion.div>
+      <div className="container-custom">
+        {/* --- Header: Clean & Bold --- */}
+        <div className="grid lg:grid-cols-12 gap-12 mb-24 items-end">
+          <div className="lg:col-span-7">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="flex items-center gap-4 mb-8"
+            >
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#a79c82]">Capabilities</span>
+              <div className="h-px w-12 bg-[#a79c82]" />
+            </motion.div>
+            <h2 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none">
+              {t.services.title.split(' ')[0]} <br />
+              <span className="text-[#a79c82] italic font-light tracking-normal">{t.services.title.split(' ').slice(1).join(' ')}</span>
+            </h2>
+          </div>
+          <div className="lg:col-span-5">
+            <p className="text-xl text-slate-500 font-light leading-relaxed border-l border-slate-100 pl-8">
+              {t.services.subtitle}
+            </p>
+          </div>
+        </div>
 
-        {/* Service Tier Tabs with advanced animations */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-16"
-        >
+        {/* --- Minimalist Navigator --- */}
+        <div className="flex flex-wrap gap-x-12 gap-y-6 mb-20 border-b border-slate-100 pb-8">
           {tiers.map((tier) => (
-            <motion.button
+            <button
               key={tier.id}
               onClick={() => setSelectedTier(tier.id)}
-              className={`relative px-8 py-5 rounded-2xl font-semibold transition-all duration-300 overflow-hidden ${selectedTier === tier.id
-                ? 'text-white shadow-2xl scale-105'
-                : 'bg-white text-slate-700 hover:shadow-lg border-2 border-slate-200 hover:border-slate-300'
-                }`}
-              whileHover={{ scale: selectedTier === tier.id ? 1.05 : 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="group relative flex items-center gap-3 outline-none"
             >
+              <span className={`text-xs font-black uppercase tracking-[0.2em] transition-colors duration-300 ${selectedTier === tier.id ? 'text-slate-900' : 'text-slate-400 group-hover:text-slate-500'
+                }`}>
+                {tier.label}
+              </span>
               {selectedTier === tier.id && (
-                <>
-                  <motion.div
-                    layoutId="activeTab"
-                    className={`absolute inset-0 bg-gradient-to-r ${tier.gradient}`}
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r opacity-50 blur-xl"
-                    style={{ background: tier.glow }}
-                  />
-                </>
-              )}
-              <div className="relative z-10 text-center">
-                <div className="text-base mb-1">{t.services.tiers[tier.id].title}</div>
-                <div className={`text-xs ${selectedTier === tier.id ? 'text-white/80' : 'text-slate-500'}`}>
-                  {t.services.tiers[tier.id].description}
-                </div>
-              </div>
-            </motion.button>
-          ))}
-        </motion.div>
-
-        {/* Service Cards with advanced animations */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedTier}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
-          >
-            {filteredServices.map((service, index) => {
-              const Icon = serviceIcons[services.findIndex(s => s.key === service.key)];
-              const serviceData = t.services.items[service.key as keyof typeof t.services.items];
-              const isHovered = hoveredCard === index;
-
-              return (
                 <motion.div
-                  key={service.key}
-                  initial={{ opacity: 0, y: 50, rotateX: -15 }}
-                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{
-                    y: -10,
-                    rotateY: 5,
-                    rotateX: 5,
-                  }}
-                  onHoverStart={() => setHoveredCard(index)}
-                  onHoverEnd={() => setHoveredCard(null)}
-                  className="relative group perspective-1000"
-                  style={{ transformStyle: 'preserve-3d' }}
-                >
-                  <div className="relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-slate-100 overflow-hidden transform-gpu"
-                    style={{ transformStyle: 'preserve-3d' }}
+                  layoutId="activeUnderline"
+                  className="absolute -bottom-8 left-0 right-0 h-1 bg-[#a79c82]"
+                />
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* --- Content Grid --- */}
+        <div className="min-h-[600px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedTier}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-100 border border-slate-100"
+            >
+              {filteredServices.map((service, index) => {
+                const Icon = service.icon;
+                const serviceData = t.services.items[service.key as keyof typeof t.services.items];
+
+                return (
+                  <div
+                    key={service.key}
+                    className="group relative bg-white p-8 hover:bg-neutral-50 transition-all duration-500 overflow-hidden"
                   >
-                    {/* Animated gradient background on hover */}
-                    <motion.div
-                      className={`absolute inset-0 bg-gradient-to-br ${selectedTierData?.gradient} opacity-0 transition-opacity duration-300`}
-                      animate={{ opacity: isHovered ? 0.05 : 0 }}
-                    />
-
-                    {/* Glow effect */}
-                    <motion.div
-                      className="absolute inset-0 blur-2xl transition-opacity duration-300"
-                      style={{ background: selectedTierData?.glow }}
-                      animate={{ opacity: isHovered ? 0.3 : 0 }}
-                    />
-
-                    {/* Content */}
-                    <div className="relative z-10">
-                      {/* Icon with 3D effect */}
-                      <motion.div
-                        className="mb-6"
-                        animate={{
-                          rotateY: isHovered ? 180 : 0,
-                        }}
-                        transition={{ duration: 0.6 }}
-                        style={{ transformStyle: 'preserve-3d' }}
-                      >
-                        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${selectedTierData?.gradient} flex items-center justify-center text-white shadow-lg`}>
-                          <Icon className="w-10 h-10" />
+                    <div className="relative z-10 flex flex-col h-full">
+                      <div className="flex justify-between items-start mb-12">
+                        <div className="text-slate-300 group-hover:text-[#a79c82] group-hover:scale-110 transition-all duration-500">
+                          <Icon size={32} strokeWidth={1.5} />
                         </div>
-                      </motion.div>
+                        <span className="text-[10px] font-mono text-slate-200 group-hover:text-[#a79c82]">
+                          0{index + 1}
+                        </span>
+                      </div>
 
-                      {/* Title */}
-                      <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-tight">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight leading-snug">
                         {serviceData.title}
                       </h3>
 
-                      {/* Description */}
-                      <p className="text-slate-600 leading-relaxed">
+                      <p className="text-slate-500 text-sm leading-relaxed mb-12 font-light line-clamp-4">
                         {serviceData.description}
                       </p>
+
+                      <div className="mt-auto pt-8 border-t border-slate-50 flex items-center justify-between">
+                        {service.hasDashboard ? (
+                          <Link href="/services/finops" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#a79c82] hover:gap-3 transition-all">
+                            Live Preview <FaExternalLinkAlt size={8} />
+                          </Link>
+                        ) : (
+                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-neutral-400 group-hover:text-[#a79c82] transition-colors">
+                            Expertise Focus
+                          </span>
+                        )}
+                        <LuChevronRight className="text-slate-200 group-hover:text-[#a79c82] group-hover:translate-x-1 transition-all" />
+                      </div>
                     </div>
-
-                    {/* Decorative corner elements */}
-                    <motion.div
-                      className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${selectedTierData?.gradient} opacity-0 blur-2xl transition-opacity`}
-                      animate={{ opacity: isHovered ? 0.2 : 0 }}
-                    />
-                    <motion.div
-                      className={`absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr ${selectedTierData?.gradient} opacity-0 blur-2xl transition-opacity`}
-                      animate={{ opacity: isHovered ? 0.2 : 0 }}
-                    />
                   </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* CTA Section with advanced design */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-24"
-        >
-          <div className="relative max-w-5xl mx-auto bg-gradient-to-r from-slate-900 via-blue-900 to-primary-900 rounded-3xl p-12 md:p-16 shadow-2xl overflow-hidden">
-            {/* Animated background elements */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.2),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.2),transparent_50%)]" />
-
-            <div className="relative z-10 text-center">
-              <motion.h3
-                className="text-3xl md:text-4xl font-bold text-white mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                {t.servicesCta.title}
-              </motion.h3>
-              <motion.p
-                className="text-xl text-blue-100/80 mb-10 max-w-2xl mx-auto leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                {t.servicesCta.description}
-              </motion.p>
-              <motion.div
-                onClick={() => {
-                  const element = document.getElementById('#');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="relative group font-bold py-5 px-12 rounded-2xl overflow-hidden shadow-sm text-lg cursor-pointer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-              >
-                <motion.svg
-                  className="w-10 h-10 text-white mx-auto"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  />
-                </motion.svg>
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

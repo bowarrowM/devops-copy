@@ -18,60 +18,61 @@ export const tr: Translations = {
   },
   services: {
     title: 'Hizmetlerimiz',
-    subtitle: 'Her ölçekteki işletme için kapsamlı DevOps çözümleri',
+    subtitle: 'Geleneksel DevOps\'un ötesinde, otonom ve platform odaklı dönüşüm çözümleri',
     tiers: {
       foundation: {
-        title: 'Temel Hizmetler',
-        description: 'DevOps yolculuğunuza başlayın',
+        title: 'Temel Modernizasyon',
+        description: 'Bulut yerlisi (Cloud-native) temellerinizi dünya standartlarında atın',
       },
       transformation: {
-        title: 'Dönüşüm Hizmetleri',
-        description: 'Altyapınızı modernize edin',
+        title: 'Platform Mühendisliği',
+        description: 'Geliştirici deneyimini (DevEx) ve ürün geliştirme hızınızı optimize edin',
       },
       advanced: {
-        title: 'İleri Seviye',
-        description: 'Kurumsal ölçekte çözümler',
+        title: 'Agentic Ops & Otonom Gelecek',
+        description: 'Yapay zeka ile kendi kendini iyileştiren (self-healing) sistemler',
       },
     },
     items: {
       assessment: {
-        title: 'DevOps Değerlendirme & Strateji',
-        description: 'Mevcut durumunuzu analiz eder, teknoloji stack değerlendirmesi yapar ve yol haritası oluştururuz.',
+        title: 'Stratejik DevOps & Agentic Olgunluk Analizi',
+        description: 'Mevcut yapınızı analiz ediyor, otonom operasyonlara geçiş için yüksek performanslı bir yol haritası ve teknoloji dönüşümü sunuyoruz.',
       },
       gitops: {
-        title: 'GitOps & Continuous Deployment',
-        description: 'ArgoCD, Flux CD ile Git-driven deployment, otomatik rollback ve drift detection. Kubernetes-native continuous delivery.',
+        title: 'GitOps & Altyapı Otomasyonu (IaC)',
+        description: 'ArgoCD ve Flux ile "Infrastructure as Code". Tüm altyapıyı Git üzerinden yönetin, drift detection ile manuel hataları tamamen ortadan kaldırın.',
       },
       cloudMigration: {
-        title: 'Bulut Migrasyonu & Optimizasyon',
-        description: 'AWS, Azure, GCP\'ye güvenli geçiş ve multi-cloud strateji. Vendor lock-in olmadan esnek altyapı.',
+        title: 'Bulut Migrasyonu & Modernizasyon',
+        description: 'AWS, Azure ve GCP\'ye güvenli geçiş. Legacy yapıları microservices mimarisine dönüştürerek modern bulut ekosistemine taşıyoruz.',
       },
       llmops: {
-        title: 'LLMOps & AI Model Operations',
-        description: 'LLM model deployment, prompt engineering, vector databases, AI workflow otomasyonu. MLflow, Kubernetes, GPU orchestration.',
+        title: 'GenAI & LLMOps Altyapı Yönetimi',
+        description: 'GPU orkestrasyonu, ölçeklenebilir vektör veritabanı (Elasticsearch) entegrasyonu ve RAG uyumlu AI altyapı mimarileri.',
       },
       kubernetes: {
-        title: 'Kubernetes & Container Orchestration',
-        description: 'EKS, AKS, GKE ile production-ready cluster setup, service mesh, autoscaling ve monitoring.',
+        title: 'Kubernetes & Cloud-Native Ekosistemi',
+        description: 'EKS, AKS ve GKE üzerinde production-ready cluster kurulumu. Service Mesh (Istio) ile mikroservis trafiğini güvenli ve akıllıca yönetin.',
       },
       devsecops: {
-        title: 'DevSecOps & AI Security',
-        description: 'AI-powered security scanning, policy-as-code, automated compliance ve vulnerability management.',
+        title: 'DevSecOps & Otonom Siber Güvenlik',
+        description: 'Pipeline içine entegre AI destekli güvenlik taramaları. Policy-as-code ile uyumluluk (compliance) süreçlerini gerçek zamanlı otomatiğe bağlayın.',
       },
       platform: {
         title: 'Platform Engineering & IDP',
-        description: 'Internal Developer Platform (IDP), self-service infrastructure, Backstage. Developer experience ve productivity odaklı.',
+        description: 'Backstage tabanlı İç Geliştirici Platformları (IDP). Yazılımcıların kendi altyapılarını "Golden Path" üzerinden self-service kurmasını sağlayın.',
       },
       aiops: {
-        title: 'AIOps & Intelligent Monitoring',
-        description: 'AI-powered predictive analytics, automated incident response, unified observability. Prometheus, Grafana, Datadog, Dynatrace.',
+        title: 'AIOps & Unified Observability',
+        description: 'Elasticsearch tabanlı merkezi izleme. AI ile anomali tespiti ve öngörücü log analizi yaparak kesintileri yaşanmadan engelleyin.',
       },
       finops: {
-        title: 'FinOps & Cloud Cost Management',
-        description: 'Cloud cost optimization, waste reduction, reserved instances stratejisi. 15-40% maliyet tasarrufu. AWS, Azure, GCP billing.',
+        title: 'FinOps & Otonom Bulut Ekonomisi',
+        description: 'Birim maliyet verimliliği odaklı, bulut harcamalarını gerçek zamanlı optimize eden ve %15-40 tasarruf sağlayan otonom yönetim.',
       },
     },
   },
+
   about: {
     title: 'Neden DevOps?',
     subtitle: 'DevOps dönüşümünüzde stratejik ortağınız. Modern practices, proven frameworks, hands-on expertise',
